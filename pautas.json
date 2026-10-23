@@ -514,7 +514,7 @@
      "base": 57.766
     },
     "lado": {
-     "right": 87.28,
+     "right": 88.247,
      "base": 55.336
     },
     "placa_px": {
@@ -1553,15 +1553,19 @@
    "w": 133.7
   },
   "gorilla": {
-   "src": "protesto_gorilla.png?v=3",
-   "h": 89.5,
-   "w": 58.3,
-   "mao_x": 0.29
+   "src": "protesto_gorilla2.png?v=4",
+   "h": 116,
+   "w": 93.3
   },
   "kaiju": {
    "src": "protesto_kaiju.png?v=3",
    "h": 111.2,
    "w": 109.9
+  },
+  "dragon": {
+   "src": "protesto_dragon.png?v=4",
+   "h": 128,
+   "w": 137.6
   }
  },
  "mapa": {
