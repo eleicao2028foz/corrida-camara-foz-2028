@@ -16,9 +16,28 @@
     "gravidade": 5
    },
    "termometro": {
-    "x": 84.51,
-    "top": 42.38,
-    "bottom": 47.95
+    "left": 84.57,
+    "top": 42.383,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 1299.0,
+     "r": 1304.0,
+     "t": 434,
+     "b": 478
+    },
+    "numero": {
+     "cx": 84.733,
+     "cy": 41.016,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fbf6f2",
+     "px": {
+      "cx": 1301.5,
+      "cy": 420
+     }
+    }
    },
    "problemas": [
     {
@@ -43,7 +62,7 @@
      "titulo": "UBS Porto Belo sem agenda",
      "fato": "Consulta nova só em 2027; falta vaga para preventivo e mamografia",
      "data": "2026-10-20",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "UPA Walter Barbosa sem transparência",
@@ -77,9 +96,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 27.15,
-    "top": 39.75,
-    "bottom": 45.31
+    "left": 27.148,
+    "top": 39.648,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 417.0,
+     "r": 422.0,
+     "t": 406,
+     "b": 450
+    },
+    "numero": {
+     "cx": 27.311,
+     "cy": 38.281,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#f8f4f3",
+     "px": {
+      "cx": 419.5,
+      "cy": 392
+     }
+    }
    },
    "problemas": [
     {
@@ -92,13 +130,13 @@
      "titulo": "25 carros danificados",
      "fato": "Carros caíram em buracos após a chuva",
      "data": "2026-10-13",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Porto Meira e Bubas abandonados",
      "fato": "Ruas esburacadas, lama e obras paradas",
      "data": "2026-10-10",
-     "fonte": "Instagram @edhqueiroz"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Obras sem transparência",
@@ -132,9 +170,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 28.52,
-    "top": 53.71,
-    "bottom": 59.28
+    "left": 28.516,
+    "top": 53.809,
+    "width": 0.391,
+    "height": 4.492,
+    "rot": 0,
+    "px": {
+     "l": 438.0,
+     "r": 444.0,
+     "t": 551,
+     "b": 597
+    },
+    "numero": {
+     "cx": 28.711,
+     "cy": 52.441,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf6ee",
+     "px": {
+      "cx": 441.0,
+      "cy": 537
+     }
+    }
    },
    "problemas": [
     {
@@ -165,7 +222,7 @@
      "titulo": "Semáforos apagados na Av. JK",
      "fato": "Confusão no trânsito",
      "data": "2026-10-13",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Trânsito: 327 pedidos na Câmara",
@@ -187,9 +244,28 @@
     "gravidade": 3
    },
    "termometro": {
-    "x": 31.25,
-    "top": 28.52,
-    "bottom": 34.08
+    "left": 31.315,
+    "top": 28.516,
+    "width": 0.326,
+    "height": 4.004,
+    "rot": 0,
+    "px": {
+     "l": 481.0,
+     "r": 486.0,
+     "t": 292,
+     "b": 333
+    },
+    "numero": {
+     "cx": 31.478,
+     "cy": 27.148,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fcf6ef",
+     "px": {
+      "cx": 483.5,
+      "cy": 278
+     }
+    }
    },
    "problemas": [
     {
@@ -202,13 +278,13 @@
      "titulo": "Coleta deixa sacos e reciclável",
      "fato": "Porto Meira com lixo nas ruas",
      "data": "2026-10-21",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Lixo entupindo bueiros",
      "fato": "Campanha da Prefeitura liga lixo a alagamentos",
      "data": "2026-10-21",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "3 mil toneladas de entulho",
@@ -236,16 +312,35 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 97.72,
-    "top": 53.12,
-    "bottom": 58.69
+    "left": 97.721,
+    "top": 53.125,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 1501.0,
+     "r": 1506.0,
+     "t": 544,
+     "b": 588
+    },
+    "numero": {
+     "cx": 97.884,
+     "cy": 51.758,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf7f2",
+     "px": {
+      "cx": 1503.5,
+      "cy": 530
+     }
+    }
    },
    "problemas": [
     {
      "titulo": "Escolas arrombadas e vandalizadas",
      "fato": "Merenda destruída; ~2,2 mil comentários",
      "data": "2026-10-12",
-     "fonte": "g1 / Instagram @edhqueiroz"
+     "fonte": "g1 / Instagram"
     },
     {
      "titulo": "Escola Padre Luigi invadida",
@@ -285,9 +380,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 97.01,
-    "top": 30.47,
-    "bottom": 36.04
+    "left": 97.07,
+    "top": 30.371,
+    "width": 0.26,
+    "height": 4.004,
+    "rot": 0,
+    "px": {
+     "l": 1491.0,
+     "r": 1495.0,
+     "t": 311,
+     "b": 352
+    },
+    "numero": {
+     "cx": 97.201,
+     "cy": 29.004,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fcf7f1",
+     "px": {
+      "cx": 1493.0,
+      "cy": 297
+     }
+    }
    },
    "problemas": [
     {
@@ -328,9 +442,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 58.14,
-    "top": 23.93,
-    "bottom": 29.49
+    "left": 58.203,
+    "top": 23.926,
+    "width": 0.326,
+    "height": 4.492,
+    "rot": 0,
+    "px": {
+     "l": 894.0,
+     "r": 899.0,
+     "t": 245,
+     "b": 291
+    },
+    "numero": {
+     "cx": 58.366,
+     "cy": 22.559,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fcf5f1",
+     "px": {
+      "cx": 896.5,
+      "cy": 231
+     }
+    }
    },
    "problemas": [
     {
@@ -383,9 +516,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 40.49,
-    "top": 15.43,
-    "bottom": 21.0
+    "left": 40.495,
+    "top": 15.527,
+    "width": 0.391,
+    "height": 4.59,
+    "rot": 0,
+    "px": {
+     "l": 622.0,
+     "r": 628.0,
+     "t": 159,
+     "b": 206
+    },
+    "numero": {
+     "cx": 40.69,
+     "cy": 14.16,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fbf8f5",
+     "px": {
+      "cx": 625.0,
+      "cy": 145
+     }
+    }
    },
    "problemas": [
     {
@@ -426,9 +578,28 @@
     "gravidade": 4
    },
    "termometro": {
-    "x": 47.4,
-    "top": 38.87,
-    "bottom": 44.43
+    "left": 47.396,
+    "top": 38.867,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 728.0,
+     "r": 733.0,
+     "t": 398,
+     "b": 442
+    },
+    "numero": {
+     "cx": 47.559,
+     "cy": 37.5,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf8f0",
+     "px": {
+      "cx": 730.5,
+      "cy": 384
+     }
+    }
    },
    "problemas": [
     {
@@ -441,7 +612,7 @@
      "titulo": "Foz na Palma da Mão fora do ar",
      "fato": "Prejudica contadores e empresas",
      "data": "2026-08-31",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "90 contratações sem licitação",
@@ -463,16 +634,35 @@
     "gravidade": 2
    },
    "termometro": {
-    "x": 65.62,
-    "top": 38.48,
-    "bottom": 44.04
+    "left": 65.69,
+    "top": 38.477,
+    "width": 0.326,
+    "height": 4.395,
+    "rot": 0,
+    "px": {
+     "l": 1009.0,
+     "r": 1014.0,
+     "t": 394,
+     "b": 439
+    },
+    "numero": {
+     "cx": 65.853,
+     "cy": 37.109,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fbf6f0",
+     "px": {
+      "cx": 1011.5,
+      "cy": 380
+     }
+    }
    },
    "problemas": [
     {
      "titulo": "Sistema Elotec falhando",
      "fato": "Há meses sem funcionar",
      "data": "2026-08-28",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Nota fiscal travou",
@@ -500,22 +690,41 @@
     "gravidade": 2
    },
    "termometro": {
-    "x": 22.01,
-    "top": 15.62,
-    "bottom": 21.19
+    "left": 22.005,
+    "top": 15.625,
+    "width": 0.391,
+    "height": 4.688,
+    "rot": 0,
+    "px": {
+     "l": 338.0,
+     "r": 344.0,
+     "t": 160,
+     "b": 208
+    },
+    "numero": {
+     "cx": 22.201,
+     "cy": 14.258,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fcf8f0",
+     "px": {
+      "cx": 341.0,
+      "cy": 146
+     }
+    }
    },
    "problemas": [
     {
      "titulo": "Região sem energia após temporal",
      "fato": "",
      "data": "2026-09-10",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Mais uma noite sem luz (Vila A)",
      "fato": "",
      "data": "2026-09-29",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     },
     {
      "titulo": "Queda de energia na Vila C",
@@ -537,9 +746,28 @@
     "gravidade": 3
    },
    "termometro": {
-    "x": 47.33,
-    "top": 54.1,
-    "bottom": 59.67
+    "left": 47.396,
+    "top": 54.102,
+    "width": 0.326,
+    "height": 4.395,
+    "rot": 0,
+    "px": {
+     "l": 728.0,
+     "r": 733.0,
+     "t": 554,
+     "b": 599
+    },
+    "numero": {
+     "cx": 47.559,
+     "cy": 52.734,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf8ef",
+     "px": {
+      "cx": 730.5,
+      "cy": 540
+     }
+    }
    },
    "problemas": [
     {
@@ -574,9 +802,28 @@
     "gravidade": 2
    },
    "termometro": {
-    "x": 93.88,
+    "left": 93.88,
     "top": 70.02,
-    "bottom": 75.59
+    "width": 0.326,
+    "height": 4.395,
+    "rot": 0,
+    "px": {
+     "l": 1442.0,
+     "r": 1447.0,
+     "t": 717,
+     "b": 762
+    },
+    "numero": {
+     "cx": 94.043,
+     "cy": 68.652,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf8f2",
+     "px": {
+      "cx": 1444.5,
+      "cy": 703
+     }
+    }
    },
    "problemas": [
     {
@@ -605,16 +852,35 @@
     "gravidade": 1
    },
    "termometro": {
-    "x": 87.63,
-    "top": 15.72,
-    "bottom": 21.29
+    "left": 87.63,
+    "top": 16.113,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 1346.0,
+     "r": 1351.0,
+     "t": 165,
+     "b": 209
+    },
+    "numero": {
+     "cx": 87.793,
+     "cy": 14.746,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fef9f0",
+     "px": {
+      "cx": 1348.5,
+      "cy": 151
+     }
+    }
    },
    "problemas": [
     {
      "titulo": "Obras atrapalham turistas",
      "fato": "",
      "data": "2026-09-06",
-     "fonte": "Instagram @paranapop_"
+     "fonte": "Instagram"
     }
    ],
    "nivel": 7
@@ -630,9 +896,28 @@
     "gravidade": 0
    },
    "termometro": {
-    "x": 79.43,
-    "top": 27.05,
-    "bottom": 32.62
+    "left": 79.492,
+    "top": 27.051,
+    "width": 0.326,
+    "height": 4.297,
+    "rot": 0,
+    "px": {
+     "l": 1221.0,
+     "r": 1226.0,
+     "t": 277,
+     "b": 321
+    },
+    "numero": {
+     "cx": 79.655,
+     "cy": 25.684,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fdf7f3",
+     "px": {
+      "cx": 1223.5,
+      "cy": 263
+     }
+    }
    },
    "problemas": [],
    "nivel": 0
@@ -648,9 +933,28 @@
     "gravidade": 0
    },
    "termometro": {
-    "x": 64.19,
-    "top": 54.39,
-    "bottom": 59.96
+    "left": 64.258,
+    "top": 54.59,
+    "width": 0.326,
+    "height": 4.492,
+    "rot": 0,
+    "px": {
+     "l": 987.0,
+     "r": 992.0,
+     "t": 559,
+     "b": 605
+    },
+    "numero": {
+     "cx": 64.421,
+     "cy": 53.223,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fcf7ed",
+     "px": {
+      "cx": 989.5,
+      "cy": 545
+     }
+    }
    },
    "problemas": [],
    "nivel": 0
@@ -666,9 +970,28 @@
     "gravidade": 0
    },
    "termometro": {
-    "x": 79.82,
-    "top": 54.0,
-    "bottom": 59.57
+    "left": 79.818,
+    "top": 54.199,
+    "width": 0.391,
+    "height": 4.492,
+    "rot": 0,
+    "px": {
+     "l": 1226.0,
+     "r": 1232.0,
+     "t": 555,
+     "b": 601
+    },
+    "numero": {
+     "cx": 80.013,
+     "cy": 52.832,
+     "w": 2.214,
+     "h": 2.148,
+     "bg": "#fbf6f0",
+     "px": {
+      "cx": 1229.0,
+      "cy": 541
+     }
+    }
    },
    "problemas": [],
    "nivel": 0
