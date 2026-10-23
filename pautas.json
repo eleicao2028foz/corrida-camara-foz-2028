@@ -1543,23 +1543,23 @@
  ],
  "sprites": {
   "pair": {
-   "src": "protesto_pair.png",
+   "src": "protesto_pair.png?v=3",
    "h": 51.8,
    "w": 38.6
   },
   "crowd": {
-   "src": "protesto_crowd.png",
+   "src": "protesto_crowd.png?v=3",
    "h": 70.7,
    "w": 133.7
   },
   "gorilla": {
-   "src": "protesto_gorilla.png",
+   "src": "protesto_gorilla.png?v=3",
    "h": 89.5,
    "w": 58.3,
    "mao_x": 0.29
   },
   "kaiju": {
-   "src": "protesto_kaiju.png",
+   "src": "protesto_kaiju.png?v=3",
    "h": 111.2,
    "w": 109.9
   }
