@@ -239,9 +239,9 @@
    "metricas": {
     "eouve_aberto": 747,
     "camara": 252,
-    "noticias": 4,
-    "instagram": 6,
-    "gravidade": 3
+    "noticias": 5,
+    "instagram": 7,
+    "gravidade": 4
    },
    "termometro": {
     "left": 31.315,
@@ -268,6 +268,12 @@
     }
    },
    "problemas": [
+    {
+     "titulo": "Cemitérios a 100%",
+     "fato": "Corpos à espera; Justiça dá 30 dias",
+     "data": "2026-09-07",
+     "fonte": "Foz ao Vivo / CNN / Instagram"
+    },
     {
      "titulo": "Terrenos sujos: 537 em aberto",
      "fato": "Posturas com 31% em aberto",
@@ -299,7 +305,7 @@
      "fonte": "eOuve"
     }
    ],
-   "nivel": 73
+   "nivel": 81
   },
   {
    "id": "seguranca",
@@ -573,9 +579,9 @@
    "metricas": {
     "eouve_aberto": null,
     "camara": 15,
-    "noticias": 2,
-    "instagram": 2,
-    "gravidade": 4
+    "noticias": 1,
+    "instagram": 1,
+    "gravidade": 3
    },
    "termometro": {
     "left": 47.396,
@@ -603,12 +609,6 @@
    },
    "problemas": [
     {
-     "titulo": "Cemitérios a 100%",
-     "fato": "Corpos à espera; Justiça dá 30 dias",
-     "data": "2026-09-07",
-     "fonte": "Foz ao Vivo / CNN / Instagram"
-    },
-    {
      "titulo": "Foz na Palma da Mão fora do ar",
      "fato": "Prejudica contadores e empresas",
      "data": "2026-08-31",
@@ -621,7 +621,7 @@
      "fonte": "Observatório Social"
     }
    ],
-   "nivel": 33
+   "nivel": 23
   },
   {
    "id": "financas",
