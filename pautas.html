@@ -40,8 +40,7 @@ function show(o){pc.innerHTML=`<h2>${o.nome}</h2><div>Termômetro: <b>${o.nivel}
  `<p class="mt">Base: eOuve em aberto ${o.metricas.eouve_aberto??'n/d'} · pedidos na Câmara ${o.metricas.camara} · notícias ${o.metricas.noticias} · posts no Instagram ${o.metricas.instagram} · gravidade ${o.metricas.gravidade}/5</p>`;pn.classList.add('on')}
 document.getElementById('metodo').onclick=()=>{pc.innerHTML=`<h2>Como medimos</h2><p class="mt">Período: 23/04 a 23/10/2026. Cada órgão recebe de 0 a 100:<br><br>
 <b>25%</b> pedidos ainda em aberto no eOuve (teto 500) — junta volume e o quanto está parado<br><b>20%</b> pedidos de vereadores na Câmara (SAPL, teto 300)<br><b>20%</b> fatos na imprensa local (teto 8)<br><b>15%</b> posts de problemas no Instagram (teto 10)<br><b>20%</b> gravidade (0–5: risco à vida/saúde, alcance)<br><br>
-Quando uma fonte não cobre o tema (ex.: Sanepar e Copel não estão no eOuve), o peso dela é dividido entre as outras. Fontes: SAPL, eOuve, Observatório Social, H2FOZ, Rádio Cultura, Portal da Cidade, Não Viu, Click Foz, g1, Bem Paraná e outros.<br><br>
-Defesa Civil (cheia e granizo) está no <b>Gabinete do Prefeito</b>. Zoonoses (CCZ) estão em <b>Saúde</b>; cemitérios em <b>Administração</b>.</p>`;pn.classList.add('on')};
+Quando uma fonte não cobre o tema (ex.: Sanepar e Copel não estão no eOuve), o peso dela é dividido entre as outras. Fontes: SAPL, eOuve, Observatório Social, H2FOZ, Rádio Cultura, Portal da Cidade, Não Viu, Click Foz, g1, Bem Paraná e outros.</p>`;pn.classList.add('on')};
 // pan/zoom
 let s=1,x=0,y=0,moved=false;const pts=new Map();let st=null;
 function minS(){return Math.max(innerWidth/MW,innerHeight/MH)}
