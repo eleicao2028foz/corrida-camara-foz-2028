@@ -788,7 +788,7 @@
     "instagram": 1,
     "gravidade": 3,
     "notas": 2,
-    "processos": 1
+    "processos": 2
    },
    "termometro": {
     "left": 51.899,
@@ -819,6 +819,13 @@
      "tipo": "processo"
     },
     {
+     "titulo": "Processo 0017326-52.2006: área do Tertuliano",
+     "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado.",
+     "data": "2026-10-26",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
      "titulo": "Nota de esclarecimento: consignado de servidores",
      "fato": "Prefeitura defende o credenciamento de bancos para consignado dos servidores (Edital 002/2025) e nega pressão ou exclusividade.",
      "data": "2026-10-22",
@@ -845,7 +852,7 @@
      "fonte": "Observatório Social"
     }
    ],
-   "nivel": 35,
+   "nivel": 39,
    "predio": {
     "px": {
      "l": 640,
@@ -1040,7 +1047,7 @@
     "instagram": 0,
     "gravidade": 3,
     "notas": 0,
-    "processos": 6
+    "processos": 7
    },
    "termometro": {
     "left": 53.626,
@@ -1106,6 +1113,13 @@
      "tipo": "processo"
     },
     {
+     "titulo": "Processo 0017326-52.2006: área do Tertuliano",
+     "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado.",
+     "data": "2026-10-26",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
      "titulo": "Invasões: 86% em aberto",
      "fato": "",
      "data": "2026-10-23",
@@ -1124,7 +1138,7 @@
      "fonte": "SAPL"
     }
    ],
-   "nivel": 42,
+   "nivel": 46,
    "predio": {
     "px": {
      "l": 606,
@@ -1575,6 +1589,15 @@
    "data": "2026-10-26",
    "titulo": "Processo 0013229-81.2021: ocupação Resistência 2",
    "fato": "Área ocupada que precisa de regularização fundiária, ainda sem solução apresentada pela Fozhabita."
+  },
+  {
+   "orgaos": [
+    "fozhabita",
+    "administracao"
+   ],
+   "data": "2026-10-26",
+   "titulo": "Processo 0017326-52.2006: área do Tertuliano",
+   "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado."
   }
  ]
 }
