@@ -820,8 +820,8 @@
     },
     {
      "titulo": "Processo 0017326-52.2006: área do Tertuliano",
-     "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado.",
-     "data": "2026-10-26",
+     "fato": "Fozhabita e Administração devem apresentar plano de realocação das famílias; segundo o acompanhamento, nenhum plano foi apresentado.",
+     "data": "2025-03-24",
      "fonte": "Justiça (TJPR)",
      "tipo": "processo"
     },
@@ -1107,15 +1107,15 @@
     },
     {
      "titulo": "Processo 0013229-81.2021: ocupação Resistência 2",
-     "fato": "Área ocupada que precisa de regularização fundiária, ainda sem solução apresentada pela Fozhabita.",
-     "data": "2026-10-26",
+     "fato": "Reintegração de posse em área particular, julgada procedente e já em cumprimento de sentença; a área precisa de regularização e não há plano ou cadastro das famílias publicado pela Fozhabita.",
+     "data": "2026-09-24",
      "fonte": "Justiça (TJPR)",
      "tipo": "processo"
     },
     {
      "titulo": "Processo 0017326-52.2006: área do Tertuliano",
-     "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado.",
-     "data": "2026-10-26",
+     "fato": "Fozhabita e Administração devem apresentar plano de realocação das famílias; segundo o acompanhamento, nenhum plano foi apresentado.",
+     "data": "2025-03-24",
      "fonte": "Justiça (TJPR)",
      "tipo": "processo"
     },
@@ -1586,18 +1586,18 @@
    "orgaos": [
     "fozhabita"
    ],
-   "data": "2026-10-26",
+   "data": "2026-09-24",
    "titulo": "Processo 0013229-81.2021: ocupação Resistência 2",
-   "fato": "Área ocupada que precisa de regularização fundiária, ainda sem solução apresentada pela Fozhabita."
+   "fato": "Reintegração de posse em área particular, julgada procedente e já em cumprimento de sentença; a área precisa de regularização e não há plano ou cadastro das famílias publicado pela Fozhabita."
   },
   {
    "orgaos": [
     "fozhabita",
     "administracao"
    ],
-   "data": "2026-10-26",
+   "data": "2025-03-24",
    "titulo": "Processo 0017326-52.2006: área do Tertuliano",
-   "fato": "Fozhabita e Administração devem apresentar um plano de realocação das famílias e, até agora, não há plano apresentado."
+   "fato": "Fozhabita e Administração devem apresentar plano de realocação das famílias; segundo o acompanhamento, nenhum plano foi apresentado."
   }
  ]
 }
