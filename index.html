@@ -48,7 +48,7 @@ if(!f.checkValidity()||tel.value.replace(/\D/g,'').length<10){er.textContent='Pr
 er.textContent='';var b=f.querySelector('.env');b.disabled=true;b.textContent='Enviando…';
 fetch('https://docs.google.com/forms/d/e/1FAIpQLSemoInBSO8ywiy6QJT2c_f2iCRyZ6ZuCgiPXxWkcUncKC-pcA/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams(new FormData(f))}).then(function(){localStorage.setItem('apoioTs',Date.now());f.hidden=true;document.getElementById('apok').hidden=false}).catch(function(){b.disabled=false;b.textContent='Enviar';er.textContent='Falha ao enviar. Tente de novo.'})});
 </script>
-<main><p class="dica">👆 Toque em um candidato para ver as matérias dele</p><div class="stage" id="stage"><video autoplay muted loop playsinline poster="corrida.png?v=1793016696" aria-label="Corrida para a Câmara de Foz 2028 – posição de cada pré-candidato"><source src="corrida.webm?v=1793016696" type="video/webm"><source src="corrida.mp4?v=1793016696" type="video/mp4"><img src="corrida.png?v=1793016696" alt="Corrida para a Câmara de Foz 2028"></video></div></main>
+<main><p class="dica">👆 Toque em um candidato para ver as matérias dele</p><div class="stage" id="stage"><video autoplay muted loop playsinline poster="corrida.png?v=1793020191" aria-label="Corrida para a Câmara de Foz 2028 – posição de cada pré-candidato"><source src="corrida.webm?v=1793020191" type="video/webm"><source src="corrida.mp4?v=1793020191" type="video/mp4"><img src="corrida.png?v=1793020191" alt="Corrida para a Câmara de Foz 2028"></video></div></main>
 <div id="modal" role="dialog" aria-modal="true"><div class="box"><button class="x" aria-label="Fechar">×</button><div id="mc"></div></div></div>
 <script>
 const esc=t=>String(t||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -62,7 +62,7 @@ function abre(r){C.innerHTML=`<h2>${r.rank}º ${esc(r.nome)}</h2>
 <details><summary class="sec cit">Outras menções – só citado (${r.cit.length})</summary>${li(r.cit)}</details>`;M.classList.add('on');M.querySelector('.box').scrollTop=0}
 function fecha(){M.classList.remove('on')}
 M.onclick=e=>{if(e.target===M||e.target.classList.contains('x'))fecha()};document.onkeydown=e=>{if(e.key==='Escape')fecha()};
-fetch('noticias.json?v=1793016696').then(r=>r.json()).then(D=>{const S=document.getElementById('stage');
+fetch('noticias.json?v=1793020191').then(r=>r.json()).then(D=>{const S=document.getElementById('stage');
  D.areas.forEach(a=>{const b=document.createElement('button');b.className='hit';b.title=b.ariaLabel=`${a.rank}º ${a.nome} – ver matérias`;
   Object.assign(b.style,{left:a.x*100+'%',top:a.y*100+'%',width:a.w*100+'%',height:a.h*100+'%'});b.onclick=()=>abre(D.noticias[a.slug]);S.appendChild(b);const n=document.createElement('span');n.className='apo';n.textContent='👥 '+((D.apoios||{})[a.slug]||0)+' apoiadores';Object.assign(n.style,{left:(a.x+a.w/2)*100+'%',top:(a.y+a.h)*100+'%'});S.appendChild(n)});
  if(location.hash)setTimeout(()=>{const k=location.hash.slice(1);D.noticias[k]&&abre(D.noticias[k])},0)});
