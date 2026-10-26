@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-10-23",
+ "atualizado": "2026-10-26",
  "periodo": [
   "2026-04-23",
   "2026-10-23"
@@ -13,7 +13,8 @@
     "camara": 543,
     "noticias": 7,
     "instagram": 3,
-    "gravidade": 5
+    "gravidade": 5,
+    "notas": 1
    },
    "termometro": {
     "left": 84.546,
@@ -40,6 +41,13 @@
     }
    },
    "problemas": [
+    {
+     "titulo": "Nota de esclarecimento: ocorrência no Hospital Municipal",
+     "fato": "Hospital Municipal esclarece o corpo encontrado em área técnica da unidade.",
+     "data": "2026-06-01",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
+    },
     {
      "titulo": "Hospital Municipal superlotado",
      "fato": "128,9% de ocupação, 16 pacientes nos corredores",
@@ -83,7 +91,7 @@
      "fonte": "SAPL"
     }
    ],
-   "nivel": 77,
+   "nivel": 81,
    "predio": {
     "px": {
      "l": 1091.4,
@@ -115,7 +123,8 @@
     "top": 33.95,
     "width": 10.877,
     "height": 11.409
-   }
+   },
+   "nivel_base": 77
   },
   {
    "id": "obras",
@@ -125,7 +134,8 @@
     "camara": 253,
     "noticias": 6,
     "instagram": 10,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 0
    },
    "termometro": {
     "left": 27.15,
@@ -221,7 +231,8 @@
     "top": 31.694,
     "width": 10.552,
     "height": 11.759
-   }
+   },
+   "nivel_base": 88
   },
   {
    "id": "foztrans",
@@ -231,7 +242,8 @@
     "camara": 419,
     "noticias": 6,
     "instagram": 9,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 1
    },
    "termometro": {
     "left": 28.517,
@@ -258,6 +270,13 @@
     }
    },
    "problemas": [
+    {
+     "titulo": "Nota de esclarecimento: contrato do transporte coletivo",
+     "fato": "Prefeitura responde à empresa de ônibus sobre reajuste e o adicional \"dirige e cobra\", em meio à greve.",
+     "data": "2026-04-27",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
+    },
     {
      "titulo": "Edital do ônibus não saiu",
      "fato": "Contrato da Visac prorrogado até mar/2027",
@@ -295,7 +314,7 @@
      "fonte": "SAPL"
     }
    ],
-   "nivel": 86,
+   "nivel": 90,
    "predio": {
     "px": {
      "l": 243.3,
@@ -327,7 +346,8 @@
     "top": 44.807,
     "width": 13.488,
     "height": 11.842
-   }
+   },
+   "nivel_base": 86
   },
   {
    "id": "meio_ambiente",
@@ -337,7 +357,8 @@
     "camara": 252,
     "noticias": 5,
     "instagram": 7,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 0
    },
    "termometro": {
     "left": 31.315,
@@ -433,7 +454,8 @@
     "top": 22.145,
     "width": 9.648,
     "height": 12.109
-   }
+   },
+   "nivel_base": 81
   },
   {
    "id": "seguranca",
@@ -443,7 +465,8 @@
     "camara": 90,
     "noticias": 4,
     "instagram": 12,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 0
    },
    "termometro": {
     "left": 97.691,
@@ -533,7 +556,8 @@
     "top": 43.849,
     "width": 11.858,
     "height": 12.099
-   }
+   },
+   "nivel_base": 63
   },
   {
    "id": "educacao",
@@ -543,7 +567,8 @@
     "camara": 329,
     "noticias": 3,
     "instagram": 2,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 1
    },
    "termometro": {
     "left": 97.04,
@@ -571,6 +596,13 @@
    },
    "problemas": [
     {
+     "titulo": "Nota de esclarecimento: pagamento parcelado do IDEB",
+     "fato": "Prefeitura explica o prêmio do IDEB pago em parcelas: gasto com pessoal em 53,7% da receita, acima do limite prudencial.",
+     "data": "2026-09-30",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
+    },
+    {
      "titulo": "Pedidos dispararam",
      "fato": "~100 pedidos/mês na Câmara em ago e set",
      "data": "2026-09-30",
@@ -595,7 +627,7 @@
      "fonte": "Instagram"
     }
    ],
-   "nivel": 50,
+   "nivel": 54,
    "predio": {
     "px": {
      "l": 1261.0,
@@ -627,7 +659,8 @@
     "top": 23.794,
     "width": 11.595,
     "height": 11.842
-   }
+   },
+   "nivel_base": 50
   },
   {
    "id": "gabinete",
@@ -637,7 +670,8 @@
     "camara": 115,
     "noticias": 6,
     "instagram": 5,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 0
    },
    "termometro": {
     "left": 58.191,
@@ -733,7 +767,8 @@
     "top": 17.716,
     "width": 11.989,
     "height": 11.759
-   }
+   },
+   "nivel_base": 46
   },
   {
    "id": "sanepar",
@@ -743,7 +778,8 @@
     "camara": 18,
     "noticias": 5,
     "instagram": 0,
-    "gravidade": 4
+    "gravidade": 4,
+    "notas": 0
    },
    "termometro": {
     "left": 40.491,
@@ -827,7 +863,8 @@
     "top": 10.258,
     "width": 10.753,
     "height": 12.449
-   }
+   },
+   "nivel_base": 40
   },
   {
    "id": "administracao",
@@ -837,7 +874,8 @@
     "camara": 15,
     "noticias": 1,
     "instagram": 1,
-    "gravidade": 3
+    "gravidade": 3,
+    "notas": 2
    },
    "termometro": {
     "left": 47.389,
@@ -865,6 +903,20 @@
    },
    "problemas": [
     {
+     "titulo": "Nota de esclarecimento: consignado de servidores",
+     "fato": "Prefeitura defende o credenciamento de bancos para consignado dos servidores (Edital 002/2025) e nega pressão ou exclusividade.",
+     "data": "2026-10-22",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
+    },
+    {
+     "titulo": "Nota de esclarecimento: vagas do concurso público",
+     "fato": "Administração explica o número de vagas do concurso 001/2026 e vai corrigir o salário dos professores.",
+     "data": "2026-05-14",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
+    },
+    {
      "titulo": "Foz na Palma da Mão fora do ar",
      "fato": "Prejudica contadores e empresas",
      "data": "2026-08-31",
@@ -877,7 +929,7 @@
      "fonte": "Observatório Social"
     }
    ],
-   "nivel": 23,
+   "nivel": 31,
    "predio": {
     "px": {
      "l": 559.9,
@@ -909,7 +961,8 @@
     "top": 31.262,
     "width": 11.271,
     "height": 12.449
-   }
+   },
+   "nivel_base": 23
   },
   {
    "id": "financas",
@@ -919,7 +972,8 @@
     "camara": 28,
     "noticias": 2,
     "instagram": 1,
-    "gravidade": 2
+    "gravidade": 2,
+    "notas": 0
    },
    "termometro": {
     "left": 65.674,
@@ -997,7 +1051,8 @@
     "top": 30.571,
     "width": 11.34,
     "height": 12.532
-   }
+   },
+   "nivel_base": 22
   },
   {
    "id": "copel",
@@ -1007,7 +1062,8 @@
     "camara": 0,
     "noticias": 1,
     "instagram": 2,
-    "gravidade": 2
+    "gravidade": 2,
+    "notas": 0
    },
    "termometro": {
     "left": 22.009,
@@ -1085,7 +1141,8 @@
     "top": 10.599,
     "width": 10.559,
     "height": 12.109
-   }
+   },
+   "nivel_base": 18
   },
   {
    "id": "fozhabita",
@@ -1095,7 +1152,8 @@
     "camara": 24,
     "noticias": 1,
     "instagram": 0,
-    "gravidade": 3
+    "gravidade": 3,
+    "notas": 0
    },
    "termometro": {
     "left": 47.389,
@@ -1173,7 +1231,8 @@
     "top": 44.807,
     "width": 10.166,
     "height": 13.84
-   }
+   },
+   "nivel_base": 18
   },
   {
    "id": "assistencia",
@@ -1183,7 +1242,8 @@
     "camara": 0,
     "noticias": 0,
     "instagram": 2,
-    "gravidade": 2
+    "gravidade": 2,
+    "notas": 0
    },
    "termometro": {
     "left": 93.852,
@@ -1255,7 +1315,8 @@
     "top": 58.61,
     "width": 11.533,
     "height": 12.532
-   }
+   },
+   "nivel_base": 15
   },
   {
    "id": "turismo",
@@ -1265,7 +1326,8 @@
     "camara": 0,
     "noticias": 0,
     "instagram": 1,
-    "gravidade": 1
+    "gravidade": 1,
+    "notas": 0
    },
    "termometro": {
     "left": 87.604,
@@ -1331,7 +1393,8 @@
     "top": 10.866,
     "width": 10.359,
     "height": 12.274
-   }
+   },
+   "nivel_base": 7
   },
   {
    "id": "esporte",
@@ -1341,7 +1404,8 @@
     "camara": 0,
     "noticias": 0,
     "instagram": 0,
-    "gravidade": 0
+    "gravidade": 0,
+    "notas": 0
    },
    "termometro": {
     "left": 79.47,
@@ -1400,7 +1464,8 @@
     "top": 20.755,
     "width": 9.903,
     "height": 11.068
-   }
+   },
+   "nivel_base": 0
   },
   {
    "id": "cultura",
@@ -1410,7 +1475,8 @@
     "camara": 0,
     "noticias": 0,
     "instagram": 0,
-    "gravidade": 0
+    "gravidade": 0,
+    "notas": 0
    },
    "termometro": {
     "left": 64.243,
@@ -1469,7 +1535,8 @@
     "top": 44.807,
     "width": 12.113,
     "height": 11.842
-   }
+   },
+   "nivel_base": 0
   },
   {
    "id": "comunicacao",
@@ -1479,7 +1546,8 @@
     "camara": 0,
     "noticias": 0,
     "instagram": 0,
-    "gravidade": 0
+    "gravidade": 0,
+    "notas": 0
    },
    "termometro": {
     "left": 79.796,
@@ -1538,7 +1606,8 @@
     "top": 44.807,
     "width": 10.49,
     "height": 12.274
-   }
+   },
+   "nivel_base": 0
   }
  ],
  "sprites": {
@@ -1580,5 +1649,42 @@
    0.942725,
    0.429793
   ]
- }
+ },
+ "notas": [
+  {
+   "orgao": "administracao",
+   "data": "2026-10-22",
+   "assunto": "consignado de servidores",
+   "fato": "Prefeitura defende o credenciamento de bancos para consignado dos servidores (Edital 002/2025) e nega pressão ou exclusividade.",
+   "url": "https://www5.pmfi.pr.gov.br/noticia.php?id=54824"
+  },
+  {
+   "orgao": "educacao",
+   "data": "2026-09-30",
+   "assunto": "pagamento parcelado do IDEB",
+   "fato": "Prefeitura explica o prêmio do IDEB pago em parcelas: gasto com pessoal em 53,7% da receita, acima do limite prudencial.",
+   "url": "https://www.foz.pr.gov.br/prefeitura-esclarece-pagamento-parcelado-do-ideb-e-situacao-dos-gastos-com-pessoal/"
+  },
+  {
+   "orgao": "saude",
+   "data": "2026-06-01",
+   "assunto": "ocorrência no Hospital Municipal",
+   "fato": "Hospital Municipal esclarece o corpo encontrado em área técnica da unidade.",
+   "url": " caso apurado pelas autoridades."
+  },
+  {
+   "orgao": "administracao",
+   "data": "2026-05-14",
+   "assunto": "vagas do concurso público",
+   "fato": "Administração explica o número de vagas do concurso 001/2026 e vai corrigir o salário dos professores.",
+   "url": "https://www.foz.pr.gov.br/secretaria-de-administracao-e-recursos-humanos-esclarece-criterios-para-definicao-de-vagas-em-concurso-publico/"
+  },
+  {
+   "orgao": "foztrans",
+   "data": "2026-04-27",
+   "assunto": "contrato do transporte coletivo",
+   "fato": "Prefeitura responde à empresa de ônibus sobre reajuste e o adicional \"dirige e cobra\", em meio à greve.",
+   "url": "https://www.foz.pr.gov.br/prefeitura-garante-reajuste-com-ganho-real-e-esclarece-limites-legais-no-contrato-do-transporte-coletivo/"
+  }
+ ]
 }
