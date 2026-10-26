@@ -1040,7 +1040,7 @@
     "instagram": 0,
     "gravidade": 3,
     "notas": 0,
-    "processos": 5
+    "processos": 6
    },
    "termometro": {
     "left": 53.626,
@@ -1099,6 +1099,13 @@
      "tipo": "processo"
     },
     {
+     "titulo": "Processo 0013229-81.2021: ocupação Resistência 2",
+     "fato": "Área ocupada que precisa de regularização fundiária, ainda sem solução apresentada pela Fozhabita.",
+     "data": "2026-10-26",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
      "titulo": "Invasões: 86% em aberto",
      "fato": "",
      "data": "2026-10-23",
@@ -1117,7 +1124,7 @@
      "fonte": "SAPL"
     }
    ],
-   "nivel": 38,
+   "nivel": 42,
    "predio": {
     "px": {
      "l": 606,
@@ -1560,6 +1567,14 @@
    "data": "2026-09-28",
    "titulo": "Processo 0023782-03.2015: ocupação do Morenitas",
    "fato": "Ação de posse aberta há 11 anos, com audiência de conciliação cancelada em 07/2026 e sem acordo nem sentença."
+  },
+  {
+   "orgaos": [
+    "fozhabita"
+   ],
+   "data": "2026-10-26",
+   "titulo": "Processo 0013229-81.2021: ocupação Resistência 2",
+   "fato": "Área ocupada que precisa de regularização fundiária, ainda sem solução apresentada pela Fozhabita."
   }
  ]
 }
