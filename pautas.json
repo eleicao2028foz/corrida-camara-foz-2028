@@ -121,7 +121,7 @@
    "metricas": {
     "eouve_aberto": 707,
     "camara": 253,
-    "noticias": 6,
+    "noticias": 7,
     "instagram": 10,
     "gravidade": 4,
     "notas": 0,
@@ -183,9 +183,16 @@
      "fato": "Compra não reduziu a fila de buracos",
      "data": "2026-05-27",
      "fonte": "Rádio Cultura / Não Viu"
+    },
+    {
+     "titulo": "Bubas: drenagem parada e famílias sem solução",
+     "fato": "Obra de urbanização (R$ 23,5 mi, 13,55% executada em agosto) com drenagem parada por casas no traçado dos canais; Fozhabita negocia aluguel social ou transferência com MP e TJ, sem prazo. Regularização fundiária de terreno invadido é só \"futura\".",
+     "data": "2026-10-14",
+     "fonte": "Rádio Cultura / SAPL (Req. 720/2026, ofício Fozhabita)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 88,
+   "nivel": 90,
    "predio": {
     "px": {
      "l": 1222,
@@ -210,7 +217,7 @@
     "width": 15.055,
     "height": 13.444
    },
-   "nivel_base": 88
+   "nivel_base": 90
   },
   {
    "id": "foztrans",
@@ -1043,7 +1050,7 @@
    "metricas": {
     "eouve_aberto": 33,
     "camara": 24,
-    "noticias": 1,
+    "noticias": 2,
     "instagram": 0,
     "gravidade": 3,
     "notas": 0,
@@ -1136,9 +1143,16 @@
      "fato": "10 pedidos em setembro",
      "data": "2026-09-30",
      "fonte": "SAPL"
+    },
+    {
+     "titulo": "Bubas: drenagem parada e famílias sem solução",
+     "fato": "Obra de urbanização (R$ 23,5 mi, 13,55% executada em agosto) com drenagem parada por casas no traçado dos canais; Fozhabita negocia aluguel social ou transferência com MP e TJ, sem prazo. Regularização fundiária de terreno invadido é só \"futura\".",
+     "data": "2026-10-14",
+     "fonte": "Rádio Cultura / SAPL (Req. 720/2026, ofício Fozhabita)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 46,
+   "nivel": 48,
    "predio": {
     "px": {
      "l": 606,
@@ -1163,7 +1177,7 @@
     "width": 11.948,
     "height": 12.155
    },
-   "nivel_base": 18
+   "nivel_base": 20
   },
   {
    "id": "assistencia",
