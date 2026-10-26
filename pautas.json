@@ -11,7 +11,7 @@
    "metricas": {
     "eouve_aberto": 301,
     "camara": 543,
-    "noticias": 7,
+    "noticias": 10,
     "instagram": 3,
     "gravidade": 5,
     "notas": 1,
@@ -86,9 +86,30 @@
      "fato": "De 56 em maio para 123 em agosto",
      "data": "2026-10-23",
      "fonte": "SAPL"
+    },
+    {
+     "titulo": "Ofícios sobre estoque e almoxarifado do Hospital Municipal sem resposta",
+     "fato": "Pedidos sobre planejamento de compras, estoque de materiais e medicamentos e almoxarifado do Hospital Municipal aguardam resposta da Secretaria de Saúde.",
+     "data": "2026-08-31",
+     "fonte": "Observatório Social (2º quad. 2026)",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Foz em 242º em saúde no IPDM (117º no geral)",
+     "fato": "Painel do Observatório com a Secretaria de Saúde, 9ª Regional e Câmara: cerca de 450 mil cartões SUS para menos de 300 mil habitantes, desequilíbrio de financiamento e falta de mão de obra especializada.",
+     "data": "2026-09-17",
+     "fonte": "Observatório Social",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "UBS Porto Belo paralisada",
+     "fato": "No mapa Foco na Obra, a UBS (contrato 74/2023, R$ 1,1 mi) está paralisada, com última medição em 31/03/2025.",
+     "data": "2026-10-26",
+     "fonte": "Observatório Social (Foco na Obra)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 81,
+   "nivel": 84,
    "predio": {
     "px": {
      "l": 1256,
@@ -113,7 +134,7 @@
     "width": 9.945,
     "height": 6.538
    },
-   "nivel_base": 77
+   "nivel_base": 80
   },
   {
    "id": "obras",
@@ -121,7 +142,7 @@
    "metricas": {
     "eouve_aberto": 707,
     "camara": 253,
-    "noticias": 7,
+    "noticias": 10,
     "instagram": 10,
     "gravidade": 4,
     "notas": 0,
@@ -190,9 +211,30 @@
      "data": "2026-10-14",
      "fonte": "Rádio Cultura / SAPL (Req. 720/2026, ofício Fozhabita)",
      "tipo": "noticia"
+    },
+    {
+     "titulo": "Pavimentação da Rua Patrulheiro Venanti Otremba: denúncia sem resposta",
+     "fato": "O Município só informou qual contrato cobre a pavimentação; a denúncia do Observatório aguarda manifestação de mérito.",
+     "data": "2026-08-31",
+     "fonte": "Observatório Social (2º quad. 2026)",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Portal da Transparência com falhas para acompanhar obras",
+     "fato": "Após reunião com a Secretaria de Obras, o Observatório enviou ofício sobre instabilidade, falta de documentos e informação incompleta sobre obras e licitações; a Secretaria disse estar migrando de sistema e não há resposta ao ofício.",
+     "data": "2026-05-01",
+     "fonte": "Observatório Social",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Drenagem do Jardim Morenitas II suspensa",
+     "fato": "No mapa Foco na Obra do Observatório, contrato de R$ 3,5 mi aparece como suspenso temporariamente, com 6,05% executado na última medição (08/2025).",
+     "data": "2026-10-26",
+     "fonte": "Observatório Social (Foco na Obra)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 90,
+   "nivel": 93,
    "predio": {
     "px": {
      "l": 1222,
@@ -217,7 +259,7 @@
     "width": 15.055,
     "height": 13.444
    },
-   "nivel_base": 90
+   "nivel_base": 93
   },
   {
    "id": "foztrans",
@@ -225,7 +267,7 @@
    "metricas": {
     "eouve_aberto": 422,
     "camara": 419,
-    "noticias": 6,
+    "noticias": 9,
     "instagram": 9,
     "gravidade": 4,
     "notas": 1,
@@ -294,9 +336,30 @@
      "fato": "Itaipu C e Três Lagoas lideram",
      "data": "2026-10-23",
      "fonte": "SAPL"
+    },
+    {
+     "titulo": "Transporte: custo +16,3% e subsídio +37,7%",
+     "fato": "Estudo do Observatório Social (mar–ago/2026 contra 2025): custo do transporte +16,3%, passageiros +2,9%, aporte da prefeitura +37,7%. A Câmara aprovou em 21/10 mais R$ 12,3 mi de subsídio, em urgência.",
+     "data": "2026-10-22",
+     "fonte": "Observatório Social",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Ofício ao MP sobre irregularidades do transporte (CPI/STF)",
+     "fato": "Observatório Social pediu ao Ministério Público e à Prefeitura providências sobre as irregularidades apontadas pela CPI e pelo STF após a caducidade do contrato. Relatório do 2º quadrimestre não registra resposta.",
+     "data": "2026-08-31",
+     "fonte": "Observatório Social (2º quad. 2026)",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Consultoria do novo modelo: respostas insuficientes",
+     "fato": "Foztrans informou cronograma de 22 meses desde dez/2024 e edital previsto para o 2º semestre de 2026; o Observatório considerou a resposta insuficiente. O contrato atual vence em março de 2027.",
+     "data": "2026-04-30",
+     "fonte": "Observatório Social",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 90,
+   "nivel": 95,
    "predio": {
     "px": {
      "l": 190,
@@ -321,7 +384,7 @@
     "width": 11.188,
     "height": 9.761
    },
-   "nivel_base": 86
+   "nivel_base": 91
   },
   {
    "id": "meio_ambiente",
@@ -517,7 +580,7 @@
    "metricas": {
     "eouve_aberto": 69,
     "camara": 329,
-    "noticias": 3,
+    "noticias": 4,
     "instagram": 2,
     "gravidade": 4,
     "notas": 1,
@@ -574,9 +637,16 @@
      "fato": "Pais denunciam problemas; SMED responde",
      "data": "2026-08-26",
      "fonte": "Instagram"
+    },
+    {
+     "titulo": "Pregão de limpeza das unidades (R$ 31,7 mi) suspenso",
+     "fato": "O Pregão 034/2026 foi suspenso depois de questionamentos de empresas e do Observatório sobre postos de trabalho, valores e critérios, para readequar o termo de referência.",
+     "data": "2026-08-31",
+     "fonte": "Observatório Social (2º quad. 2026)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 54,
+   "nivel": 56,
    "predio": {
     "px": {
      "l": 578,
@@ -601,7 +671,7 @@
     "width": 12.017,
     "height": 9.669
    },
-   "nivel_base": 50
+   "nivel_base": 52
   },
   {
    "id": "gabinete",
@@ -1050,7 +1120,7 @@
    "metricas": {
     "eouve_aberto": 33,
     "camara": 24,
-    "noticias": 2,
+    "noticias": 3,
     "instagram": 0,
     "gravidade": 3,
     "notas": 0,
@@ -1150,9 +1220,16 @@
      "data": "2026-10-14",
      "fonte": "Rádio Cultura / SAPL (Req. 720/2026, ofício Fozhabita)",
      "tipo": "noticia"
+    },
+    {
+     "titulo": "42 unidades habitacionais paralisadas",
+     "fato": "No mapa Foco na Obra, o contrato 168/2023 (R$ 6,96 mi) aparece paralisado, com última medição em 07/11/2025 e prazo original em 17/01/2024.",
+     "data": "2026-10-26",
+     "fonte": "Observatório Social (Foco na Obra)",
+     "tipo": "noticia"
     }
    ],
-   "nivel": 48,
+   "nivel": 51,
    "predio": {
     "px": {
      "l": 606,
@@ -1177,7 +1254,7 @@
     "width": 11.948,
     "height": 12.155
    },
-   "nivel_base": 20
+   "nivel_base": 23
   },
   {
    "id": "assistencia",
