@@ -14,7 +14,8 @@
     "noticias": 7,
     "instagram": 3,
     "gravidade": 5,
-    "notas": 1
+    "notas": 1,
+    "processos": 0
    },
    "termometro": {
     "left": 96.581,
@@ -123,7 +124,8 @@
     "noticias": 6,
     "instagram": 10,
     "gravidade": 4,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 94.164,
@@ -219,7 +221,8 @@
     "noticias": 6,
     "instagram": 9,
     "gravidade": 4,
-    "notas": 1
+    "notas": 1,
+    "processos": 0
    },
    "termometro": {
     "left": 24.206,
@@ -322,7 +325,8 @@
     "noticias": 5,
     "instagram": 7,
     "gravidade": 4,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 70.615,
@@ -418,7 +422,8 @@
     "noticias": 4,
     "instagram": 12,
     "gravidade": 4,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 56.043,
@@ -508,7 +513,8 @@
     "noticias": 3,
     "instagram": 2,
     "gravidade": 4,
-    "notas": 1
+    "notas": 1,
+    "processos": 0
    },
    "termometro": {
     "left": 51.692,
@@ -599,7 +605,8 @@
     "noticias": 6,
     "instagram": 5,
     "gravidade": 4,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 25.932,
@@ -695,7 +702,8 @@
     "noticias": 5,
     "instagram": 0,
     "gravidade": 4,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 95.546,
@@ -779,7 +787,8 @@
     "noticias": 1,
     "instagram": 1,
     "gravidade": 3,
-    "notas": 2
+    "notas": 2,
+    "processos": 1
    },
    "termometro": {
     "left": 51.899,
@@ -802,6 +811,13 @@
     }
    },
    "problemas": [
+    {
+     "titulo": "Processo 0001863-45.2021: ocupação em frente à Unioeste/UNILA",
+     "fato": "Ocupação que começou em área privada e se estendeu para área pública, ainda sem registro oficial; segue em mediação no CEJUSC Fundiário.",
+     "data": "2026-07-08",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
     {
      "titulo": "Nota de esclarecimento: consignado de servidores",
      "fato": "Prefeitura defende o credenciamento de bancos para consignado dos servidores (Edital 002/2025) e nega pressão ou exclusividade.",
@@ -829,7 +845,7 @@
      "fonte": "Observatório Social"
     }
    ],
-   "nivel": 31,
+   "nivel": 35,
    "predio": {
     "px": {
      "l": 640,
@@ -865,7 +881,8 @@
     "noticias": 2,
     "instagram": 1,
     "gravidade": 2,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 28.211,
@@ -943,7 +960,8 @@
     "noticias": 1,
     "instagram": 2,
     "gravidade": 2,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 73.101,
@@ -1021,7 +1039,8 @@
     "noticias": 1,
     "instagram": 0,
     "gravidade": 3,
-    "notas": 0
+    "notas": 0,
+    "processos": 5
    },
    "termometro": {
     "left": 53.626,
@@ -1045,6 +1064,41 @@
    },
    "problemas": [
     {
+     "titulo": "Processo 0024205-26.2016: Arroio Dourado",
+     "fato": "Ocupação em gleba municipal (antigo lixão), cerca de 85 famílias. A Fozhabita deve cumprir o acordo de regularização fundiária (Moradia Legal), sob acompanhamento do Judiciário.",
+     "data": "2026-08-27",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
+     "titulo": "Processo 0001863-45.2021: ocupação em frente à Unioeste/UNILA",
+     "fato": "Ocupação que começou em área privada e se estendeu para área pública, ainda sem registro oficial; segue em mediação no CEJUSC Fundiário.",
+     "data": "2026-07-08",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
+     "titulo": "Processo 0026808-57.2025: ocupação do Jupira",
+     "fato": "Reintegração de posse com conflito coletivo em mediação no CEJUSC Fundiário, com novos desdobramentos a cada mês e sem solução apresentada pela Fozhabita.",
+     "data": "2026-09-22",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
+     "titulo": "Processo 0022485-09.2025: ocupação Lagoa Azul",
+     "fato": "Reintegração de posse com conflito fundiário coletivo; o TJPR suspendeu a reintegração em 2025, a audiência de conciliação foi cancelada e não há solução habitacional definida.",
+     "data": "2026-09-23",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
+     "titulo": "Processo 0023782-03.2015: ocupação do Morenitas",
+     "fato": "Ação de posse aberta há 11 anos, com audiência de conciliação cancelada em 07/2026 e sem acordo nem sentença.",
+     "data": "2026-09-28",
+     "fonte": "Justiça (TJPR)",
+     "tipo": "processo"
+    },
+    {
      "titulo": "Invasões: 86% em aberto",
      "fato": "",
      "data": "2026-10-23",
@@ -1063,7 +1117,7 @@
      "fonte": "SAPL"
     }
    ],
-   "nivel": 18,
+   "nivel": 38,
    "predio": {
     "px": {
      "l": 606,
@@ -1099,7 +1153,8 @@
     "noticias": 0,
     "instagram": 2,
     "gravidade": 2,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 84.841,
@@ -1171,7 +1226,8 @@
     "noticias": 0,
     "instagram": 1,
     "gravidade": 1,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 46.305,
@@ -1237,7 +1293,8 @@
     "noticias": 0,
     "instagram": 0,
     "gravidade": 0,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 74.965,
@@ -1296,7 +1353,8 @@
     "noticias": 0,
     "instagram": 0,
     "gravidade": 0,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 82.148,
@@ -1355,7 +1413,8 @@
     "noticias": 0,
     "instagram": 0,
     "gravidade": 0,
-    "notas": 0
+    "notas": 0,
+    "processos": 0
    },
    "termometro": {
     "left": 28.971,
@@ -1458,6 +1517,49 @@
    "assunto": "contrato do transporte coletivo",
    "fato": "Prefeitura responde à empresa de ônibus sobre reajuste e o adicional \"dirige e cobra\", em meio à greve.",
    "url": "https://www.foz.pr.gov.br/prefeitura-garante-reajuste-com-ganho-real-e-esclarece-limites-legais-no-contrato-do-transporte-coletivo/"
+  }
+ ],
+ "processos": [
+  {
+   "orgaos": [
+    "fozhabita"
+   ],
+   "data": "2026-08-27",
+   "titulo": "Processo 0024205-26.2016: Arroio Dourado",
+   "fato": "Ocupação em gleba municipal (antigo lixão), cerca de 85 famílias. A Fozhabita deve cumprir o acordo de regularização fundiária (Moradia Legal), sob acompanhamento do Judiciário."
+  },
+  {
+   "orgaos": [
+    "fozhabita",
+    "administracao"
+   ],
+   "data": "2026-07-08",
+   "titulo": "Processo 0001863-45.2021: ocupação em frente à Unioeste/UNILA",
+   "fato": "Ocupação que começou em área privada e se estendeu para área pública, ainda sem registro oficial; segue em mediação no CEJUSC Fundiário."
+  },
+  {
+   "orgaos": [
+    "fozhabita"
+   ],
+   "data": "2026-09-22",
+   "titulo": "Processo 0026808-57.2025: ocupação do Jupira",
+   "fato": "Reintegração de posse com conflito coletivo em mediação no CEJUSC Fundiário, com novos desdobramentos a cada mês e sem solução apresentada pela Fozhabita."
+  },
+  {
+   "orgaos": [
+    "fozhabita"
+   ],
+   "data": "2026-09-23",
+   "titulo": "Processo 0022485-09.2025: ocupação Lagoa Azul",
+   "fato": "Reintegração de posse com conflito fundiário coletivo; o TJPR suspendeu a reintegração em 2025, a audiência de conciliação foi cancelada e não há solução habitacional definida."
+  },
+  {
+   "orgaos": [
+    "fozhabita"
+   ],
+   "data": "2026-09-28",
+   "titulo": "Processo 0023782-03.2015: ocupação do Morenitas",
+   "fato": "Ação de posse aberta há 11 anos, com audiência de conciliação cancelada em 07/2026 e sem acordo nem sentença."
   }
  ]
 }
