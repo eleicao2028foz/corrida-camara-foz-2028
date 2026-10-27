@@ -328,6 +328,16 @@
    "positivas": [
     {
      "orgao": "obras",
+     "titulo": "Prefeitura corta quase R$ 90 mil por mês em energia de unidades irregulares",
+     "fato": "Após cruzamento de dados com IA e inspeções, a Prefeitura desligou unidades de energia irregulares e reduziu quase R$ 90 mil por mês nos gastos (R$ 1,08 milhão por ano se mantido).",
+     "data": "2026-10-06",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/10/06/prefeitura-foz-contas-irregulares-energia/",
+     "peso": 2,
+     "obs": "Informado pela Diretoria de Iluminação Pública; lançado em administração por ser economia de gasto interno. A economia acumulada de out/2025 a ago/2026 é de cerca de R$ 135 mil."
+    },
+    {
+     "orgao": "obras",
      "titulo": "Secretaria de Obras recebe caminhão tapa-buracos de R$ 1,4 milhão",
      "fato": "A Secretaria de Obras recebeu um caminhão tapa-buracos (Romanelli TBR-800, R$ 1,445 milhão) que reúne todas as etapas do reparo.",
      "data": "2026-09-05",
@@ -367,7 +377,7 @@
      "obs": "A Secretaria de Obras é citada como fonte. Pode ser lançado também em meio_ambiente (Parque Ambiental)."
     }
    ],
-   "estrelas": 4
+   "estrelas": 5
   },
   {
    "id": "foztrans",
@@ -1208,19 +1218,8 @@
     "bot": 944,
     "bulb": 952
    },
-   "positivas": [
-    {
-     "orgao": "administracao",
-     "titulo": "Prefeitura corta quase R$ 90 mil por mês em energia de unidades irregulares",
-     "fato": "Após cruzamento de dados com IA e inspeções, a Prefeitura desligou unidades de energia irregulares e reduziu quase R$ 90 mil por mês nos gastos (R$ 1,08 milhão por ano se mantido).",
-     "data": "2026-10-06",
-     "fonte": "Rádio Cultura",
-     "url": "https://www.radioculturafoz.com.br/2026/10/06/prefeitura-foz-contas-irregulares-energia/",
-     "peso": 2,
-     "obs": "Informado pela Diretoria de Iluminação Pública; lançado em administração por ser economia de gasto interno. A economia acumulada de out/2025 a ago/2026 é de cerca de R$ 135 mil."
-    }
-   ],
-   "estrelas": 1
+   "positivas": [],
+   "estrelas": 0
   },
   {
    "id": "financas",
@@ -2262,7 +2261,7 @@
    "obs": "Em 04/08 o programa tinha R$ 3 milhões arrecadados em um mês: https://portaltrivox.com.br/p/recuperafoz-arrecada-r-3-milhoes-em-um-mes"
   },
   {
-   "orgao": "administracao",
+   "orgao": "obras",
    "titulo": "Prefeitura corta quase R$ 90 mil por mês em energia de unidades irregulares",
    "fato": "Após cruzamento de dados com IA e inspeções, a Prefeitura desligou unidades de energia irregulares e reduziu quase R$ 90 mil por mês nos gastos (R$ 1,08 milhão por ano se mantido).",
    "data": "2026-10-06",
