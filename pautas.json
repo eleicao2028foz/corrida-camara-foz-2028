@@ -1140,16 +1140,6 @@
    "positivas": [
     {
      "orgao": "gabinete",
-     "titulo": "Foz lidera geração de empregos formais no PR em agosto",
-     "fato": "Foz do Iguaçu liderou a geração de empregos formais no Paraná em agosto.",
-     "data": "2026-10-14",
-     "fonte": "Click Foz",
-     "url": "https://clickfozdoiguacu.com.br/foz-lidera-geracao-empregos-parana-agosto/",
-     "peso": 2,
-     "obs": "Fonte Click Foz, com ressalva."
-    },
-    {
-     "orgao": "gabinete",
      "titulo": "Região de Foz lidera acesso à internet no PR",
      "fato": "A região de Foz do Iguaçu lidera o acesso à internet no Paraná, com 96% conectados, segundo o Ipardes.",
      "data": "2026-10-14",
@@ -1157,38 +1147,9 @@
      "url": "https://www.radioculturafoz.com.br/2026/10/14/regiao-foz-iguacu-lidera-acesso-internet-parana/",
      "peso": 1,
      "obs": "Dado do Ipardes, não é ação direta da Prefeitura."
-    },
-    {
-     "orgao": "gabinete",
-     "titulo": "Agência do Trabalhador: mais de 1,3 mil trabalhadores com novas oportunidades",
-     "fato": "Mais de 1,3 mil trabalhadores conquistaram novas oportunidades pela Agência do Trabalhador.",
-     "data": "2026-08-18",
-     "fonte": "Clube Foz (Agência Municipal de Notícias)",
-     "url": "https://clubefoz.com.br/mais-de-13-mil-trabalhadores-conquistam-novas-oportunidades-por-meio-da-agencia-do-trabalhador-prefeitura-municipal-de-foz-do-iguacu/",
-     "peso": 2,
-     "obs": "Release da Prefeitura, fonte oficial."
-    },
-    {
-     "orgao": "gabinete",
-     "titulo": "Foz conquista Selo Diamante do Sebrae/PR",
-     "fato": "Foz do Iguaçu conquistou pela 1ª vez o Selo Diamante de referência em atendimento do Sebrae/PR.",
-     "data": "2026-06-15",
-     "fonte": "Clube Foz (Agência Municipal de Notícias)",
-     "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-pela-1a-vez-selo-diamante-de-referencia-em-atendimento-do-sebrae-pr-prefeitura-municipal-de-foz-do-iguacu/",
-     "peso": 2,
-     "obs": "Release da Prefeitura, fonte oficial."
-    },
-    {
-     "orgao": "gabinete",
-     "titulo": "Foz sobe em ranking de qualidade de vida",
-     "fato": "Foz do Iguaçu subiu em ranking de qualidade de vida, com os motivos da melhora.",
-     "data": "2026-05-28",
-     "fonte": "Não Viu",
-     "url": "https://www.naoviu.com.br/foz-do-iguacu-sobe-em-ranking-de-qualidade-de-vida-veja-os-motivos-da-melhora/",
-     "peso": 2
     }
    ],
-   "estrelas": 5
+   "estrelas": 1
   },
   {
    "id": "sanepar",
@@ -2677,45 +2638,6 @@
    "url": "https://clubefoz.com.br/projeto-do-fozhabita-e-premiado-na-8a-conferencia-brasileira-de-habitacao-social-e-regularizacao-fundiaria/",
    "peso": 2,
    "obs": "Release da Prefeitura, fonte oficial."
-  },
-  {
-   "orgao": "gabinete",
-   "titulo": "Foz sobe em ranking de qualidade de vida",
-   "fato": "Foz do Iguaçu subiu em ranking de qualidade de vida, com os motivos da melhora.",
-   "data": "2026-05-28",
-   "fonte": "Não Viu",
-   "url": "https://www.naoviu.com.br/foz-do-iguacu-sobe-em-ranking-de-qualidade-de-vida-veja-os-motivos-da-melhora/",
-   "peso": 2
-  },
-  {
-   "orgao": "gabinete",
-   "titulo": "Agência do Trabalhador: mais de 1,3 mil trabalhadores com novas oportunidades",
-   "fato": "Mais de 1,3 mil trabalhadores conquistaram novas oportunidades pela Agência do Trabalhador.",
-   "data": "2026-08-18",
-   "fonte": "Clube Foz (Agência Municipal de Notícias)",
-   "url": "https://clubefoz.com.br/mais-de-13-mil-trabalhadores-conquistam-novas-oportunidades-por-meio-da-agencia-do-trabalhador-prefeitura-municipal-de-foz-do-iguacu/",
-   "peso": 2,
-   "obs": "Release da Prefeitura, fonte oficial."
-  },
-  {
-   "orgao": "gabinete",
-   "titulo": "Foz conquista Selo Diamante do Sebrae/PR",
-   "fato": "Foz do Iguaçu conquistou pela 1ª vez o Selo Diamante de referência em atendimento do Sebrae/PR.",
-   "data": "2026-06-15",
-   "fonte": "Clube Foz (Agência Municipal de Notícias)",
-   "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-pela-1a-vez-selo-diamante-de-referencia-em-atendimento-do-sebrae-pr-prefeitura-municipal-de-foz-do-iguacu/",
-   "peso": 2,
-   "obs": "Release da Prefeitura, fonte oficial."
-  },
-  {
-   "orgao": "gabinete",
-   "titulo": "Foz lidera geração de empregos formais no PR em agosto",
-   "fato": "Foz do Iguaçu liderou a geração de empregos formais no Paraná em agosto.",
-   "data": "2026-10-14",
-   "fonte": "Click Foz",
-   "url": "https://clickfozdoiguacu.com.br/foz-lidera-geracao-empregos-parana-agosto/",
-   "peso": 2,
-   "obs": "Fonte Click Foz, com ressalva."
   },
   {
    "orgao": "gabinete",
