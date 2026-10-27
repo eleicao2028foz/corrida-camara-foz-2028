@@ -194,6 +194,15 @@
     },
     {
      "orgao": "saude",
+     "titulo": "60 mil doses contra a gripe aplicadas",
+     "fato": "Foz aplicou 60.390 doses da vacina contra a gripe, liberada a toda a população desde 29/06.",
+     "data": "2026-08-04",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/prefeitura-intensifica-vacinacao-contra-a-gripe-e-inicia-campanha-para-atualizar-carteiras-de-criancas-e-adolescentes",
+     "peso": 1
+    },
+    {
+     "orgao": "saude",
      "titulo": "Sistema de Foz é premiado no combate à dengue",
      "fato": "O sistema de Foz no combate à dengue foi premiado.",
      "data": "2026-07-20",
@@ -210,6 +219,24 @@
      "url": "https://clubefoz.com.br/saude-de-foz-do-iguacu-e-reconhecida-na-21a-mostra-brasil-aqui-tem-sus-prefeitura-municipal-de-foz-do-iguacu/",
      "peso": 2,
      "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Foz passa a aplicar toxina botulínica no CER IV",
+     "fato": "Pacientes com espasticidade passaram a ser atendidos em Foz, no CER IV, sem precisar ir a outras cidades.",
+     "data": "2026-07-09",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/foz-do-iguacu-amplia-atendimento-especializado-com-novo-centro-para-aplicacao-de-toxina-botulinica",
+     "peso": 2
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Ambulatório de Oftalmologia entra em operação",
+     "fato": "A Prefeitura colocou em funcionamento o novo Ambulatório de Oftalmologia no Centro Integrado de Saúde (Porto Meira), ampliando consultas, exames e cirurgias.",
+     "data": "2026-07-03",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/novo-ambulatorio-de-oftalmologia-amplia-atendimentos-e-reforca-oferta-de-cirurgias-em-foz-do-iguacu",
+     "peso": 2
     },
     {
      "orgao": "saude",
@@ -426,6 +453,15 @@
     },
     {
      "orgao": "obras",
+     "titulo": "Rua Codorna pavimentada após ~30 anos de espera",
+     "fato": "A pavimentação da Rua Codorna foi concluída, com drenagem e renivelamento.",
+     "data": "2026-05-22",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/rua-codorna-recebe-pavimentacao-apos-30-anos-de-espera-em-foz-do-iguacu",
+     "peso": 1
+    },
+    {
+     "orgao": "obras",
      "titulo": "Praça João José da Silva entregue no São Roque",
      "fato": "A praça de esporte e lazer João José da Silva foi oficialmente entregue à comunidade do bairro São Roque.",
      "data": "2026-05-08",
@@ -585,6 +621,15 @@
      "data": "2026-09-29",
      "fonte": "Portal Trivox",
      "url": "https://portaltrivox.com.br/p/foztrans-remove-sete-veiculos-abandonados-na-vila-portes",
+     "peso": 1
+    },
+    {
+     "orgao": "foztrans",
+     "titulo": "~100 escapamentos irregulares destruídos",
+     "fato": "Foztrans e Guarda Municipal destruíram cerca de 100 escapamentos irregulares apreendidos em fiscalizações de ruído.",
+     "data": "2026-08-14",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/foztrans-e-guarda-municipal-destroem-cerca-de-100-escapamentos-irregulares-em-foz",
      "peso": 1
     },
     {
@@ -1794,6 +1839,15 @@
    "positivas": [
     {
      "orgao": "assistencia",
+     "titulo": "Operação Nossa Casa: 30 abordagens, 21 encaminhados",
+     "fato": "Em 15/09, cinco secretarias fizeram 30 abordagens a pessoas em situação de rua e encaminharam 21 às Casas de Passagem.",
+     "data": "2026-09-16",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/seguranca-e-cuidado-social-andam-juntos-em-nova-etapa-da-operacao-nossa-casa-em-foz-do-iguacu",
+     "peso": 1
+    },
+    {
+     "orgao": "assistencia",
      "titulo": "CRAS passam a usar sistema digital (SIAS)",
      "fato": "Os 5 CRAS passaram a usar o SIAS, que elimina formulários em papel e reúne o histórico das famílias.",
      "data": "2026-08-03",
@@ -1801,9 +1855,18 @@
      "url": "https://portaltrivox.com.br/p/cras-adotam-novo-sistema-digital",
      "peso": 2,
      "obs": "Contraponto: demanda reprimida e filas nos CRAS reconhecidas pela Secretaria (Portal da Cidade, 21/08)."
+    },
+    {
+     "orgao": "assistencia",
+     "titulo": "Família Acolhedora já é 33% das vagas de acolhimento",
+     "fato": "O Serviço Família Acolhedora responde por 33% das vagas de acolhimento de crianças e adolescentes em Foz, segundo a Prefeitura.",
+     "data": "2026-07-30",
+     "fonte": "Guarda Volume",
+     "url": "https://www.guardavolume.com/blog/familia-acolhedora-ja-representa-33-das-vagas-de-acolhimento-em-foz-do-iguacu",
+     "peso": 1
     }
    ],
-   "estrelas": 1
+   "estrelas": 2
   },
   {
    "id": "esporte",
@@ -2663,6 +2726,69 @@
    "url": "https://www.radioculturafoz.com.br/2026/10/14/regiao-foz-iguacu-lidera-acesso-internet-parana/",
    "peso": 1,
    "obs": "Dado do Ipardes, não é ação direta da Prefeitura."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Ambulatório de Oftalmologia entra em operação",
+   "fato": "A Prefeitura colocou em funcionamento o novo Ambulatório de Oftalmologia no Centro Integrado de Saúde (Porto Meira), ampliando consultas, exames e cirurgias.",
+   "data": "2026-07-03",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/novo-ambulatorio-de-oftalmologia-amplia-atendimentos-e-reforca-oferta-de-cirurgias-em-foz-do-iguacu",
+   "peso": 2
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Foz passa a aplicar toxina botulínica no CER IV",
+   "fato": "Pacientes com espasticidade passaram a ser atendidos em Foz, no CER IV, sem precisar ir a outras cidades.",
+   "data": "2026-07-09",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/foz-do-iguacu-amplia-atendimento-especializado-com-novo-centro-para-aplicacao-de-toxina-botulinica",
+   "peso": 2
+  },
+  {
+   "orgao": "saude",
+   "titulo": "60 mil doses contra a gripe aplicadas",
+   "fato": "Foz aplicou 60.390 doses da vacina contra a gripe, liberada a toda a população desde 29/06.",
+   "data": "2026-08-04",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/prefeitura-intensifica-vacinacao-contra-a-gripe-e-inicia-campanha-para-atualizar-carteiras-de-criancas-e-adolescentes",
+   "peso": 1
+  },
+  {
+   "orgao": "assistencia",
+   "titulo": "Família Acolhedora já é 33% das vagas de acolhimento",
+   "fato": "O Serviço Família Acolhedora responde por 33% das vagas de acolhimento de crianças e adolescentes em Foz, segundo a Prefeitura.",
+   "data": "2026-07-30",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/familia-acolhedora-ja-representa-33-das-vagas-de-acolhimento-em-foz-do-iguacu",
+   "peso": 1
+  },
+  {
+   "orgao": "assistencia",
+   "titulo": "Operação Nossa Casa: 30 abordagens, 21 encaminhados",
+   "fato": "Em 15/09, cinco secretarias fizeram 30 abordagens a pessoas em situação de rua e encaminharam 21 às Casas de Passagem.",
+   "data": "2026-09-16",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/seguranca-e-cuidado-social-andam-juntos-em-nova-etapa-da-operacao-nossa-casa-em-foz-do-iguacu",
+   "peso": 1
+  },
+  {
+   "orgao": "foztrans",
+   "titulo": "~100 escapamentos irregulares destruídos",
+   "fato": "Foztrans e Guarda Municipal destruíram cerca de 100 escapamentos irregulares apreendidos em fiscalizações de ruído.",
+   "data": "2026-08-14",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/foztrans-e-guarda-municipal-destroem-cerca-de-100-escapamentos-irregulares-em-foz",
+   "peso": 1
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Rua Codorna pavimentada após ~30 anos de espera",
+   "fato": "A pavimentação da Rua Codorna foi concluída, com drenagem e renivelamento.",
+   "data": "2026-05-22",
+   "fonte": "Guarda Volume",
+   "url": "https://www.guardavolume.com/blog/rua-codorna-recebe-pavimentacao-apos-30-anos-de-espera-em-foz-do-iguacu",
+   "peso": 1
   }
  ]
 }
