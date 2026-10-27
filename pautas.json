@@ -9,12 +9,12 @@
    "id": "saude",
    "nome": "Sec. Saúde",
    "metricas": {
-    "eouve_aberto": 301,
-    "camara": 543,
-    "noticias": 10,
+    "eouve_aberto": 299,
+    "camara": 534,
+    "noticias": 6,
     "instagram": 3,
-    "gravidade": 5,
-    "notas": 1,
+    "gravidade": 4,
+    "notas": 0,
     "processos": 0
    },
    "termometro": {
@@ -39,59 +39,52 @@
    },
    "problemas": [
     {
-     "titulo": "Nota de esclarecimento: ocorrência no Hospital Municipal",
-     "fato": "Hospital Municipal esclarece o corpo encontrado em área técnica da unidade.",
-     "data": "2026-06-01",
-     "fonte": "Prefeitura (nota de esclarecimento)",
-     "tipo": "nota"
-    },
-    {
-     "titulo": "Hospital Municipal superlotado",
-     "fato": "128,9% de ocupação, 16 pacientes nos corredores",
-     "data": "2026-10-21",
-     "fonte": "H2FOZ / Rádio Cultura"
-    },
-    {
-     "titulo": "Hospital lotado também em junho",
-     "fato": "125,6%: 275 pacientes para 218 leitos; 62 na fila das UPAs",
-     "data": "2026-06-02",
-     "fonte": "Portal da Cidade / H2FOZ"
-    },
-    {
-     "titulo": "Vaga zero no HM",
-     "fato": "Vaga zero subiu 146% no 1º trimestre",
-     "data": "2026-05-26",
-     "fonte": "H2FOZ"
-    },
-    {
      "titulo": "UBS Porto Belo sem agenda",
      "fato": "Consulta nova só em 2027; falta vaga para preventivo e mamografia",
      "data": "2026-10-20",
-     "fonte": "Instagram"
+     "fonte": "Instagram (paranapop_)",
+     "tipo": "instagram"
+    },
+    {
+     "titulo": "Projeto de nova maternidade (R$ 82 mi): a atual atende 430 partos/mês com capacidade de 280",
+     "fato": "Comentários citam falta de suporte local (paciente levou o filho a Curitiba)",
+     "data": "2026-10-20",
+     "fonte": "Instagram (paranapop_)",
+     "tipo": "instagram"
+    },
+    {
+     "titulo": "Foz vai ganhar nova maternidade e Hospital Modelo de Fronteira",
+     "fato": "Anúncio de novos equipamentos (não é o Hospital Municipal)",
+     "data": "2026-10-20",
+     "fonte": "Instagram (edhqueiroz)",
+     "tipo": "instagram"
+    },
+    {
+     "titulo": "UPAs com 62 pacientes na fila",
+     "fato": "Na mesma matéria da lotação do hospital em junho, 62 pessoas aguardavam nas UPAs",
+     "data": "2026-06-02",
+     "fonte": "Portal da Cidade / H2FOZ",
+     "tipo": "noticia"
     },
     {
      "titulo": "UPA Walter Barbosa sem transparência",
      "fato": "Observatório pediu dados de lotação e não recebeu; estoque de remédios sem resposta",
      "data": "2026-09-30",
-     "fonte": "Observatório Social (2º quad.)"
+     "fonte": "Observatório Social (2º quad.)",
+     "tipo": "noticia"
     },
     {
      "titulo": "CCZ / zoonoses parado",
-     "fato": "68% dos pedidos do CCZ em aberto; Câmara questiona estrutura",
+     "fato": "68% dos pedidos do CCZ em aberto (91 de 134); Câmara questiona estrutura",
      "data": "2026-09-15",
-     "fonte": "eOuve / site da Câmara"
+     "fonte": "eOuve / site da Câmara",
+     "tipo": "noticia"
     },
     {
-     "titulo": "Câmara: 488 pedidos de saúde",
-     "fato": "De 56 em maio para 123 em agosto",
-     "data": "2026-10-23",
-     "fonte": "SAPL"
-    },
-    {
-     "titulo": "Ofícios sobre estoque e almoxarifado do Hospital Municipal sem resposta",
-     "fato": "Pedidos sobre planejamento de compras, estoque de materiais e medicamentos e almoxarifado do Hospital Municipal aguardam resposta da Secretaria de Saúde.",
-     "data": "2026-08-31",
-     "fonte": "Observatório Social (2º quad. 2026)",
+     "titulo": "Câmara: 534 pedidos de saúde e zoonoses (fora o Hospital Municipal)",
+     "fato": "Recontagem 23/04–26/10: saúde 508 + zoonoses 64, sem sobreposição 553, menos 19 do HM = 534. Maio 56, agosto 123.",
+     "data": "2026-10-26",
+     "fonte": "SAPL",
      "tipo": "noticia"
     },
     {
@@ -103,13 +96,13 @@
     },
     {
      "titulo": "UBS Porto Belo paralisada",
-     "fato": "No mapa Foco na Obra, a UBS (contrato 74/2023, R$ 1,1 mi) está paralisada, com última medição em 31/03/2025.",
+     "fato": "No mapa Foco na Obra, a UBS (contrato 74/2023, R$ 1,1 mi) está paralisada, com última medição em 31/03/2025 (status consultado em 26/10/2026).",
      "data": "2026-10-26",
      "fonte": "Observatório Social (Foco na Obra)",
      "tipo": "noticia"
     }
    ],
-   "nivel": 84,
+   "nivel": 70,
    "predio": {
     "px": {
      "l": 1256,
@@ -129,12 +122,18 @@
     }
    },
    "clique": {
-    "left": 86.464,
-    "top": 39.871,
-    "width": 9.945,
-    "height": 6.538
+    "left": 1192,
+    "top": 230,
+    "width": 128,
+    "height": 106
    },
-   "nivel_base": 80
+   "nivel_base": 70,
+   "tubo": {
+    "cx": 225,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "obras",
@@ -254,12 +253,18 @@
     }
    },
    "clique": {
-    "left": 84.116,
-    "top": 54.604,
-    "width": 15.055,
-    "height": 13.444
+    "left": 1264,
+    "top": 604,
+    "width": 104,
+    "height": 107
    },
-   "nivel_base": 93
+   "nivel_base": 93,
+   "tubo": {
+    "cx": 575,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "foztrans",
@@ -379,12 +384,18 @@
     }
    },
    "clique": {
-    "left": 12.845,
-    "top": 61.694,
-    "width": 11.188,
-    "height": 9.761
+    "left": 315,
+    "top": 196,
+    "width": 149,
+    "height": 86
    },
-   "nivel_base": 91
+   "nivel_base": 91,
+   "tubo": {
+    "cx": 840,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "meio_ambiente",
@@ -476,12 +487,18 @@
     }
    },
    "clique": {
-    "left": 61.671,
-    "top": 50.368,
-    "width": 8.978,
-    "height": 9.116
+    "left": 1008,
+    "top": 555,
+    "width": 150,
+    "height": 96
    },
-   "nivel_base": 81
+   "nivel_base": 81,
+   "tubo": {
+    "cx": 482,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "seguranca",
@@ -567,12 +584,18 @@
     }
    },
    "clique": {
-    "left": 45.58,
-    "top": 83.333,
-    "width": 10.428,
-    "height": 10.773
+    "left": 1042,
+    "top": 170,
+    "width": 158,
+    "height": 103
    },
-   "nivel_base": 63
+   "nivel_base": 63,
+   "tubo": {
+    "cx": 1343,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "educacao",
@@ -666,12 +689,18 @@
     }
    },
    "clique": {
-    "left": 39.641,
-    "top": 27.164,
-    "width": 12.017,
-    "height": 9.669
+    "left": 930,
+    "top": 255,
+    "width": 123,
+    "height": 102
    },
-   "nivel_base": 52
+   "nivel_base": 52,
+   "tubo": {
+    "cx": 143,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "gabinete",
@@ -763,12 +792,18 @@
     }
    },
    "clique": {
-    "left": 18.992,
-    "top": 19.797,
-    "width": 6.906,
-    "height": 8.748
+    "left": 712,
+    "top": 452,
+    "width": 138,
+    "height": 106
    },
-   "nivel_base": 46
+   "nivel_base": 46,
+   "tubo": {
+    "cx": 60,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "sanepar",
@@ -848,12 +883,18 @@
     }
    },
    "clique": {
-    "left": 86.05,
-    "top": 22.744,
-    "width": 9.392,
-    "height": 10.773
+    "left": 735,
+    "top": 12,
+    "width": 123,
+    "height": 81
    },
-   "nivel_base": 40
+   "nivel_base": 40,
+   "tubo": {
+    "cx": 1096,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "administracao",
@@ -949,12 +990,18 @@
     }
    },
    "clique": {
-    "left": 43.232,
-    "top": 47.053,
-    "width": 8.633,
-    "height": 8.84
+    "left": 609,
+    "top": 564,
+    "width": 159,
+    "height": 106
    },
-   "nivel_base": 23
+   "nivel_base": 23,
+   "tubo": {
+    "cx": 663,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "financas",
@@ -1028,12 +1075,18 @@
     }
    },
    "clique": {
-    "left": 20.511,
-    "top": 42.818,
-    "width": 7.666,
-    "height": 7.735
+    "left": 1098,
+    "top": 675,
+    "width": 122,
+    "height": 101
    },
-   "nivel_base": 22
+   "nivel_base": 22,
+   "tubo": {
+    "cx": 1255,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "copel",
@@ -1107,12 +1160,18 @@
     }
    },
    "clique": {
-    "left": 65.331,
-    "top": 13.536,
-    "width": 7.528,
-    "height": 10.037
+    "left": 878,
+    "top": 57,
+    "width": 157,
+    "height": 123
    },
-   "nivel_base": 18
+   "nivel_base": 18,
+   "tubo": {
+    "cx": 1171,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "fozhabita",
@@ -1249,12 +1308,18 @@
     }
    },
    "clique": {
-    "left": 41.575,
-    "top": 64.273,
-    "width": 11.948,
-    "height": 12.155
+    "left": 468,
+    "top": 291,
+    "width": 132,
+    "height": 84
    },
-   "nivel_base": 23
+   "nivel_base": 23,
+   "tubo": {
+    "cx": 928,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "assistencia",
@@ -1322,79 +1387,18 @@
     }
    },
    "clique": {
-    "left": 73.757,
-    "top": 83.057,
-    "width": 11.05,
-    "height": 11.05
+    "left": 1320,
+    "top": 363,
+    "width": 174,
+    "height": 90
    },
-   "nivel_base": 15
-  },
-  {
-   "id": "turismo",
-   "nome": "Sec. Turismo",
-   "metricas": {
-    "eouve_aberto": null,
-    "camara": 0,
-    "noticias": 0,
-    "instagram": 1,
-    "gravidade": 1,
-    "notas": 0,
-    "processos": 0
-   },
-   "termometro": {
-    "left": 46.305,
-    "top": 7.505,
-    "width": 0.76,
-    "height": 7.735,
-    "f0": 0.0536,
-    "f100": 0.9226,
-    "numero": {
-     "cx": 48.204,
-     "cy": 8.103,
-     "w": 1.796,
-     "h": 1.197
-    },
-    "px": {
-     "l": 670.5,
-     "r": 681.5,
-     "t": 81.5,
-     "b": 165.5
-    }
-   },
-   "problemas": [
-    {
-     "titulo": "Obras atrapalham turistas",
-     "fato": "",
-     "data": "2026-09-06",
-     "fonte": "Instagram"
-    }
-   ],
-   "nivel": 7,
-   "predio": {
-    "px": {
-     "l": 540,
-     "t": 116,
-     "r": 662,
-     "b": 172
-    },
-    "placa_px": {
-     "l": 570,
-     "t": 84,
-     "r": 665,
-     "b": 118
-    },
-    "frente": {
-     "cx": 41.436,
-     "base": 18.785
-    }
-   },
-   "clique": {
-    "left": 37.017,
-    "top": 7.366,
-    "width": 9.185,
-    "height": 8.84
-   },
-   "nivel_base": 7
+   "nivel_base": 15,
+   "tubo": {
+    "cx": 309,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "esporte",
@@ -1449,12 +1453,18 @@
     }
    },
    "clique": {
-    "left": 62.914,
-    "top": 33.057,
-    "width": 12.017,
-    "height": 12.799
+    "left": 1275,
+    "top": 484,
+    "width": 168,
+    "height": 89
    },
-   "nivel_base": 0
+   "nivel_base": 0,
+   "tubo": {
+    "cx": 393,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
    "id": "cultura",
@@ -1509,72 +1519,118 @@
     }
    },
    "clique": {
-    "left": 72.238,
-    "top": 64.825,
-    "width": 9.738,
-    "height": 11.05
+    "left": 378,
+    "top": 414,
+    "width": 147,
+    "height": 99
    },
-   "nivel_base": 0
+   "nivel_base": 0,
+   "tubo": {
+    "cx": 752,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   },
   {
-   "id": "comunicacao",
-   "nome": "Sec. Comunicação",
+   "id": "hospital",
+   "nome": "Hospital Municipal",
    "metricas": {
     "eouve_aberto": null,
-    "camara": 0,
-    "noticias": 0,
+    "camara": 19,
+    "noticias": 10,
     "instagram": 0,
-    "gravidade": 0,
-    "notas": 0,
+    "gravidade": 5,
+    "notas": 1,
     "processos": 0
    },
-   "termometro": {
-    "left": 28.971,
-    "top": 82.09,
-    "width": 0.76,
-    "height": 7.274,
-    "f0": 0.0696,
-    "f100": 0.9177,
-    "numero": {
-     "cx": 30.87,
-     "cy": 82.689,
-     "w": 1.796,
-     "h": 1.197
+   "problemas": [
+    {
+     "titulo": "Nota de esclarecimento: ocorrência no Hospital Municipal",
+     "fato": "Hospital Municipal esclarece o corpo encontrado em área técnica da unidade.",
+     "data": "2026-06-01",
+     "fonte": "Prefeitura (nota de esclarecimento)",
+     "tipo": "nota"
     },
-    "px": {
-     "l": 419.5,
-     "r": 430.5,
-     "t": 891.5,
-     "b": 970.5
+    {
+     "titulo": "Hospital Municipal superlotado",
+     "fato": "128,9% de ocupação, 16 pacientes nos corredores (22 alertas de superlotação no ano, segundo o gdia de 22/10)",
+     "data": "2026-10-21",
+     "fonte": "H2FOZ / Rádio Cultura"
+    },
+    {
+     "titulo": "Hospital lotado também em junho",
+     "fato": "125,6%: 275 pacientes para 218 leitos",
+     "data": "2026-06-02",
+     "fonte": "Portal da Cidade / H2FOZ"
+    },
+    {
+     "titulo": "Vaga zero no HM",
+     "fato": "Vaga zero subiu 146% no 1º trimestre",
+     "data": "2026-05-26",
+     "fonte": "H2FOZ"
+    },
+    {
+     "titulo": "Ofícios sobre estoque e almoxarifado do Hospital Municipal sem resposta",
+     "fato": "Pedidos sobre planejamento de compras, estoque de materiais e medicamentos e almoxarifado do Hospital Municipal aguardam resposta da Secretaria de Saúde.",
+     "data": "2026-08-31",
+     "fonte": "Observatório Social (2º quad. 2026)",
+     "tipo": "noticia"
+    },
+    {
+     "titulo": "Superlotação do Hospital Municipal preocupa comissão da Câmara",
+     "fato": "Comissão de Saúde da Câmara emite nota sobre a superlotação do Hospital Municipal.",
+     "data": "2026-06-09",
+     "fonte": "Portal Trivox",
+     "tipo": "noticia",
+     "extra": true
+    },
+    {
+     "titulo": "Comissão de Saúde cobra plano para reduzir superlotação no Hospital Municipal",
+     "fato": "Em reunião de 24/07, vereadores pedem à Secretaria de Saúde um plano de ação contra a superlotação.",
+     "data": "2026-07-28",
+     "fonte": "H2FOZ",
+     "tipo": "noticia",
+     "extra": true
+    },
+    {
+     "titulo": "Comida nas UPAs e no Hospital Municipal é questionada na Câmara",
+     "fato": "Requerimento do vereador Bosco Foz sobre o fornecimento de alimentação nas UPAs e no Hospital Municipal (Req. 688/2026, 10/08).",
+     "data": "2026-08-12",
+     "fonte": "H2FOZ",
+     "tipo": "noticia",
+     "extra": true
+    },
+    {
+     "titulo": "Superlotação do Itamed leva pacientes às UPAs e ao Hospital Municipal",
+     "fato": "Atendimento reduzido no pronto-socorro do Itamed empurra pacientes de Foz para as UPAs e para o Hospital Municipal.",
+     "data": "2026-08-19",
+     "fonte": "H2FOZ",
+     "tipo": "noticia",
+     "extra": true
+    },
+    {
+     "titulo": "Câmara: 19 pedidos sobre o Hospital Municipal",
+     "fato": "19 requerimentos/indicações citam o Hospital Municipal/HMPGL ou o Pronto-Socorro Municipal (óbito nas dependências, corpo em área técnica, superlotação, estrutura, convenção coletiva, macas, alimentação, direitos do paciente); o primeiro é de 13/05 e o último de 08/09.",
+     "data": "2026-10-26",
+     "fonte": "SAPL (recontagem 23/04–26/10)",
+     "tipo": "noticia"
     }
-   },
-   "problemas": [],
-   "nivel": 0,
-   "predio": {
-    "px": {
-     "l": 270,
-     "t": 918,
-     "r": 398,
-     "b": 996
-    },
-    "placa_px": {
-     "l": 296,
-     "t": 876,
-     "r": 411,
-     "b": 909
-    },
-    "frente": {
-     "cx": 22.445,
-     "base": 94.659
-    }
-   },
+   ],
+   "nivel_base": 55,
+   "nivel": 59,
    "clique": {
-    "left": 18.37,
-    "top": 80.295,
-    "width": 10.29,
-    "height": 11.786
+    "left": 502,
+    "top": 75,
+    "width": 203,
+    "height": 83
    },
-   "nivel_base": 0
+   "tubo": {
+    "cx": 1016,
+    "top": 886,
+    "bot": 944,
+    "bulb": 952
+   }
   }
  ],
  "sprites": {
@@ -1590,9 +1646,9 @@
   }
  },
  "mapa": {
-  "src": "mapa-foz-v3.webp",
-  "w": 1448,
-  "h": 1086
+  "src": "mapa-foz-v4.webp",
+  "w": 1536,
+  "h": 1024
  },
  "notas": [
   {
@@ -1610,7 +1666,7 @@
    "url": "https://www.foz.pr.gov.br/prefeitura-esclarece-pagamento-parcelado-do-ideb-e-situacao-dos-gastos-com-pessoal/"
   },
   {
-   "orgao": "saude",
+   "orgao": "hospital",
    "data": "2026-06-01",
    "assunto": "ocorrência no Hospital Municipal",
    "fato": "Hospital Municipal esclarece o corpo encontrado em área técnica da unidade.",
