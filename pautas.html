@@ -40,7 +40,7 @@ P.orgaos.forEach(o=>{const t=o.tubo,n=o.nivel;
  e.innerHTML='<div class="tube" style="height:'+(t.bot-t.top+8)+'px"><div class="fill"></div></div><div class="bulb" style="top:'+(t.bulb-13-t.top)+'px"></div>';
  mi.appendChild(e);const f=e.querySelector('.fill');setTimeout(()=>f.style.height=(n/100*(t.bot-t.top+4))+'px',300);
  const l=document.createElement('div');l.className='pct';l.style.cssText=`left:${t.cx}px;top:${t.bulb+19}px`;l.textContent=n+'%';mi.appendChild(l);
- const sr=document.createElement('div');sr.className='stars';sr.style.cssText=`left:${o.clique.left-2}px;top:${o.clique.top+o.clique.height/2}px`;sr.innerHTML=[0,1,2,3,4].map(k=>'<i class="'+(k<o.estrelas?'':'off')+'">★</i>').join('');mi.appendChild(sr);;
+ const sr=document.createElement('div');sr.className='stars';sr.style.cssText=`left:${o.clique.left-2}px;top:${o.clique.top+o.clique.height/2+(o.id=='seguranca'?-48:0)}px`;sr.innerHTML=[0,1,2,3,4].map(k=>'<i class="'+(k<o.estrelas?'':'off')+'">★</i>').join('');mi.appendChild(sr);;
  const z=document.createElement('div');z.className='hot';z.title=o.nome;z.style.cssText=`left:${o.clique.left}px;top:${o.clique.top}px;width:${o.clique.width}px;height:${o.clique.height}px`;mi.appendChild(z);
  const z2=document.createElement('div');z2.className='hot';z2.title=o.nome;z2.style.cssText=`left:${t.cx-26}px;top:${t.top-4}px;width:52px;height:${t.bulb+36-t.top}px`;mi.appendChild(z2);
  [z,z2,e].forEach(n=>n.addEventListener('click',ev=>{if(moved)return;show(o)}));});
