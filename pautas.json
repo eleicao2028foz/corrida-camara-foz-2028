@@ -133,7 +133,67 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "saude",
+     "titulo": "Projeto do CCZ é reconhecido no Prêmio Gestor Público Paraná",
+     "fato": "O Sistema VAP, do CCZ, ficou entre os 38 projetos reconhecidos entre 177 inscritos no Prêmio Gestor Público Paraná.",
+     "data": "2026-10-15",
+     "fonte": "H2FOZ",
+     "url": "https://www.h2foz.com.br/saude/foz-do-iguacu-ccz-reconhecimento-estadual/",
+     "peso": 1,
+     "obs": "A cerimônia de entrega será em 10/11; o reconhecimento já foi divulgado."
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Dengue cai 86,6% no 2º quadrimestre",
+     "fato": "Foram 28 casos confirmados de dengue em maio–agosto de 2026, contra 209 no mesmo período de 2025 (−86,6%), sem mortes.",
+     "data": "2026-09-21",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foz-reduz-casos-de-dengue-e-amplia-atendimentos",
+     "peso": 3,
+     "obs": "No mesmo relatório: exames especializados 38.903 vs 23.927 e faltas a consultas/exames de 13% para 10%. A Saúde atribui a queda a vistorias e à 2ª fase da Wolbachia (a fase seguiu em andamento)."
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Saúde aplica R$ 212 milhões, 27% da receita, acima do piso de 15%",
+     "fato": "A Prefeitura aplicou R$ 212,3 milhões próprios em saúde até agosto, 27% da receita-base, contra o mínimo constitucional de 15%.",
+     "data": "2026-09-21",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/09/21/saude-foz-27-receita-minimo-constitucional/",
+     "peso": 1
+    },
+    {
+     "orgao": "saude",
+     "titulo": "UPAs recebem 60 cadeiras novas de soroterapia",
+     "fato": "As UPAs João Samek e Walter Cavalcante Barbosa receberam 30 cadeiras novas cada, num investimento de R$ 49,2 mil.",
+     "data": "2026-08-07",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/upas-de-foz-recebem-60-novas-cadeiras-de-soroterapia",
+     "peso": 1
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Receitas de pacientes crônicos já podem ser renovadas pelo aplicativo",
+     "fato": "Pacientes crônicos da rede municipal já podem renovar receitas pelo aplicativo da Prefeitura (Lei 5.669/2026), com receita digital válida por 12 meses.",
+     "data": "2026-08-05",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/receitas-para-pacientes-cronicos-viram-digitais",
+     "peso": 1
+    },
+    {
+     "orgao": "saude",
+     "titulo": "CEM recebe 4 aparelhos cardiológicos novos",
+     "fato": "O Centro de Especialidades Médicas recebeu 4 aparelhos de eletrocardiograma comprados com emenda parlamentar.",
+     "data": "2026-05-18",
+     "fonte": "Não Viu",
+     "url": "https://www.naoviu.com.br/fila-de-4-mil-exames-cem-de-foz-recebe-novos-aparelhos-e-promete-dobrar-atendimentos/",
+     "peso": 1,
+     "obs": "A meta de dobrar os exames (800 para 1.500 por mês) é expectativa, não resultado. A fila é de cerca de 4 mil pacientes."
+    }
+   ],
+   "estrelas": 4
   },
   {
    "id": "obras",
@@ -264,7 +324,50 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "obras",
+     "titulo": "Secretaria de Obras recebe caminhão tapa-buracos de R$ 1,4 milhão",
+     "fato": "A Secretaria de Obras recebeu um caminhão tapa-buracos (Romanelli TBR-800, R$ 1,445 milhão) que reúne todas as etapas do reparo.",
+     "data": "2026-09-05",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/09/05/operacao-tapa-buracos-em-foz-do-iguacu-ganha-novo-caminhao-de-r-14-milhao/",
+     "peso": 1,
+     "obs": "Equipamento recebido; o início da operação estava previsto para cerca de 15 dias depois."
+    },
+    {
+     "orgao": "obras",
+     "titulo": "LED concluído em mais 5 bairros",
+     "fato": "A concessionária IP Foz concluiu a troca por LED na Vila C Nova, Vila C Velha, Jardim Universitário, Vila Portes e Jardim Jupira, além da Av. Maria Bubiak.",
+     "data": "2026-08-04",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/mais-bairros-recebem-iluminacao-em-led",
+     "peso": 2,
+     "obs": "Órgão incerto: a obra é da concessionária IP Foz, com a Diretoria de Iluminação Pública (mapeada em obras). Em 06/09, 22.135 de 43.580 pontos já eram LED (Trivox)."
+    },
+    {
+     "orgao": "obras",
+     "titulo": "Avenida JK revitalizada e entregue",
+     "fato": "A Prefeitura entregou a revitalização da Av. JK, com drenagem, recapeamento, ciclovia, calçadas, iluminação e 2 pontos de ônibus climatizados, pagos por Itaipu (R$ 25 milhões segundo H2FOZ; R$ 26 milhões segundo outros veículos).",
+     "data": "2026-06-02",
+     "fonte": "H2FOZ",
+     "url": "https://www.h2foz.com.br/itaipu/nova-jk-itaipu-entrega-revitalizacao-de-uma-das-principais-vias-de-foz-do-iguacu/",
+     "peso": 3,
+     "obs": "Obra com prazo original vencido em 21/05/2025 (Observatório Social); a entrega em si é fato. Sem piso tátil, segundo o H2FOZ."
+    },
+    {
+     "orgao": "obras",
+     "titulo": "Parque Remador revitalizado",
+     "fato": "A Prefeitura entregou a revitalização do Parque Ambiental Omar de Oliveira (Porto Meira), com pista de skate, caminhada, quiosques, iluminação e câmeras (R$ 2,6 milhões).",
+     "data": "2026-05-26",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/05/27/parque-remador-e-revitalizado-e-ganha-nova-estrutura-de-lazer-no-porto-meira/",
+     "peso": 2,
+     "obs": "A Secretaria de Obras é citada como fonte. Pode ser lançado também em meio_ambiente (Parque Ambiental)."
+    }
+   ],
+   "estrelas": 4
   },
   {
    "id": "foztrans",
@@ -395,7 +498,29 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "foztrans",
+     "titulo": "Foztrans instala 18 dos 28 abrigos de ônibus com conforto térmico",
+     "fato": "O Foztrans concluiu a instalação de 18 dos 28 abrigos cedidos pela AMEP, sem custo para a Prefeitura.",
+     "data": "2026-10-25",
+     "fonte": "Guia 3 (cita G1)",
+     "url": "https://www.guia3.com/noticia/foztrans-instala-18-novos-abrigos-de-onibus-em-foz-do-iguacu",
+     "peso": 1,
+     "obs": "Parcial: 10 abrigos restam. O equipamento é do Governo do Estado (AMEP)."
+    },
+    {
+     "orgao": "foztrans",
+     "titulo": "Foztrans remove 7 veículos abandonados na Vila Portes",
+     "fato": "Agentes do Foztrans removeram 7 veículos abandonados na Vila Portes após pedido registrado no eOuve.",
+     "data": "2026-09-29",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foztrans-remove-sete-veiculos-abandonados-na-vila-portes",
+     "peso": 1
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "meio_ambiente",
@@ -498,7 +623,39 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "meio_ambiente",
+     "titulo": "Cerca de 3 mil toneladas de descarte irregular recolhidas em 15 mutirões",
+     "fato": "Em seis meses, 15 mutirões nas 5 regiões recolheram quase 3 mil toneladas de entulho, galhos e móveis descartados em áreas públicas.",
+     "data": "2026-10-05",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foz-recolhe-quase-3-mil-toneladas-de-descarte-irregular-em-seis-meses",
+     "peso": 2,
+     "obs": "A matéria do Trivox traz crítica de que o descarte irregular segue grande. Origem do dado: Prefeitura, também em https://clubefoz.com.br/prefeitura-recolhe-quase-3-mil-toneladas-de-descarte-irregular-em-seis-meses-prefeitura-municipal-de-foz-do-iguacu/"
+    },
+    {
+     "orgao": "meio_ambiente",
+     "titulo": "Foz chega a 5 mil castrações gratuitas",
+     "fato": "O município e o Governo do Paraná fizeram 5 mil castrações gratuitas de cães e gatos desde outubro de 2025.",
+     "data": "2026-09-08",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foz-chega-a-5-mil-castracoes-gratuitas",
+     "peso": 2,
+     "obs": "Os 7,6 mil novos procedimentos citados na matéria são futuros e ficaram de fora. O H2FOZ (15/05) publicou crítica sobre contratos de castração."
+    },
+    {
+     "orgao": "meio_ambiente",
+     "titulo": "84,5 toneladas de ração distribuídas a protetores em 2026",
+     "fato": "A Diretoria de Bem-Estar Animal recebeu 30 t de ração para 85 protetores e 6 ONGs; em 2026 o total chega a 84,5 t.",
+     "data": "2026-07-15",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foz-recebe-mais-30-toneladas-de-racao-para-protetores-e-ongs-cadastrados",
+     "peso": 1
+    }
+   ],
+   "estrelas": 3
   },
   {
    "id": "seguranca",
@@ -595,7 +752,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "seguranca",
+     "titulo": "Guarda Municipal: 313 flagrantes e 506 kg de drogas apreendidas até 29/05",
+     "fato": "No balanço de 01/01 a 29/05/2026, a Guarda Municipal prendeu 313 pessoas em flagrante, cumpriu 49 mandados, recuperou 43 veículos e apreendeu 506 kg de drogas.",
+     "data": "2026-06-19",
+     "fonte": "Almanaque Futuro (suplemento com dados da Comunicação da Prefeitura)",
+     "url": "https://almanaquefuturo.com.br/foz-112-anos/resultados-nas-ruas-eficiencia-operacional-e-o-compromisso-socioambiental/",
+     "peso": 1,
+     "obs": "Dado da própria Prefeitura, em veículo suplementar e sem checagem independente."
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "educacao",
@@ -700,7 +870,39 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "educacao",
+     "titulo": "Rede municipal tem a maior nota do IDEB da história: 7,7",
+     "fato": "A rede municipal alcançou 7,7 nos anos iniciais (7,4 em 2023), 1º lugar no Paraná entre cidades com mais de 150 mil habitantes, segundo o MEC.",
+     "data": "2026-08-05",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/educacao-de-foz-lidera-ideb-no-parana",
+     "peso": 3
+    },
+    {
+     "orgao": "educacao",
+     "titulo": "Nova sede da Escola Cândido Portinari inaugurada",
+     "fato": "A Prefeitura inaugurou oficialmente a nova sede da Escola Municipal Cândido Portinari (Jardim Petrópolis), 40 anos depois.",
+     "data": "2026-05-28",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/05/28/depois-de-40-anos-nova-sede-da-escola-candido-portinari-e-inaugurada/",
+     "peso": 2,
+     "obs": "Alunos já usavam o prédio desde fev/2026; a cerimônia oficial foi em 28/05."
+    },
+    {
+     "orgao": "educacao",
+     "titulo": "CMEI Carlos Gauto recebe mobiliário planejado",
+     "fato": "O CMEI Carlos Gauto recebeu móveis planejados com recursos de emenda parlamentar, e a diretora relata ambientes mais organizados.",
+     "data": "2026-05-15",
+     "fonte": "Diário de Foz",
+     "url": "https://diariodefoz.com/cmei-carlos-gauto-passa-por-melhorias-foz/",
+     "peso": 1,
+     "obs": "Recurso de emenda da Câmara."
+    }
+   ],
+   "estrelas": 3
   },
   {
    "id": "gabinete",
@@ -803,7 +1005,9 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [],
+   "estrelas": 0
   },
   {
    "id": "sanepar",
@@ -894,7 +1098,9 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [],
+   "estrelas": 0
   },
   {
    "id": "administracao",
@@ -1001,7 +1207,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "administracao",
+     "titulo": "Prefeitura corta quase R$ 90 mil por mês em energia de unidades irregulares",
+     "fato": "Após cruzamento de dados com IA e inspeções, a Prefeitura desligou unidades de energia irregulares e reduziu quase R$ 90 mil por mês nos gastos (R$ 1,08 milhão por ano se mantido).",
+     "data": "2026-10-06",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/10/06/prefeitura-foz-contas-irregulares-energia/",
+     "peso": 2,
+     "obs": "Informado pela Diretoria de Iluminação Pública; lançado em administração por ser economia de gasto interno. A economia acumulada de out/2025 a ago/2026 é de cerca de R$ 135 mil."
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "financas",
@@ -1086,7 +1305,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "financas",
+     "titulo": "RecuperaFoz fecha 1.560 acordos somando R$ 5,6 milhões",
+     "fato": "Desde 15/07, o RecuperaFoz fechou 1.560 acordos de parcelamento (R$ 5,61 milhões), dos quais R$ 4,58 milhões já foram pagos.",
+     "data": "2026-08-21",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/recuperafoz-soma-r-56-milhoes-em-acordos",
+     "peso": 2,
+     "obs": "Em 04/08 o programa tinha R$ 3 milhões arrecadados em um mês: https://portaltrivox.com.br/p/recuperafoz-arrecada-r-3-milhoes-em-um-mes"
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "copel",
@@ -1171,7 +1403,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "copel",
+     "titulo": "Copel diz ter reduzido em 30% as interrupções no 1º semestre",
+     "fato": "Segundo a Copel, as interrupções de energia em Foz caíram 30% no 1º semestre de 2026 em relação a 2025.",
+     "data": "2026-07-17",
+     "fonte": "H2FOZ",
+     "url": "https://www.h2foz.com.br/cidade/copel-queda-de-energia-foz-do-iguacu/",
+     "peso": 1,
+     "obs": "Dado autodeclarado pela Copel, apresentado em audiência na Câmara em meio a reclamações de moradores; sem checagem independente."
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "fozhabita",
@@ -1319,7 +1564,19 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "fozhabita",
+     "titulo": "60 famílias recebem casas no César Cabral",
+     "fato": "O Fozhabita, com Itaipu e Itaipu Parquetec, entregou oficialmente 60 moradias do Loteamento César Cabral (2º lote do Projeto Moradias), que chega a 112 unidades entregues.",
+     "data": "2026-06-30",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/06/30/entrega-de-60-casas-populares-beneficia-familias-e-amplia-projeto-habitacional/",
+     "peso": 3
+    }
+   ],
+   "estrelas": 2
   },
   {
    "id": "assistencia",
@@ -1398,7 +1655,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "assistencia",
+     "titulo": "CRAS passam a usar sistema digital (SIAS)",
+     "fato": "Os 5 CRAS passaram a usar o SIAS, que elimina formulários em papel e reúne o histórico das famílias.",
+     "data": "2026-08-03",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/cras-adotam-novo-sistema-digital",
+     "peso": 2,
+     "obs": "Contraponto: demanda reprimida e filas nos CRAS reconhecidas pela Secretaria (Portal da Cidade, 21/08)."
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "esporte",
@@ -1464,7 +1734,30 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "esporte",
+     "titulo": "Atletas de Foz somam 6 medalhas nos Jogos da Juventude Caixa",
+     "fato": "No 1º bloco dos Jogos da Juventude Caixa, atletas de Foz ganharam 6 medalhas, incluindo o ouro de Nicolas Izidoro no salto triplo.",
+     "data": "2026-10-22",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/atletas-de-foz-do-iguacu-conquistam-seis-medalhas-nos-jogos-da-juventude-caixa-2026-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 1,
+     "obs": "Parcial: ainda faltavam 2 blocos de provas."
+    },
+    {
+     "orgao": "esporte",
+     "titulo": "Foz fica em 3º lugar geral nos Jogos da Juventude do Paraná",
+     "fato": "A delegação da SMEL (210 atletas, 13 modalidades) fez 324 pontos e teve a melhor colocação da história no JOJUP, com ouro em tênis de mesa feminino e basquete feminino e masculino sub-17.",
+     "data": "2026-10-17",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-o-3o-lugar-geral-no-38o-jogos-da-juventude-do-parana-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "A competição terminou em 17/10; a matéria é de 19/10."
+    }
+   ],
+   "estrelas": 2
   },
   {
    "id": "cultura",
@@ -1530,7 +1823,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "cultura",
+     "titulo": "21ª Feira do Livro reúne cerca de 35 mil pessoas",
+     "fato": "A Feira Internacional do Livro, da Fundação Cultural, teve mais de 80 atividades gratuitas e cerca de 35 mil visitantes em 4 dias.",
+     "data": "2026-09-06",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/cerca-de-35-mil-pessoas-prestigiam-a-21a-feira-internacional-do-livro-em-foz-do-iguacu-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Número de público divulgado pela Prefeitura."
+    }
+   ],
+   "estrelas": 1
   },
   {
    "id": "hospital",
@@ -1630,7 +1936,20 @@
     "top": 886,
     "bot": 944,
     "bulb": 952
-   }
+   },
+   "positivas": [
+    {
+     "orgao": "hospital",
+     "titulo": "Hospital Municipal recebe novo Arco em C cirúrgico",
+     "fato": "O Hospital Municipal Padre Germano Lauck recebeu um novo arco cirúrgico de R$ 730 mil e passou a ter 4 aparelhos.",
+     "data": "2026-05-18",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/hmpgl-recebe-novo-arco-em-c-para-reforcar-cirurgias-e-atendimentos-a-populacao-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Emenda de vereadores."
+    }
+   ],
+   "estrelas": 1
   }
  ],
  "sprites": {
@@ -1745,6 +2064,281 @@
    "data": "2025-03-24",
    "titulo": "Processo 0017326-52.2006: área do Tertuliano",
    "fato": "A Justiça deu ao Município (autor da ação) 90 dias para elaborar o plano de realocação das famílias (Resolução 510/2023 do CNJ e ADPF 828). Segundo o acompanhamento, nenhum plano foi apresentado até agora."
+  }
+ ],
+ "positivas": [
+  {
+   "orgao": "educacao",
+   "titulo": "Rede municipal tem a maior nota do IDEB da história: 7,7",
+   "fato": "A rede municipal alcançou 7,7 nos anos iniciais (7,4 em 2023), 1º lugar no Paraná entre cidades com mais de 150 mil habitantes, segundo o MEC.",
+   "data": "2026-08-05",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/educacao-de-foz-lidera-ideb-no-parana",
+   "peso": 3
+  },
+  {
+   "orgao": "educacao",
+   "titulo": "Nova sede da Escola Cândido Portinari inaugurada",
+   "fato": "A Prefeitura inaugurou oficialmente a nova sede da Escola Municipal Cândido Portinari (Jardim Petrópolis), 40 anos depois.",
+   "data": "2026-05-28",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/05/28/depois-de-40-anos-nova-sede-da-escola-candido-portinari-e-inaugurada/",
+   "peso": 2,
+   "obs": "Alunos já usavam o prédio desde fev/2026; a cerimônia oficial foi em 28/05."
+  },
+  {
+   "orgao": "educacao",
+   "titulo": "CMEI Carlos Gauto recebe mobiliário planejado",
+   "fato": "O CMEI Carlos Gauto recebeu móveis planejados com recursos de emenda parlamentar, e a diretora relata ambientes mais organizados.",
+   "data": "2026-05-15",
+   "fonte": "Diário de Foz",
+   "url": "https://diariodefoz.com/cmei-carlos-gauto-passa-por-melhorias-foz/",
+   "peso": 1,
+   "obs": "Recurso de emenda da Câmara."
+  },
+  {
+   "orgao": "fozhabita",
+   "titulo": "60 famílias recebem casas no César Cabral",
+   "fato": "O Fozhabita, com Itaipu e Itaipu Parquetec, entregou oficialmente 60 moradias do Loteamento César Cabral (2º lote do Projeto Moradias), que chega a 112 unidades entregues.",
+   "data": "2026-06-30",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/06/30/entrega-de-60-casas-populares-beneficia-familias-e-amplia-projeto-habitacional/",
+   "peso": 3
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Dengue cai 86,6% no 2º quadrimestre",
+   "fato": "Foram 28 casos confirmados de dengue em maio–agosto de 2026, contra 209 no mesmo período de 2025 (−86,6%), sem mortes.",
+   "data": "2026-09-21",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foz-reduz-casos-de-dengue-e-amplia-atendimentos",
+   "peso": 3,
+   "obs": "No mesmo relatório: exames especializados 38.903 vs 23.927 e faltas a consultas/exames de 13% para 10%. A Saúde atribui a queda a vistorias e à 2ª fase da Wolbachia (a fase seguiu em andamento)."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Saúde aplica R$ 212 milhões, 27% da receita, acima do piso de 15%",
+   "fato": "A Prefeitura aplicou R$ 212,3 milhões próprios em saúde até agosto, 27% da receita-base, contra o mínimo constitucional de 15%.",
+   "data": "2026-09-21",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/09/21/saude-foz-27-receita-minimo-constitucional/",
+   "peso": 1
+  },
+  {
+   "orgao": "saude",
+   "titulo": "CEM recebe 4 aparelhos cardiológicos novos",
+   "fato": "O Centro de Especialidades Médicas recebeu 4 aparelhos de eletrocardiograma comprados com emenda parlamentar.",
+   "data": "2026-05-18",
+   "fonte": "Não Viu",
+   "url": "https://www.naoviu.com.br/fila-de-4-mil-exames-cem-de-foz-recebe-novos-aparelhos-e-promete-dobrar-atendimentos/",
+   "peso": 1,
+   "obs": "A meta de dobrar os exames (800 para 1.500 por mês) é expectativa, não resultado. A fila é de cerca de 4 mil pacientes."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "UPAs recebem 60 cadeiras novas de soroterapia",
+   "fato": "As UPAs João Samek e Walter Cavalcante Barbosa receberam 30 cadeiras novas cada, num investimento de R$ 49,2 mil.",
+   "data": "2026-08-07",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/upas-de-foz-recebem-60-novas-cadeiras-de-soroterapia",
+   "peso": 1
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Receitas de pacientes crônicos já podem ser renovadas pelo aplicativo",
+   "fato": "Pacientes crônicos da rede municipal já podem renovar receitas pelo aplicativo da Prefeitura (Lei 5.669/2026), com receita digital válida por 12 meses.",
+   "data": "2026-08-05",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/receitas-para-pacientes-cronicos-viram-digitais",
+   "peso": 1
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Projeto do CCZ é reconhecido no Prêmio Gestor Público Paraná",
+   "fato": "O Sistema VAP, do CCZ, ficou entre os 38 projetos reconhecidos entre 177 inscritos no Prêmio Gestor Público Paraná.",
+   "data": "2026-10-15",
+   "fonte": "H2FOZ",
+   "url": "https://www.h2foz.com.br/saude/foz-do-iguacu-ccz-reconhecimento-estadual/",
+   "peso": 1,
+   "obs": "A cerimônia de entrega será em 10/11; o reconhecimento já foi divulgado."
+  },
+  {
+   "orgao": "hospital",
+   "titulo": "Hospital Municipal recebe novo Arco em C cirúrgico",
+   "fato": "O Hospital Municipal Padre Germano Lauck recebeu um novo arco cirúrgico de R$ 730 mil e passou a ter 4 aparelhos.",
+   "data": "2026-05-18",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/hmpgl-recebe-novo-arco-em-c-para-reforcar-cirurgias-e-atendimentos-a-populacao-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Emenda de vereadores."
+  },
+  {
+   "orgao": "assistencia",
+   "titulo": "CRAS passam a usar sistema digital (SIAS)",
+   "fato": "Os 5 CRAS passaram a usar o SIAS, que elimina formulários em papel e reúne o histórico das famílias.",
+   "data": "2026-08-03",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/cras-adotam-novo-sistema-digital",
+   "peso": 2,
+   "obs": "Contraponto: demanda reprimida e filas nos CRAS reconhecidas pela Secretaria (Portal da Cidade, 21/08)."
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Avenida JK revitalizada e entregue",
+   "fato": "A Prefeitura entregou a revitalização da Av. JK, com drenagem, recapeamento, ciclovia, calçadas, iluminação e 2 pontos de ônibus climatizados, pagos por Itaipu (R$ 25 milhões segundo H2FOZ; R$ 26 milhões segundo outros veículos).",
+   "data": "2026-06-02",
+   "fonte": "H2FOZ",
+   "url": "https://www.h2foz.com.br/itaipu/nova-jk-itaipu-entrega-revitalizacao-de-uma-das-principais-vias-de-foz-do-iguacu/",
+   "peso": 3,
+   "obs": "Obra com prazo original vencido em 21/05/2025 (Observatório Social); a entrega em si é fato. Sem piso tátil, segundo o H2FOZ."
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Parque Remador revitalizado",
+   "fato": "A Prefeitura entregou a revitalização do Parque Ambiental Omar de Oliveira (Porto Meira), com pista de skate, caminhada, quiosques, iluminação e câmeras (R$ 2,6 milhões).",
+   "data": "2026-05-26",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/05/27/parque-remador-e-revitalizado-e-ganha-nova-estrutura-de-lazer-no-porto-meira/",
+   "peso": 2,
+   "obs": "A Secretaria de Obras é citada como fonte. Pode ser lançado também em meio_ambiente (Parque Ambiental)."
+  },
+  {
+   "orgao": "obras",
+   "titulo": "LED concluído em mais 5 bairros",
+   "fato": "A concessionária IP Foz concluiu a troca por LED na Vila C Nova, Vila C Velha, Jardim Universitário, Vila Portes e Jardim Jupira, além da Av. Maria Bubiak.",
+   "data": "2026-08-04",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/mais-bairros-recebem-iluminacao-em-led",
+   "peso": 2,
+   "obs": "Órgão incerto: a obra é da concessionária IP Foz, com a Diretoria de Iluminação Pública (mapeada em obras). Em 06/09, 22.135 de 43.580 pontos já eram LED (Trivox)."
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Secretaria de Obras recebe caminhão tapa-buracos de R$ 1,4 milhão",
+   "fato": "A Secretaria de Obras recebeu um caminhão tapa-buracos (Romanelli TBR-800, R$ 1,445 milhão) que reúne todas as etapas do reparo.",
+   "data": "2026-09-05",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/09/05/operacao-tapa-buracos-em-foz-do-iguacu-ganha-novo-caminhao-de-r-14-milhao/",
+   "peso": 1,
+   "obs": "Equipamento recebido; o início da operação estava previsto para cerca de 15 dias depois."
+  },
+  {
+   "orgao": "meio_ambiente",
+   "titulo": "Cerca de 3 mil toneladas de descarte irregular recolhidas em 15 mutirões",
+   "fato": "Em seis meses, 15 mutirões nas 5 regiões recolheram quase 3 mil toneladas de entulho, galhos e móveis descartados em áreas públicas.",
+   "data": "2026-10-05",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foz-recolhe-quase-3-mil-toneladas-de-descarte-irregular-em-seis-meses",
+   "peso": 2,
+   "obs": "A matéria do Trivox traz crítica de que o descarte irregular segue grande. Origem do dado: Prefeitura, também em https://clubefoz.com.br/prefeitura-recolhe-quase-3-mil-toneladas-de-descarte-irregular-em-seis-meses-prefeitura-municipal-de-foz-do-iguacu/"
+  },
+  {
+   "orgao": "meio_ambiente",
+   "titulo": "Foz chega a 5 mil castrações gratuitas",
+   "fato": "O município e o Governo do Paraná fizeram 5 mil castrações gratuitas de cães e gatos desde outubro de 2025.",
+   "data": "2026-09-08",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foz-chega-a-5-mil-castracoes-gratuitas",
+   "peso": 2,
+   "obs": "Os 7,6 mil novos procedimentos citados na matéria são futuros e ficaram de fora. O H2FOZ (15/05) publicou crítica sobre contratos de castração."
+  },
+  {
+   "orgao": "meio_ambiente",
+   "titulo": "84,5 toneladas de ração distribuídas a protetores em 2026",
+   "fato": "A Diretoria de Bem-Estar Animal recebeu 30 t de ração para 85 protetores e 6 ONGs; em 2026 o total chega a 84,5 t.",
+   "data": "2026-07-15",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foz-recebe-mais-30-toneladas-de-racao-para-protetores-e-ongs-cadastrados",
+   "peso": 1
+  },
+  {
+   "orgao": "financas",
+   "titulo": "RecuperaFoz fecha 1.560 acordos somando R$ 5,6 milhões",
+   "fato": "Desde 15/07, o RecuperaFoz fechou 1.560 acordos de parcelamento (R$ 5,61 milhões), dos quais R$ 4,58 milhões já foram pagos.",
+   "data": "2026-08-21",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/recuperafoz-soma-r-56-milhoes-em-acordos",
+   "peso": 2,
+   "obs": "Em 04/08 o programa tinha R$ 3 milhões arrecadados em um mês: https://portaltrivox.com.br/p/recuperafoz-arrecada-r-3-milhoes-em-um-mes"
+  },
+  {
+   "orgao": "administracao",
+   "titulo": "Prefeitura corta quase R$ 90 mil por mês em energia de unidades irregulares",
+   "fato": "Após cruzamento de dados com IA e inspeções, a Prefeitura desligou unidades de energia irregulares e reduziu quase R$ 90 mil por mês nos gastos (R$ 1,08 milhão por ano se mantido).",
+   "data": "2026-10-06",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/10/06/prefeitura-foz-contas-irregulares-energia/",
+   "peso": 2,
+   "obs": "Informado pela Diretoria de Iluminação Pública; lançado em administração por ser economia de gasto interno. A economia acumulada de out/2025 a ago/2026 é de cerca de R$ 135 mil."
+  },
+  {
+   "orgao": "cultura",
+   "titulo": "21ª Feira do Livro reúne cerca de 35 mil pessoas",
+   "fato": "A Feira Internacional do Livro, da Fundação Cultural, teve mais de 80 atividades gratuitas e cerca de 35 mil visitantes em 4 dias.",
+   "data": "2026-09-06",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/cerca-de-35-mil-pessoas-prestigiam-a-21a-feira-internacional-do-livro-em-foz-do-iguacu-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Número de público divulgado pela Prefeitura."
+  },
+  {
+   "orgao": "esporte",
+   "titulo": "Foz fica em 3º lugar geral nos Jogos da Juventude do Paraná",
+   "fato": "A delegação da SMEL (210 atletas, 13 modalidades) fez 324 pontos e teve a melhor colocação da história no JOJUP, com ouro em tênis de mesa feminino e basquete feminino e masculino sub-17.",
+   "data": "2026-10-17",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-o-3o-lugar-geral-no-38o-jogos-da-juventude-do-parana-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "A competição terminou em 17/10; a matéria é de 19/10."
+  },
+  {
+   "orgao": "esporte",
+   "titulo": "Atletas de Foz somam 6 medalhas nos Jogos da Juventude Caixa",
+   "fato": "No 1º bloco dos Jogos da Juventude Caixa, atletas de Foz ganharam 6 medalhas, incluindo o ouro de Nicolas Izidoro no salto triplo.",
+   "data": "2026-10-22",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/atletas-de-foz-do-iguacu-conquistam-seis-medalhas-nos-jogos-da-juventude-caixa-2026-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 1,
+   "obs": "Parcial: ainda faltavam 2 blocos de provas."
+  },
+  {
+   "orgao": "seguranca",
+   "titulo": "Guarda Municipal: 313 flagrantes e 506 kg de drogas apreendidas até 29/05",
+   "fato": "No balanço de 01/01 a 29/05/2026, a Guarda Municipal prendeu 313 pessoas em flagrante, cumpriu 49 mandados, recuperou 43 veículos e apreendeu 506 kg de drogas.",
+   "data": "2026-06-19",
+   "fonte": "Almanaque Futuro (suplemento com dados da Comunicação da Prefeitura)",
+   "url": "https://almanaquefuturo.com.br/foz-112-anos/resultados-nas-ruas-eficiencia-operacional-e-o-compromisso-socioambiental/",
+   "peso": 1,
+   "obs": "Dado da própria Prefeitura, em veículo suplementar e sem checagem independente."
+  },
+  {
+   "orgao": "copel",
+   "titulo": "Copel diz ter reduzido em 30% as interrupções no 1º semestre",
+   "fato": "Segundo a Copel, as interrupções de energia em Foz caíram 30% no 1º semestre de 2026 em relação a 2025.",
+   "data": "2026-07-17",
+   "fonte": "H2FOZ",
+   "url": "https://www.h2foz.com.br/cidade/copel-queda-de-energia-foz-do-iguacu/",
+   "peso": 1,
+   "obs": "Dado autodeclarado pela Copel, apresentado em audiência na Câmara em meio a reclamações de moradores; sem checagem independente."
+  },
+  {
+   "orgao": "foztrans",
+   "titulo": "Foztrans instala 18 dos 28 abrigos de ônibus com conforto térmico",
+   "fato": "O Foztrans concluiu a instalação de 18 dos 28 abrigos cedidos pela AMEP, sem custo para a Prefeitura.",
+   "data": "2026-10-25",
+   "fonte": "Guia 3 (cita G1)",
+   "url": "https://www.guia3.com/noticia/foztrans-instala-18-novos-abrigos-de-onibus-em-foz-do-iguacu",
+   "peso": 1,
+   "obs": "Parcial: 10 abrigos restam. O equipamento é do Governo do Estado (AMEP)."
+  },
+  {
+   "orgao": "foztrans",
+   "titulo": "Foztrans remove 7 veículos abandonados na Vila Portes",
+   "fato": "Agentes do Foztrans removeram 7 veículos abandonados na Vila Portes após pedido registrado no eOuve.",
+   "data": "2026-09-29",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foztrans-remove-sete-veiculos-abandonados-na-vila-portes",
+   "peso": 1
   }
  ]
 }
