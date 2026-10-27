@@ -166,6 +166,16 @@
     },
     {
      "orgao": "saude",
+     "titulo": "Reforma da UBS Vila Adriana concluída",
+     "fato": "A reforma emergencial da UBS da Vila Adriana foi concluída.",
+     "data": "2026-08-27",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/reforma-emergencial-e-concluida-na-ubs-da-vila-adriana-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "saude",
      "titulo": "UPAs recebem 60 cadeiras novas de soroterapia",
      "fato": "As UPAs João Samek e Walter Cavalcante Barbosa receberam 30 cadeiras novas cada, num investimento de R$ 49,2 mil.",
      "data": "2026-08-07",
@@ -184,6 +194,25 @@
     },
     {
      "orgao": "saude",
+     "titulo": "Sistema de Foz é premiado no combate à dengue",
+     "fato": "O sistema de Foz no combate à dengue foi premiado.",
+     "data": "2026-07-20",
+     "fonte": "Diário de Foz",
+     "url": "https://diariodefoz.com/sistema-de-foz-no-combate-a-dengue/",
+     "peso": 2
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Saúde de Foz é reconhecida na 21ª Mostra Brasil, Aqui Tem SUS",
+     "fato": "A Saúde de Foz do Iguaçu foi reconhecida na 21ª Mostra Brasil, Aqui Tem SUS.",
+     "data": "2026-07-15",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/saude-de-foz-do-iguacu-e-reconhecida-na-21a-mostra-brasil-aqui-tem-sus-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "saude",
      "titulo": "CEM recebe 4 aparelhos cardiológicos novos",
      "fato": "O Centro de Especialidades Médicas recebeu 4 aparelhos de eletrocardiograma comprados com emenda parlamentar.",
      "data": "2026-05-18",
@@ -191,9 +220,19 @@
      "url": "https://www.naoviu.com.br/fila-de-4-mil-exames-cem-de-foz-recebe-novos-aparelhos-e-promete-dobrar-atendimentos/",
      "peso": 1,
      "obs": "A meta de dobrar os exames (800 para 1.500 por mês) é expectativa, não resultado. A fila é de cerca de 4 mil pacientes."
+    },
+    {
+     "orgao": "saude",
+     "titulo": "Município conquista 1º lugar na Mostra \"Paraná, Brasil Aqui Tem SUS\"",
+     "fato": "Foz do Iguaçu conquistou o 1º lugar na 2ª Mostra Paraná, Brasil Aqui Tem SUS.",
+     "data": "2026-05-08",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/municipio-conquista-1o-lugar-na-2a-mostra-parana-brasil-aqui-tem-sus-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
     }
    ],
-   "estrelas": 4
+   "estrelas": 5
   },
   {
    "id": "obras",
@@ -358,6 +397,15 @@
     },
     {
      "orgao": "obras",
+     "titulo": "Plano de recuperação viária conclui cerca de 4 km de ruas",
+     "fato": "O plano de recuperação viária concluiu cerca de 4 km de ruas pavimentadas em Foz.",
+     "data": "2026-06-26",
+     "fonte": "Diário de Foz",
+     "url": "https://diariodefoz.com/novas-ruas-pavimentadas-em-foz-do-iguacu/",
+     "peso": 2
+    },
+    {
+     "orgao": "obras",
      "titulo": "Avenida JK revitalizada e entregue",
      "fato": "A Prefeitura entregou a revitalização da Av. JK, com drenagem, recapeamento, ciclovia, calçadas, iluminação e 2 pontos de ônibus climatizados, pagos por Itaipu (R$ 25 milhões segundo H2FOZ; R$ 26 milhões segundo outros veículos).",
      "data": "2026-06-02",
@@ -375,6 +423,16 @@
      "url": "https://www.radioculturafoz.com.br/2026/05/27/parque-remador-e-revitalizado-e-ganha-nova-estrutura-de-lazer-no-porto-meira/",
      "peso": 2,
      "obs": "A Secretaria de Obras é citada como fonte. Pode ser lançado também em meio_ambiente (Parque Ambiental)."
+    },
+    {
+     "orgao": "obras",
+     "titulo": "Praça João José da Silva entregue no São Roque",
+     "fato": "A praça de esporte e lazer João José da Silva foi oficialmente entregue à comunidade do bairro São Roque.",
+     "data": "2026-05-08",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/praca-de-esporte-e-lazer-joao-jose-da-silva-e-oficialmente-entregue-a-comunidade-do-bairro-sao-roque-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial. Pode ser lançada também em Esporte."
     }
    ],
    "estrelas": 5
@@ -528,9 +586,18 @@
      "fonte": "Portal Trivox",
      "url": "https://portaltrivox.com.br/p/foztrans-remove-sete-veiculos-abandonados-na-vila-portes",
      "peso": 1
+    },
+    {
+     "orgao": "foztrans",
+     "titulo": "Foztrans redistribui pontos de táxi",
+     "fato": "A Foztrans redistribuiu pontos de táxi, beneficiando cerca de 300 taxistas.",
+     "data": "2026-05-06",
+     "fonte": "Não Viu",
+     "url": "https://www.naoviu.com.br/foztrans-redistribui-pontos-de-taxi-e-beneficia-cerca-de-300-taxistas/",
+     "peso": 1
     }
    ],
-   "estrelas": 1
+   "estrelas": 2
   },
   {
    "id": "meio_ambiente",
@@ -773,9 +840,18 @@
      "url": "https://almanaquefuturo.com.br/foz-112-anos/resultados-nas-ruas-eficiencia-operacional-e-o-compromisso-socioambiental/",
      "peso": 1,
      "obs": "Dado da própria Prefeitura, em veículo suplementar e sem checagem independente."
+    },
+    {
+     "orgao": "seguranca",
+     "titulo": "Atlas da Violência: homicídios caem 30% em dois anos",
+     "fato": "Foz do Iguaçu reduziu a taxa de homicídios em 30% em dois anos, segundo o Atlas da Violência.",
+     "data": "2026-05-27",
+     "fonte": "H2FOZ",
+     "url": "https://www.h2foz.com.br/seguranca-publica/atlas-da-violencia-foz-do-iguacu-reduz-taxa-de-homicidios-em-30-em-dois-anos/",
+     "peso": 2
     }
    ],
-   "estrelas": 1
+   "estrelas": 2
   },
   {
    "id": "educacao",
@@ -1016,8 +1092,58 @@
     "bot": 944,
     "bulb": 952
    },
-   "positivas": [],
-   "estrelas": 0
+   "positivas": [
+    {
+     "orgao": "gabinete",
+     "titulo": "Foz lidera geração de empregos formais no PR em agosto",
+     "fato": "Foz do Iguaçu liderou a geração de empregos formais no Paraná em agosto.",
+     "data": "2026-10-14",
+     "fonte": "Click Foz",
+     "url": "https://clickfozdoiguacu.com.br/foz-lidera-geracao-empregos-parana-agosto/",
+     "peso": 2,
+     "obs": "Fonte Click Foz, com ressalva."
+    },
+    {
+     "orgao": "gabinete",
+     "titulo": "Região de Foz lidera acesso à internet no PR",
+     "fato": "A região de Foz do Iguaçu lidera o acesso à internet no Paraná, com 96% conectados, segundo o Ipardes.",
+     "data": "2026-10-14",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/10/14/regiao-foz-iguacu-lidera-acesso-internet-parana/",
+     "peso": 1,
+     "obs": "Dado do Ipardes, não é ação direta da Prefeitura."
+    },
+    {
+     "orgao": "gabinete",
+     "titulo": "Agência do Trabalhador: mais de 1,3 mil trabalhadores com novas oportunidades",
+     "fato": "Mais de 1,3 mil trabalhadores conquistaram novas oportunidades pela Agência do Trabalhador.",
+     "data": "2026-08-18",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/mais-de-13-mil-trabalhadores-conquistam-novas-oportunidades-por-meio-da-agencia-do-trabalhador-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "gabinete",
+     "titulo": "Foz conquista Selo Diamante do Sebrae/PR",
+     "fato": "Foz do Iguaçu conquistou pela 1ª vez o Selo Diamante de referência em atendimento do Sebrae/PR.",
+     "data": "2026-06-15",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-pela-1a-vez-selo-diamante-de-referencia-em-atendimento-do-sebrae-pr-prefeitura-municipal-de-foz-do-iguacu/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "gabinete",
+     "titulo": "Foz sobe em ranking de qualidade de vida",
+     "fato": "Foz do Iguaçu subiu em ranking de qualidade de vida, com os motivos da melhora.",
+     "data": "2026-05-28",
+     "fonte": "Não Viu",
+     "url": "https://www.naoviu.com.br/foz-do-iguacu-sobe-em-ranking-de-qualidade-de-vida-veja-os-motivos-da-melhora/",
+     "peso": 2
+    }
+   ],
+   "estrelas": 5
   },
   {
    "id": "sanepar",
@@ -1567,6 +1693,16 @@
    "positivas": [
     {
      "orgao": "fozhabita",
+     "titulo": "Projeto do Fozhabita é premiado na Conferência de Habitação Social",
+     "fato": "O projeto do Fozhabita foi premiado na 8ª Conferência Brasileira de Habitação Social e Regularização Fundiária.",
+     "data": "2026-08-28",
+     "fonte": "Clube Foz (Agência Municipal de Notícias)",
+     "url": "https://clubefoz.com.br/projeto-do-fozhabita-e-premiado-na-8a-conferencia-brasileira-de-habitacao-social-e-regularizacao-fundiaria/",
+     "peso": 2,
+     "obs": "Release da Prefeitura, fonte oficial."
+    },
+    {
+     "orgao": "fozhabita",
      "titulo": "60 famílias recebem casas no César Cabral",
      "fato": "O Fozhabita, com Itaipu e Itaipu Parquetec, entregou oficialmente 60 moradias do Loteamento César Cabral (2º lote do Projeto Moradias), que chega a 112 unidades entregues.",
      "data": "2026-06-30",
@@ -1575,7 +1711,7 @@
      "peso": 3
     }
    ],
-   "estrelas": 2
+   "estrelas": 3
   },
   {
    "id": "assistencia",
@@ -1747,6 +1883,15 @@
     },
     {
      "orgao": "esporte",
+     "titulo": "Basquete de Foz conquista dobradinha inédita nos JOJUPs",
+     "fato": "O basquete de Foz conquistou dobradinha inédita nos JOJUPs.",
+     "data": "2026-10-18",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/basquete-de-foz-conquista-dobradinha-inedita-e-entra-para-a-historia-dos-jojups",
+     "peso": 1
+    },
+    {
+     "orgao": "esporte",
      "titulo": "Foz fica em 3º lugar geral nos Jogos da Juventude do Paraná",
      "fato": "A delegação da SMEL (210 atletas, 13 modalidades) fez 324 pontos e teve a melhor colocação da história no JOJUP, com ouro em tênis de mesa feminino e basquete feminino e masculino sub-17.",
      "data": "2026-10-17",
@@ -1754,9 +1899,27 @@
      "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-o-3o-lugar-geral-no-38o-jogos-da-juventude-do-parana-prefeitura-municipal-de-foz-do-iguacu/",
      "peso": 2,
      "obs": "A competição terminou em 17/10; a matéria é de 19/10."
+    },
+    {
+     "orgao": "esporte",
+     "titulo": "Foz Basquete é 6º no Brasileiro Sub-17",
+     "fato": "O Foz Basquete conquistou o 6º lugar no Campeonato Brasileiro Sub-17.",
+     "data": "2026-10-12",
+     "fonte": "Portal Trivox",
+     "url": "https://portaltrivox.com.br/p/foz-basquete-faz-historia-e-conquista-o-6-lugar-no-campeonato-brasileiro-sub-17",
+     "peso": 1
+    },
+    {
+     "orgao": "esporte",
+     "titulo": "Meu Campinho: 6 unidades em Foz",
+     "fato": "O projeto Meu Campinho já soma 6 unidades em Foz do Iguaçu.",
+     "data": "2026-06-24",
+     "fonte": "Rádio Cultura",
+     "url": "https://www.radioculturafoz.com.br/2026/06/24/foz-de-iguacu-investe-em-campinhos-e-ajuda-a-reduzir-tempo-de-tela-dos-jovens/",
+     "peso": 2
     }
    ],
-   "estrelas": 2
+   "estrelas": 4
   },
   {
    "id": "cultura",
@@ -2338,6 +2501,168 @@
    "fonte": "Portal Trivox",
    "url": "https://portaltrivox.com.br/p/foztrans-remove-sete-veiculos-abandonados-na-vila-portes",
    "peso": 1
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Município conquista 1º lugar na Mostra \"Paraná, Brasil Aqui Tem SUS\"",
+   "fato": "Foz do Iguaçu conquistou o 1º lugar na 2ª Mostra Paraná, Brasil Aqui Tem SUS.",
+   "data": "2026-05-08",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/municipio-conquista-1o-lugar-na-2a-mostra-parana-brasil-aqui-tem-sus-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Saúde de Foz é reconhecida na 21ª Mostra Brasil, Aqui Tem SUS",
+   "fato": "A Saúde de Foz do Iguaçu foi reconhecida na 21ª Mostra Brasil, Aqui Tem SUS.",
+   "data": "2026-07-15",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/saude-de-foz-do-iguacu-e-reconhecida-na-21a-mostra-brasil-aqui-tem-sus-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Reforma da UBS Vila Adriana concluída",
+   "fato": "A reforma emergencial da UBS da Vila Adriana foi concluída.",
+   "data": "2026-08-27",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/reforma-emergencial-e-concluida-na-ubs-da-vila-adriana-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "saude",
+   "titulo": "Sistema de Foz é premiado no combate à dengue",
+   "fato": "O sistema de Foz no combate à dengue foi premiado.",
+   "data": "2026-07-20",
+   "fonte": "Diário de Foz",
+   "url": "https://diariodefoz.com/sistema-de-foz-no-combate-a-dengue/",
+   "peso": 2
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Plano de recuperação viária conclui cerca de 4 km de ruas",
+   "fato": "O plano de recuperação viária concluiu cerca de 4 km de ruas pavimentadas em Foz.",
+   "data": "2026-06-26",
+   "fonte": "Diário de Foz",
+   "url": "https://diariodefoz.com/novas-ruas-pavimentadas-em-foz-do-iguacu/",
+   "peso": 2
+  },
+  {
+   "orgao": "obras",
+   "titulo": "Praça João José da Silva entregue no São Roque",
+   "fato": "A praça de esporte e lazer João José da Silva foi oficialmente entregue à comunidade do bairro São Roque.",
+   "data": "2026-05-08",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/praca-de-esporte-e-lazer-joao-jose-da-silva-e-oficialmente-entregue-a-comunidade-do-bairro-sao-roque-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial. Pode ser lançada também em Esporte."
+  },
+  {
+   "orgao": "seguranca",
+   "titulo": "Atlas da Violência: homicídios caem 30% em dois anos",
+   "fato": "Foz do Iguaçu reduziu a taxa de homicídios em 30% em dois anos, segundo o Atlas da Violência.",
+   "data": "2026-05-27",
+   "fonte": "H2FOZ",
+   "url": "https://www.h2foz.com.br/seguranca-publica/atlas-da-violencia-foz-do-iguacu-reduz-taxa-de-homicidios-em-30-em-dois-anos/",
+   "peso": 2
+  },
+  {
+   "orgao": "esporte",
+   "titulo": "Meu Campinho: 6 unidades em Foz",
+   "fato": "O projeto Meu Campinho já soma 6 unidades em Foz do Iguaçu.",
+   "data": "2026-06-24",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/06/24/foz-de-iguacu-investe-em-campinhos-e-ajuda-a-reduzir-tempo-de-tela-dos-jovens/",
+   "peso": 2
+  },
+  {
+   "orgao": "esporte",
+   "titulo": "Basquete de Foz conquista dobradinha inédita nos JOJUPs",
+   "fato": "O basquete de Foz conquistou dobradinha inédita nos JOJUPs.",
+   "data": "2026-10-18",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/basquete-de-foz-conquista-dobradinha-inedita-e-entra-para-a-historia-dos-jojups",
+   "peso": 1
+  },
+  {
+   "orgao": "esporte",
+   "titulo": "Foz Basquete é 6º no Brasileiro Sub-17",
+   "fato": "O Foz Basquete conquistou o 6º lugar no Campeonato Brasileiro Sub-17.",
+   "data": "2026-10-12",
+   "fonte": "Portal Trivox",
+   "url": "https://portaltrivox.com.br/p/foz-basquete-faz-historia-e-conquista-o-6-lugar-no-campeonato-brasileiro-sub-17",
+   "peso": 1
+  },
+  {
+   "orgao": "foztrans",
+   "titulo": "Foztrans redistribui pontos de táxi",
+   "fato": "A Foztrans redistribuiu pontos de táxi, beneficiando cerca de 300 taxistas.",
+   "data": "2026-05-06",
+   "fonte": "Não Viu",
+   "url": "https://www.naoviu.com.br/foztrans-redistribui-pontos-de-taxi-e-beneficia-cerca-de-300-taxistas/",
+   "peso": 1
+  },
+  {
+   "orgao": "fozhabita",
+   "titulo": "Projeto do Fozhabita é premiado na Conferência de Habitação Social",
+   "fato": "O projeto do Fozhabita foi premiado na 8ª Conferência Brasileira de Habitação Social e Regularização Fundiária.",
+   "data": "2026-08-28",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/projeto-do-fozhabita-e-premiado-na-8a-conferencia-brasileira-de-habitacao-social-e-regularizacao-fundiaria/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "gabinete",
+   "titulo": "Foz sobe em ranking de qualidade de vida",
+   "fato": "Foz do Iguaçu subiu em ranking de qualidade de vida, com os motivos da melhora.",
+   "data": "2026-05-28",
+   "fonte": "Não Viu",
+   "url": "https://www.naoviu.com.br/foz-do-iguacu-sobe-em-ranking-de-qualidade-de-vida-veja-os-motivos-da-melhora/",
+   "peso": 2
+  },
+  {
+   "orgao": "gabinete",
+   "titulo": "Agência do Trabalhador: mais de 1,3 mil trabalhadores com novas oportunidades",
+   "fato": "Mais de 1,3 mil trabalhadores conquistaram novas oportunidades pela Agência do Trabalhador.",
+   "data": "2026-08-18",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/mais-de-13-mil-trabalhadores-conquistam-novas-oportunidades-por-meio-da-agencia-do-trabalhador-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "gabinete",
+   "titulo": "Foz conquista Selo Diamante do Sebrae/PR",
+   "fato": "Foz do Iguaçu conquistou pela 1ª vez o Selo Diamante de referência em atendimento do Sebrae/PR.",
+   "data": "2026-06-15",
+   "fonte": "Clube Foz (Agência Municipal de Notícias)",
+   "url": "https://clubefoz.com.br/foz-do-iguacu-conquista-pela-1a-vez-selo-diamante-de-referencia-em-atendimento-do-sebrae-pr-prefeitura-municipal-de-foz-do-iguacu/",
+   "peso": 2,
+   "obs": "Release da Prefeitura, fonte oficial."
+  },
+  {
+   "orgao": "gabinete",
+   "titulo": "Foz lidera geração de empregos formais no PR em agosto",
+   "fato": "Foz do Iguaçu liderou a geração de empregos formais no Paraná em agosto.",
+   "data": "2026-10-14",
+   "fonte": "Click Foz",
+   "url": "https://clickfozdoiguacu.com.br/foz-lidera-geracao-empregos-parana-agosto/",
+   "peso": 2,
+   "obs": "Fonte Click Foz, com ressalva."
+  },
+  {
+   "orgao": "gabinete",
+   "titulo": "Região de Foz lidera acesso à internet no PR",
+   "fato": "A região de Foz do Iguaçu lidera o acesso à internet no Paraná, com 96% conectados, segundo o Ipardes.",
+   "data": "2026-10-14",
+   "fonte": "Rádio Cultura",
+   "url": "https://www.radioculturafoz.com.br/2026/10/14/regiao-foz-iguacu-lidera-acesso-internet-parana/",
+   "peso": 1,
+   "obs": "Dado do Ipardes, não é ação direta da Prefeitura."
   }
  ]
 }
