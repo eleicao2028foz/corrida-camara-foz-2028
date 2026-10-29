@@ -1699,16 +1699,6 @@
    "positivas": [
     {
      "orgao": "fozhabita",
-     "titulo": "Projeto do Fozhabita é premiado na Conferência de Habitação Social",
-     "fato": "O projeto do Fozhabita foi premiado na 8ª Conferência Brasileira de Habitação Social e Regularização Fundiária.",
-     "data": "2026-08-28",
-     "fonte": "Clube Foz (Agência Municipal de Notícias)",
-     "url": "https://clubefoz.com.br/projeto-do-fozhabita-e-premiado-na-8a-conferencia-brasileira-de-habitacao-social-e-regularizacao-fundiaria/",
-     "peso": 2,
-     "obs": "Release da Prefeitura, fonte oficial."
-    },
-    {
-     "orgao": "fozhabita",
      "titulo": "60 famílias recebem casas no César Cabral",
      "fato": "O Fozhabita, com Itaipu e Itaipu Parquetec, entregou oficialmente 60 moradias do Loteamento César Cabral (2º lote do Projeto Moradias), que chega a 112 unidades entregues.",
      "data": "2026-06-30",
@@ -1717,7 +1707,7 @@
      "peso": 3
     }
    ],
-   "estrelas": 3
+   "estrelas": 2
   },
   {
    "id": "assistencia",
@@ -2628,16 +2618,6 @@
    "fonte": "Não Viu",
    "url": "https://www.naoviu.com.br/foztrans-redistribui-pontos-de-taxi-e-beneficia-cerca-de-300-taxistas/",
    "peso": 1
-  },
-  {
-   "orgao": "fozhabita",
-   "titulo": "Projeto do Fozhabita é premiado na Conferência de Habitação Social",
-   "fato": "O projeto do Fozhabita foi premiado na 8ª Conferência Brasileira de Habitação Social e Regularização Fundiária.",
-   "data": "2026-08-28",
-   "fonte": "Clube Foz (Agência Municipal de Notícias)",
-   "url": "https://clubefoz.com.br/projeto-do-fozhabita-e-premiado-na-8a-conferencia-brasileira-de-habitacao-social-e-regularizacao-fundiaria/",
-   "peso": 2,
-   "obs": "Release da Prefeitura, fonte oficial."
   },
   {
    "orgao": "gabinete",
