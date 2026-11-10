@@ -255,8 +255,14 @@ map.once('style.load',async()=>{
     scheduleVegetation();
     map.getSource('urban').setData(urban);
     setMode('ilustracao');
-    const civic = window.FozCivic.install(map);
-    civic.focus();
+    // 2D civic sprites replace the previous geometric 3D palace at the Paço.
+    if(window.FozPredios){
+      const predios=await window.FozPredios.install(map);
+      predios.focus();
+    }else if(window.FozCivic){
+      const civic=window.FozCivic.install(map);
+      civic.focus();
+    }
     window.__FOZ_CITY_SIM__.ready=true;
     if(window.__startTransit) window.__startTransit();
     document.getElementById('status').textContent='Cidade retrô pronta · 100 estilos · 24 árvores · '+vegStats.total+' vegetação';
@@ -264,4 +270,4 @@ map.once('style.load',async()=>{
 });
 map.on('idle',()=>{window.__FOZ_CITY_SIM__.idle=true;});
 map.on('dataloading',()=>{window.__FOZ_CITY_SIM__.idle=false;});
-window.__FOZ_CITY_SIM__={map,ready:false,idle:false,metrics,vegStats,errors,CONFIG,view,setMode,mode,cache,getView:()=>viewName};
+window.__FOZ_CITY_SIM__={map,ready:false,idle:false,metrics,vegStats,errors,CONFIG,view,setMode,mode,cache,getView:()=>viewName,predios:()=>window.FozPredios&&window.FozPredios.stats};
