@@ -51,10 +51,17 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:system-ui,
  const HOSPITAL=[-54.57631379649068,-25.519459430914807],HO=-2*Math.PI/180;
  function hospitalLocal(x,y){const e=(HOSPITAL[0]-ORIGIN[0])*EAST+x*Math.cos(HO)-y*Math.sin(HO),n=(HOSPITAL[1]-ORIGIN[1])*NORTH+x*Math.sin(HO)+y*Math.cos(HO);return[e*Math.cos(ANGLE)+n*Math.sin(ANGLE),-e*Math.sin(ANGLE)+n*Math.cos(ANGLE)];}
  plots.push([[-54.57714830409134,-25.51836401905203],[-54.5752820416388,-25.518398250824532],[-54.57538445848077,-25.520469254869568],[-54.57729244631295,-25.520332330085807],[-54.57714830409134,-25.51836401905203]]);
+
+ const HEALTH=[-54.58620227443251,-25.548908166522168],SPORT_FINANCE=[-54.587981685273064,-25.53994668221017],NEW_ANGLE=-4*Math.PI/180;
+ function siteLocal(origin,x,y){const e=(origin[0]-ORIGIN[0])*EAST+x*Math.cos(NEW_ANGLE)-y*Math.sin(NEW_ANGLE),n=(origin[1]-ORIGIN[1])*NORTH+x*Math.sin(NEW_ANGLE)+y*Math.cos(NEW_ANGLE);return[e*Math.cos(ANGLE)+n*Math.sin(ANGLE),-e*Math.sin(ANGLE)+n*Math.cos(ANGLE)];}
+ plots.push(polygon([[-30,-34],[30,-34],[30,34],[-30,34]].map(p=>siteLocal(HEALTH,...p))));
+ plots.push(polygon([[-36,-27],[36,-27],[36,27],[-36,27]].map(p=>siteLocal(SPORT_FINANCE,...p))));
+ plots.push(...[[[-54.58813902320862,-25.540264189502146],[-54.58800453362465,-25.540264189502146],[-54.58800453362465,-25.540150056548228],[-54.58813902320862,-25.540150056548228],[-54.58813902320862,-25.540264189502146]],[[-54.588224853897096,-25.54024603866961],[-54.588090364313125,-25.54024603866961],[-54.588090364313125,-25.540075033049153],[-54.588224853897096,-25.540075033049153],[-54.588224853897096,-25.54024603866961]],[[-54.58814841094017,-25.540071790537464],[-54.58793479619026,-25.540071790537464],[-54.58793479619026,-25.53997701840706],[-54.58814841094017,-25.53997701840706],[-54.58814841094017,-25.540071790537464]],[[-54.58785873236656,-25.540088731339207],[-54.587570015764236,-25.540088731339207],[-54.587570015764236,-25.539992749157488],[-54.58785873236656,-25.539992749157488],[-54.58785873236656,-25.540088731339207]],[[-54.58808940234184,-25.540016127886336],[-54.5878154378891,-25.540016127886336],[-54.5878154378891,-25.539921355735146],[-54.58808940234184,-25.539921355735146],[-54.58808940234184,-25.540016127886336]],[[-54.588088061237336,-25.539981036201688],[-54.58777118144035,-25.539981036201688],[-54.58777118144035,-25.539555917551745],[-54.588088061237336,-25.539555917551745],[-54.588088061237336,-25.539981036201688]],[[-54.58605226459503,-25.549436058672224],[-54.585752819156646,-25.549436058672224],[-54.585752819156646,-25.549078727717905],[-54.58605226459503,-25.549078727717905],[-54.58605226459503,-25.549436058672224]],[[-54.58622794928551,-25.549382820295627],[-54.58599153575897,-25.549382820295627],[-54.58599153575897,-25.54903879883529],[-54.58622794928551,-25.54903879883529],[-54.58622794928551,-25.549382820295627]],[[-54.58661150517464,-25.54926545379096],[-54.586262438869475,-25.54926545379096],[-54.586262438869475,-25.549024279238314],[-54.58661150517464,-25.549024279238314],[-54.58661150517464,-25.54926545379096]],[[-54.58632719101906,-25.549008941030156],[-54.58619001922607,-25.549008941030156],[-54.58619001922607,-25.54882947447544],[-54.58632719101906,-25.54882947447544],[-54.58632719101906,-25.549008941030156]],[[-54.58644789042473,-25.549004101161465],[-54.586273167705535,-25.549004101161465],[-54.586273167705535,-25.548823424633017],[-54.58644789042473,-25.548823424633017],[-54.58644789042473,-25.549004101161465]],[[-54.58655920209885,-25.54887705453851],[-54.58631608304977,-25.54887705453851],[-54.58631608304977,-25.548508832406114],[-54.58655920209885,-25.548508832406114],[-54.58655920209885,-25.54887705453851]],[[-54.58623331370354,-25.549068229405723],[-54.585990194654464,-25.549068229405723],[-54.585990194654464,-25.548860933651127],[-54.58623331370354,-25.548860933651127],[-54.58623331370354,-25.549068229405723]],[[-54.58597582163811,-25.549056129739622],[-54.58582792100906,-25.549056129739622],[-54.58582792100906,-25.54886214361926],[-54.58597582163811,-25.54886214361926],[-54.58597582163811,-25.549056129739622]],[[-54.586081768894196,-25.548898833969158],[-54.58602238116264,-25.548898833969158],[-54.58602238116264,-25.548819794727418],[-54.586081768894196,-25.548819794727418],[-54.586081768894196,-25.548898833969158]],[[-54.586250748062135,-25.54887221466449],[-54.58601835784912,-25.54887221466449],[-54.58601835784912,-25.548764136161086],[-54.586250748062135,-25.548764136161086],[-54.586250748062135,-25.54887221466449]],[[-54.58624806585312,-25.54882260594459],[-54.58600897011757,-25.54882260594459],[-54.58600897011757,-25.54867096850309],[-54.58624806585312,-25.54867096850309],[-54.58624806585312,-25.54882260594459]],[[-54.58595302286148,-25.548685879366374],[-54.58584669647217,-25.548685879366374],[-54.58584669647217,-25.548568121004326],[-54.58595302286148,-25.548568121004326],[-54.58595302286148,-25.548685879366374]],[[-54.58623331370354,-25.54864232042374],[-54.586010311222076,-25.54864232042374],[-54.586010311222076,-25.548292247277683],[-54.58623331370354,-25.548292247277683],[-54.58623331370354,-25.54864232042374]]]);
  function model(){
-  const out=[];let terminalMode=false,departmentMode=false,habitaMode=false,mobilityMode=false,tourismMode=false,hospitalMode=false,min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+  const out=[];let terminalMode=false,departmentMode=false,habitaMode=false,mobilityMode=false,tourismMode=false,hospitalMode=false,newSite=null,min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
   const rgb=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255);
   function face(p,color,uv){
+   if(newSite)p=p.map(q=>[...siteLocal(newSite,q[0],q[1]),q[2]]);
    if(terminalMode)p=p.map(q=>[...terminalLocal(q[0],q[1]),q[2]]);
    if(departmentMode)p=p.map(q=>[...departmentLocal(q[0],q[1]),q[2]]);
    if(habitaMode)p=p.map(q=>[...habitaLocal(q[0],q[1]),q[2]]);
@@ -134,7 +141,7 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:system-ui,
    box(x,y-.7,z+.08,w+.35,.16,.22,'#dca953');
    box(x,y-.7,z+h-.18,w+.35,.16,.2,'#e8c68a');
    for(const edge of [-1,1])box(x+edge*w/2,y-.7,z,.22,.18,h,'#d7af70');
-   const bottom=(row+1)/16,top=row/16;
+   const bottom=(row+1)/32,top=row/32;
    face([[x-w/2+.3,y-.78,z+.3],[x+w/2-.3,y-.78,z+.3],[x+w/2-.3,y-.78,z+h-.3],[x-w/2+.3,y-.78,z+h-.3]],'#ffffff',[[0,bottom],[1,bottom],[1,top],[0,top]]);
    face([[x-w/2+.2,y-.8,z+.12],[x+w/2-.2,y-.8,z+.12],[x+w/2-.2,y-.8,z+.55],[x-w/2+.2,y-.8,z+.55]],'#ffffff',[[.05,.98],[.95,.98],[.95,.95],[.05,.95]]);
   }
@@ -547,19 +554,61 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:system-ui,
   for(const [x,y] of [[-62,26],[-63,-6],[-63,56],[65,43],[65,70],[-50,88],[0,88],[45,88]])tree(x,y,.95);
   for(const [x,y] of [[-5,-48],[26,-48],[42,-53],[-66,-35]]){flowers(x,y,3);bench(x+5,y,5);lamp(x-4,y);}
   hospitalMode=false;
+
+  // Secretaria de Saúde: administrative headquarters, not a hospital.
+  newSite=HEALTH;
+  box(0,0,.12,57,64,.18,'#d9d5c6');
+  box(0,5,.3,48,44,6,'#ecede2');
+  box(0,7,6.3,44,38,30,'#e4e8dd');
+  for(const y of [-12.1,26.1])for(let z=8;z<35;z+=5.2){
+   box(0,y,z,40,.16,3.8,'#64999a');
+   for(let x=-18;x<=18;x+=6)box(x,y+(y<0?-.1:.1),z,.4,.22,3.8,'#e9efe7');
+  }
+  for(const x of [-22.1,22.1])for(let z=8;z<35;z+=5.2)for(const y of [-6,2,10,18])box(x,y,z,.18,5,3.8,'#64999a');
+  for(const x of [-22,22])box(x,7,6.3,1.2,39,30,'#729c83');
+  box(0,7,36.3,47,41,1.1,'#f3f0df');box(0,14,37.4,20,16,3.2,'#7a9e8a');
+  glazing(0,-17.1,1.2,32,4.5);
+  box(0,-21,5.5,51,9,.65,'#4d8573');
+  for(const x of [-22,22])box(x,-22,.3,.7,.7,5.2,'#d3d7c8');
+  sign(0,-24.5,6.2,52,6,14);
+  sign(0,-12.8,36.8,46,6.2,14);
+  for(const x of [-25,25])for(const y of [-28,26])tree(x,y,.65);
+  for(const x of [-13,13]){flowers(x,-29,2);bench(x,-31,5);}
+  // Two independent departments in the second user-selected site.
+  newSite=SPORT_FINANCE;
+  box(0,0,.12,70,51,.18,'#d9d4c2');
+  // Esportes: broad sports hall, glazed entry and stepped green roof.
+  box(-18,4,.3,29,32,12,'#e7d6b6');
+  box(-18,4,12.3,31,34,.8,'#467b72');
+  for(let y=-10;y<=18;y+=7)box(-18,y,13.1,28,1.2,.6,'#89a993');
+  glazing(-18,-12.1,1.4,25,9);
+  for(const x of [-31,-5])box(x,-12.4,.3,1.2,1.2,12,'#b77e50');
+  sign(-18,-15,6,30,5.2,15);
+  box(-18,-20,.3,28,6,.12,'#b68458');
+  // Finanças: taller stone-and-glass administrative block with bronze fins.
+  box(18,4,.3,29,32,28,'#dce0d9');
+  for(let z=2;z<27;z+=5){glazing(18,-12.1,z,25,3.7);for(const side of [-1,1])for(const y of [-6,2,10,18])box(18+side*14.6,y,z,.15,5.2,3.7,'#6c939b');}
+  for(const x of [5,12,24,31])box(x,-12.45,.3,.65,.7,28,'#ae9468');
+  box(18,4,28.3,31,34,.8,'#ede6d0');box(18,10,29.1,15,14,3,'#8b938d');
+  sign(18,-15,6,30,5.2,16);
+  box(0,0,.32,4,46,.12,'#eae4d1');
+  for(const x of [-29,29]){tree(x,-22,.65);lamp(x-5,-22);}for(const x of [-13,13])bench(x,-22,5);
+  newSite=null;
+
   min=[Infinity,Infinity,Infinity];max=[-Infinity,-Infinity,-Infinity];
   for(let i=0;i<out.length;i+=11)for(let k=0;k<3;k++){min[k]=Math.min(min[k],out[i+k]);max[k]=Math.max(max[k],out[i+k]);}
   return{vertices:new Float32Array(out),min,max};
  }
  function atlas(){
   const c=document.createElement('canvas');c.width=2048;c.height=4096;const g=c.getContext('2d');
-  g.textAlign='center';g.textBaseline='middle';
-  for(const [i,name] of ['PREFEITURA DE FOZ','ESTAÇÃO CULTURAL','FUNDAÇÃO CULTURAL','TERMINAL DE ÔNIBUS','OBRAS','PLANEJAMENTO','MEIO AMBIENTE','EDUCAÇÃO','FOZHABITA','GUARDA MUNICIPAL','FOZTRANS','SECRETARIA DE TURISMO','HOSPITAL','EMERGÊNCIA'].entries()){
+  g.textAlign='center';g.textBaseline='middle';g.save();g.scale(1,.5);
+  for(const [i,name] of ['PREFEITURA DE FOZ','ESTAÇÃO CULTURAL','FUNDAÇÃO CULTURAL','TERMINAL DE ÔNIBUS','OBRAS','PLANEJAMENTO','MEIO AMBIENTE','EDUCAÇÃO','FOZHABITA','GUARDA MUNICIPAL','FOZTRANS','SECRETARIA DE TURISMO','HOSPITAL','EMERGÊNCIA','SECRETARIA DE SAÚDE','ESPORTES','FINANÇAS'].entries()){
    const y=i*256,bg=g.createLinearGradient(0,y,0,y+256);
    bg.addColorStop(0,'#352d23');bg.addColorStop(1,'#171b1a');g.fillStyle=bg;g.fillRect(0,y,2048,256);
    g.fillStyle='#fffbea';g.font='900 185px Arial';g.shadowColor='#b88035';g.shadowBlur=4;
    g.fillText(name,1024,y+137,1950);g.shadowBlur=0;
   }
+  g.restore();
   // Fourth atlas row supplies unshaded warm illumination below each sign.
   const glow=g.createLinearGradient(0,3840,0,4096);glow.addColorStop(0,'#eeb457');glow.addColorStop(.5,'#fff1bd');glow.addColorStop(1,'#eeb457');g.fillStyle=glow;g.fillRect(0,3840,2048,256);
   return c;
@@ -597,7 +646,7 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:system-ui,
   for(const id of ['footprints-flat','footprints-walls','footprints-roofs','retro-architecture','veg-trees','veg-bushes'])if(map.getLayer(id)){const prior=map.getFilter(id);map.setFilter(id,prior?['all',prior,exclusion]:exclusion);}
   const mesh=model(),texture=atlas();map.addLayer(layer(map,mesh.vertices,texture));
   function focus(){const el=map.getContainer(),h=el.clientHeight,w=el.clientWidth;const zoom=17.8+Math.log2(Math.min(h/1000,w/950));map.jumpTo({center:lngLat(-40,3),zoom,pitch:50,bearing:-14.5,padding:{top:h*.22,bottom:h*.04,left:20,right:20}});}
-  root.__FOZ_CIVIC__={revision:'hospital-v8',focus,origin:ORIGIN,plots,height:HALL_HEIGHT,modelBounds:{min:mesh.min,max:mesh.max},vertexCount:mesh.vertices.length/11,texture,markers:[],lngLat};
+  root.__FOZ_CIVIC__={revision:'saude-esportes-financas-v9',focus,origin:ORIGIN,plots,height:HALL_HEIGHT,modelBounds:{min:mesh.min,max:mesh.max},vertexCount:mesh.vertices.length/11,texture,markers:[],lngLat};
   return root.__FOZ_CIVIC__;
  }
  root.FozCivic={install,model,lngLat,plots,height:HALL_HEIGHT};
