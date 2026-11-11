@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foz — Cidade em movimento</title>
+<meta name="description" content="Mapa de Foz do Iguaçu com ônibus animados pelos horários cadastrados e pelo relógio local do dispositivo. Posições simuladas, sem GPS ao vivo.">
+<link rel="stylesheet" href="css/maplibre-gl.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="map" role="region" aria-label="Mapa de Foz do Iguaçu com ônibus simulados pelo horário local do dispositivo"></div>
+<div id="status" role="status" aria-live="polite"></div>
+<!-- Sources and limitations retained for future site content; no overlay controls. -->
+<template id="map-sources"><details id="note"><summary>Base real, aparência ilustrativa · fontes e limites</summary>
+<p><b>Ônibus:</b> horários e trajetos do arquivo Foztrans fornecido, versão 2026-11-06T12:25:24. Simulação de uma semana típica, sem GPS ao vivo. Saídas programadas, duração e posições intermediárias estimadas. Não representa uma contagem da frota física. <a href="https://www.foztrans.pr.gov.br/horarios-transporte-coletivo-beta/" target="_blank" rel="noopener">Fonte dos dados</a>.</p><p><b>Grama:</b> textura única e contínua no terreno urbano, nas praças e nas áreas verdes; sem manchas de texturas diferentes. Limites, parque nacional e aeroporto preservados.</p>
+<p><b>Cidade retrô:</b> biblioteca original de 100 estilos de casas, sobrados, lojas, galerias, apartamentos e torres, com coberturas em volume, com 24 tipos de árvores. Alturas ilustrativas: mais edifícios no Centro e entorno da JK; casas baixas fora desse núcleo. Não representa um cadastro de alturas reais. Ruas, rios, coordenadas e câmeras preservados. 7.689 construções em conflito com o espaço das ruas foram removidas; os contornos dos imóveis restantes foram preservados.</p><p>Referência: <a href="https://www.mobilize.org.br/midias/pesquisas/plano-de-mobilidade-urbana-de-foz-do-iguacu.pdf" target="_blank" rel="noopener">Plano de Mobilidade Urbana de Foz do Iguaçu</a>.</p><p><b>Vegetação:</b> 101.130 árvores, incluindo 65.000 novas posições verificadas contra ruas, construções, água e infraestrutura. Biblioteca de 24 silhuetas ilustrativas, incluindo palmeiras, árvores floridas, copas largas e colunares. Arborização ilustrativa, não inventário botânico real.</p>
+<p>Ruas, rios e limites originais preservados. Construções sobre as ruas removidas em ambos os modos. Antes = visual técnico bege.</p>
+</details></template>
+<script src="js/maplibre-gl.js"></script>
+<script src="js/pmtiles.js"></script>
+<script src="js/civic.js"></script>
+<script src="js/predios.js"></script>
+<script src="js/app.js"></script>
+<script src="js/transit.js"></script>
+</body></html>
