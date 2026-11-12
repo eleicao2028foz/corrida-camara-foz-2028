@@ -1,6 +1,6 @@
 /* News strip for secretaria buttons. Local preview only. */
 (function () {
-  const ASSET_V = "noticias-barra-v12";
+  const ASSET_V = "noticias-barra-v13";
   const DATA_URL = "data/noticias-secretarias.json?t=" + Date.now();
   const RINGS = {
     prefeitura: "#4f8fd0",

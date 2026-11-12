@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-12T11:04:31-03:00",
+  "gerado_em": "2026-11-12T11:41:25-03:00",
   "timezone": "America/Sao_Paulo",
   "export": 160,
   "secretarias": {
@@ -80,6 +80,18 @@
       "feliz": "img/personagens/esporte/feliz.webp",
       "normal": "img/personagens/esporte/normal.webp",
       "triste": "img/personagens/esporte/triste.webp"
+    },
+    "foztrans": {
+      "id": "foztrans",
+      "feliz": "img/personagens/foztrans/feliz.webp",
+      "normal": "img/personagens/foztrans/normal.webp",
+      "triste": "img/personagens/foztrans/triste.webp"
+    },
+    "prefeitura": {
+      "id": "prefeitura",
+      "feliz": "img/personagens/prefeitura/feliz.webp",
+      "normal": "img/personagens/prefeitura/normal.webp",
+      "triste": "img/personagens/prefeitura/triste.webp"
     }
   }
 }
