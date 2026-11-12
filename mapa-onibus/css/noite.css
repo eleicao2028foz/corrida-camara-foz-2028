@@ -1,0 +1,11 @@
+/* Automatic night look for the secretarias bar (no toggle control). */
+#sec-bar.night .sec-hud{
+  background:linear-gradient(180deg,rgba(40,48,62,.94) 0%,rgba(28,34,46,.96) 55%,rgba(22,26,36,.97) 100%);
+  border-color:rgba(180,200,230,.18);
+  box-shadow:0 8px 20px rgba(0,0,0,.45),0 2px 4px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.12);
+}
+#sec-bar.night .sec-label{color:#e8eef6}
+#sec-bar.night .sec-item.is-active .sec-label{color:#fff}
+#sec-bar.night .sec-tooltip{background:linear-gradient(180deg,#4a5566 0%,#2c3440 100%)}
+#sec-bar.night .sec-tooltip:after{border-top-color:#2c3440}
+body.night,body.night #map{background:#12192c}
