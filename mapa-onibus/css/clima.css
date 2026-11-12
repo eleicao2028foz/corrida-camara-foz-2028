@@ -1,0 +1,71 @@
+/* Overlay de clima — acima do mapa, abaixo da barra e da faixa de notícias. */
+#clima-veil,
+#clima-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+#clima-veil {
+  opacity: 0;
+  background: transparent;
+  transition: opacity .9s ease, background .9s ease;
+}
+
+#clima-canvas {
+  display: none;
+}
+
+body[data-clima]:not([data-clima="sol"]) #clima-canvas {
+  display: block;
+}
+
+/* Nublado: céu e luz mais acinzentados. */
+body[data-clima="nublado"] #clima-veil {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(88,100,116,.26) 0%, rgba(74,86,100,.16) 42%, rgba(62,72,86,.20) 100%);
+  mix-blend-mode: multiply;
+}
+
+body.night[data-clima="nublado"] #clima-veil {
+  background: linear-gradient(180deg, rgba(16,24,38,.34) 0%, rgba(10,16,28,.18) 100%);
+}
+
+/* Chuva: luz mais fria, ruas um pouco mais escuras. */
+body[data-clima="chuva"] #clima-veil {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(64,92,118,.18) 0%, rgba(42,72,96,.20) 52%, rgba(32,52,70,.26) 100%);
+  mix-blend-mode: multiply;
+}
+
+body.night[data-clima="chuva"] #clima-veil {
+  background: linear-gradient(180deg, rgba(8,20,38,.28) 0%, rgba(6,16,30,.16) 100%);
+}
+
+/* Tempestade: céu pesado, mais escuro no topo. */
+body[data-clima="tempestade"] #clima-veil {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(32,40,64,.46) 0%, rgba(26,34,54,.32) 48%, rgba(20,28,44,.38) 100%);
+  mix-blend-mode: multiply;
+}
+
+body.night[data-clima="tempestade"] #clima-veil {
+  background: linear-gradient(180deg, rgba(4,8,20,.50) 0%, rgba(6,12,26,.28) 100%);
+}
+
+/* Neblina: névoa clara, mais densa junto ao chão. Sem multiply para não sujar as cores. */
+body[data-clima="neblina"] #clima-veil {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(210,218,224,.16) 0%, rgba(214,220,226,.26) 55%, rgba(198,206,214,.42) 100%);
+}
+
+body.night[data-clima="neblina"] #clima-veil {
+  background: linear-gradient(180deg, rgba(36,48,64,.16) 0%, rgba(64,78,96,.20) 58%, rgba(48,62,80,.34) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #clima-veil { transition: none; }
+}
