@@ -5,6 +5,7 @@
 <meta name="description" content="Mapa de Foz do Iguaçu com ônibus animados pelos horários cadastrados e pelo relógio local do dispositivo. Posições simuladas, sem GPS ao vivo.">
 <link rel="stylesheet" href="css/maplibre-gl.css">
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/barra-secretarias.css?v=admin-barra-v10">
 </head>
 <body>
 <div id="map" role="region" aria-label="Mapa de Foz do Iguaçu com ônibus simulados pelo horário local do dispositivo"></div>
@@ -15,8 +16,247 @@
 <p><b>Cidade retrô:</b> biblioteca original de 100 estilos de casas, sobrados, lojas, galerias, apartamentos e torres, com coberturas em volume, com 24 tipos de árvores. Alturas ilustrativas: mais edifícios no Centro e entorno da JK; casas baixas fora desse núcleo. Não representa um cadastro de alturas reais. Ruas, rios, coordenadas e câmeras preservados. 7.689 construções em conflito com o espaço das ruas foram removidas; os contornos dos imóveis restantes foram preservados.</p><p>Referência: <a href="https://www.mobilize.org.br/midias/pesquisas/plano-de-mobilidade-urbana-de-foz-do-iguacu.pdf" target="_blank" rel="noopener">Plano de Mobilidade Urbana de Foz do Iguaçu</a>.</p><p><b>Vegetação:</b> 101.130 árvores, incluindo 65.000 novas posições verificadas contra ruas, construções, água e infraestrutura. Biblioteca de 24 silhuetas ilustrativas, incluindo palmeiras, árvores floridas, copas largas e colunares. Arborização ilustrativa, não inventário botânico real.</p>
 <p>Ruas, rios e limites originais preservados. Construções sobre as ruas removidas em ambos os modos. Antes = visual técnico bege.</p>
 </details></template>
+
+<nav id="sec-bar" aria-label="Secretarias da Prefeitura de Foz">
+  <div class="sec-tooltip" role="status"></div>
+  <div class="sec-hud">
+    <div class="sec-tools">
+      <div class="sec-tab" aria-hidden="true">
+        <div class="title">Secretarias</div>
+        <div class="sub">Prefeitura de Foz</div>
+      </div>
+      <div class="sec-vdiv"></div>
+      <div class="sec-btns">
+          <button type="button" class="sec-item" data-id="prefeitura" aria-label="Prefeitura (Gabinete)" data-tooltip="Prefeitura (Gabinete)">
+            <div class="sec-ring" style="--ring:#4f8fd0">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- finial + dome -->
+                  <circle cx="24" cy="4.6" r="1.3" fill="#2a3138" stroke="none"/>
+                  <path d="M16.5 16.5c0-6.2 4.2-10.7 7.5-10.7s7.5 4.5 7.5 10.7" fill="#2a3138" fill-opacity=".1"/>
+                  <path d="M16.5 16.5c0-6.2 4.2-10.7 7.5-10.7s7.5 4.5 7.5 10.7"/>
+                  <!-- pediment -->
+                  <path d="M9.5 21.2 L24 13.2 L38.5 21.2 Z" fill="#2a3138" fill-opacity=".1"/>
+                  <path d="M9.5 21.2 L24 13.2 L38.5 21.2 Z"/>
+                  <path d="M9.5 21.2 H38.5"/>
+                  <!-- body / columns -->
+                  <path d="M11 21.2 V38"/>
+                  <path d="M37 21.2 V38"/>
+                  <path d="M16 22.2 V37"/>
+                  <path d="M21.2 22.2 V37"/>
+                  <path d="M26.8 22.2 V37"/>
+                  <path d="M32 22.2 V37"/>
+                  <!-- base -->
+                  <path d="M8 38 H40"/>
+                  <path d="M11 42 H37"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Prefeitura</span>
+          </button>
+          <button type="button" class="sec-item" data-id="administracao" aria-label="Secretaria de Administração" data-tooltip="Secretaria de Administração">
+            <div class="sec-ring" style="--ring:#e0c65c">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <rect x="7" y="17" width="34" height="22" rx="3.2"/>
+                  <path d="M7 26.5 H41"/>
+                  <path d="M18 17 V14.2 a6 6 0 0 1 12 0 V17"/>
+                  <rect x="21" y="23.5" width="6" height="5" rx="1.1"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Administração</span>
+          </button>
+          <button type="button" class="sec-item" data-id="fundacao" aria-label="Fundação Cultural" data-tooltip="Fundação Cultural">
+            <div class="sec-ring multi">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- tragedy mask (back right) -->
+                  <ellipse cx="31.5" cy="20" rx="10.2" ry="13" fill="#2a3138" fill-opacity=".08"/>
+                  <ellipse cx="31.5" cy="20" rx="10.2" ry="13"/>
+                  <path d="M27.2 17.4 c0 1.5 1.3 2.2 2.4 2.2s2.4-.7 2.4-2.2"/>
+                  <path d="M31.2 17.4 c0 1.5 1.3 2.2 2.4 2.2s2.4-.7 2.4-2.2"/>
+                  <path d="M27.8 26.2 q3.8-3.2 7.6 0"/>
+                  <!-- comedy mask (front left) -->
+                  <ellipse cx="17.8" cy="23" rx="11" ry="14" fill="#fff"/>
+                  <ellipse cx="17.8" cy="23" rx="11" ry="14" fill="#2a3138" fill-opacity=".06"/>
+                  <ellipse cx="17.8" cy="23" rx="11" ry="14"/>
+                  <path d="M13 20.2 c0 1.7 1.4 2.5 2.6 2.5s2.6-.8 2.6-2.5"/>
+                  <path d="M17.4 20.2 c0 1.7 1.4 2.5 2.6 2.5s2.6-.8 2.6-2.5"/>
+                  <path d="M13.2 27.4 q4.6 4.4 9.2 0"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Fundação</span>
+          </button>
+          <button type="button" class="sec-item" data-id="meio_ambiente" aria-label="Secretaria de Meio Ambiente" data-tooltip="Secretaria de Meio Ambiente">
+            <div class="sec-ring" style="--ring:#6fbf7a">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <path d="M24 6.5 C36.5 10.5 39 28 24 42.5 C9 28 11.5 10.5 24 6.5Z" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M24 6.5 C36.5 10.5 39 28 24 42.5 C9 28 11.5 10.5 24 6.5Z"/>
+                  <path d="M24 14 V41"/>
+                  <path d="M24 22c6.5 2.2 10 8 11.5 14"/>
+                  <path d="M24 18c-5.5 3-8.5 9-9.5 15"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Meio Ambiente</span>
+          </button>
+          <button type="button" class="sec-item" data-id="obras" aria-label="Secretaria de Obras" data-tooltip="Secretaria de Obras">
+            <div class="sec-ring" style="--ring:#e09a5a">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- hard hat -->
+                  <path d="M10 28.5 a14 14 0 0 1 28 0" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M10 28.5 a14 14 0 0 1 28 0"/>
+                  <path d="M14.5 28.2 V26 a9.5 9.5 0 0 1 19 0 v2.2"/>
+                  <path d="M24 13.5 V19"/>
+                  <path d="M7 28.5 H41"/>
+                  <path d="M8.5 32.5 H39.5"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Obras</span>
+          </button>
+          <button type="button" class="sec-item" data-id="educacao" aria-label="Secretaria de Educação" data-tooltip="Secretaria de Educação">
+            <div class="sec-ring" style="--ring:#c4845c">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <path d="M6 21 L24 12 L42 21 L24 30 Z" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M6 21 L24 12 L42 21 L24 30 Z"/>
+                  <path d="M14 24.5 V32.5 c5.5 4 14.5 4 20 0 V24.5"/>
+                  <path d="M40.2 21.5 V33"/>
+                  <circle cx="40.2" cy="34.2" r="1.6" fill="#2a3138" stroke="none"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Educação</span>
+          </button>
+          <button type="button" class="sec-item" data-id="planejamento" aria-label="Secretaria de Planejamento" data-tooltip="Secretaria de Planejamento">
+            <div class="sec-ring" style="--ring:#6ec0e0">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- drawing compass -->
+                  <circle cx="24" cy="9.5" r="3.1"/>
+                  <path d="M24 12.6 L13.2 41"/>
+                  <path d="M24 12.6 L36.2 36.5"/>
+                  <path d="M16.8 28.5 H28.5"/>
+                  <path d="M13.2 41 l-2.2 3.2"/>
+                  <path d="M36.2 36.5 l3.4 2.2"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Planejamento</span>
+          </button>
+          <button type="button" class="sec-item" data-id="hospital" aria-label="Hospital Municipal" data-tooltip="Hospital Municipal">
+            <div class="sec-ring" style="--ring:#e07070">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <path d="M19 7.5 h10 v11.5 h11.5 v10 H29 v11.5 H19 V29 H7.5 V19 H19 Z"
+                        fill="#2a3138" fill-opacity=".12" stroke="#2a3138" stroke-linejoin="round"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Hospital</span>
+          </button>
+          <button type="button" class="sec-item" data-id="fozhabita" aria-label="Fozhabita" data-tooltip="Fozhabita">
+            <div class="sec-ring" style="--ring:#e8a0b8">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <path d="M6 22.5 L20 10.5 L34 22.5 V39 H6 Z" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M6 22.5 L20 10.5 L34 22.5 V39 H6 Z"/>
+                  <path d="M16.5 39 V29.5 h7 V39"/>
+                  <!-- key -->
+                  <circle cx="38.2" cy="26.5" r="4.1"/>
+                  <path d="M38.2 30.6 V41.5"/>
+                  <path d="M38.2 36.4 H41.6"/>
+                  <path d="M38.2 39.6 H40.8"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Fozhabita</span>
+          </button>
+          <button type="button" class="sec-item" data-id="foztrans" aria-label="Foztrans" data-tooltip="Foztrans">
+            <div class="sec-ring" style="--ring:#e88840">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <rect x="5.5" y="12.5" width="37" height="21" rx="5" fill="#2a3138" fill-opacity=".08"/>
+                  <rect x="5.5" y="12.5" width="37" height="21" rx="5"/>
+                  <path d="M5.5 23.5 H42.5"/>
+                  <rect x="9.5" y="16" width="8" height="6" rx="1"/>
+                  <rect x="20" y="16" width="8" height="6" rx="1"/>
+                  <rect x="30.5" y="16" width="8" height="6" rx="1"/>
+                  <circle cx="14" cy="35.5" r="3.4"/>
+                  <circle cx="34" cy="35.5" r="3.4"/>
+                  <path d="M17.6 35.5 H30.4"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Foztrans</span>
+          </button>
+          <button type="button" class="sec-item" data-id="turismo" aria-label="Secretaria de Turismo" data-tooltip="Secretaria de Turismo">
+            <div class="sec-ring" style="--ring:#4ec4b8">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- left cliff -->
+                  <path d="M5 8 H20 L18 16 H7 L5 8Z" fill="#2a3138" fill-opacity=".1"/>
+                  <path d="M5 8 H20 L18 16 H7 L5 8Z"/>
+                  <path d="M7 16 L6 36 L12 32 L18 16"/>
+                  <!-- water curtain falling off the lip -->
+                  <path d="M20 10.5 H42" stroke-width="2.2"/>
+                  <path d="M21 11 C20 18 19 26 20.5 36"/>
+                  <path d="M25 11 C25.5 19 24 28 25 38"/>
+                  <path d="M29 11 C30 20 29.2 29 30 38"/>
+                  <path d="M33.5 11 C35 19 35 28 35.5 36"/>
+                  <path d="M38.5 11 C40 18 40.5 26 40 34"/>
+                  <!-- pool / mist -->
+                  <path d="M12 36.5 Q26 45 42 35"/>
+                  <path d="M16 40.5 Q26 46 38 39"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Turismo</span>
+          </button>
+          <button type="button" class="sec-item" data-id="guarda" aria-label="Guarda Municipal" data-tooltip="Guarda Municipal">
+            <div class="sec-ring" style="--ring:#293e56">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- civic shield / badge -->
+                  <path d="M24 5.5 L40 12.2 V23.5 C40 34.2 31.4 41.2 24 43.7 C16.6 41.2 8 34.2 8 23.5 V12.2 Z" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M24 5.5 L40 12.2 V23.5 C40 34.2 31.4 41.2 24 43.7 C16.6 41.2 8 34.2 8 23.5 V12.2 Z"/>
+                  <path d="M24 16.5 l2.3 4.6 5.1.7-3.7 3.6 .9 5.1 L24 28.2 l-4.6 2.3 .9-5.1-3.7-3.6 5.1-.7 Z" fill="#2a3138" fill-opacity=".12"/>
+                  <path d="M24 16.5 l2.3 4.6 5.1.7-3.7 3.6 .9 5.1 L24 28.2 l-4.6 2.3 .9-5.1-3.7-3.6 5.1-.7 Z"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Guarda</span>
+          </button>
+          <button type="button" class="sec-item" data-id="financas" aria-label="Secretaria de Finanças" data-tooltip="Secretaria de Finanças">
+            <div class="sec-ring" style="--ring:#c9a24a">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- coin + cifrão -->
+                  <circle cx="24" cy="24" r="15.5" fill="#2a3138" fill-opacity=".07"/>
+                  <circle cx="24" cy="24" r="15.5"/>
+                  <path d="M30.2 16.2 C27 13.2 18.5 14.2 18.5 20.2 C18.5 25.8 30 23.2 30 29.2 C30 35 21.8 36.5 17.8 33.4"/>
+                  <path d="M21.2 11.5 V36.5"/>
+                  <path d="M26.8 11.5 V36.5"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Finanças</span>
+          </button>
+          <button type="button" class="sec-item" data-id="esporte" aria-label="Secretaria de Esportes" data-tooltip="Secretaria de Esportes">
+            <div class="sec-ring" style="--ring:#6aaa6a">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- soccer ball -->
+                  <circle cx="24" cy="24" r="15.5" fill="#2a3138" fill-opacity=".07"/>
+                  <circle cx="24" cy="24" r="15.5"/>
+                  <path d="M24 16.2 L28.4 19.4 26.7 24.6 21.3 24.6 19.6 19.4 Z" fill="#2a3138" fill-opacity=".12"/>
+                  <path d="M24 16.2 L28.4 19.4 26.7 24.6 21.3 24.6 19.6 19.4 Z"/>
+                  <path d="M19.6 19.4 L14.2 17.8"/>
+                  <path d="M28.4 19.4 L33.8 17.8"/>
+                  <path d="M21.3 24.6 L16.6 29.4"/>
+                  <path d="M26.7 24.6 L31.4 29.4"/>
+                  <path d="M14.2 17.8 C12.2 20.4 11.2 23.6 11.5 26.8 L16.6 29.4"/>
+                  <path d="M33.8 17.8 C35.8 20.4 36.8 23.6 36.5 26.8 L31.4 29.4"/>
+                  <path d="M16.6 29.4 C19 35.2 22.2 37.8 24 39.2 C25.8 37.8 29 35.2 31.4 29.4"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Esporte</span>
+          </button>
+          <button type="button" class="sec-item" data-id="saude" aria-label="Secretaria de Saúde" data-tooltip="Secretaria de Saúde">
+            <div class="sec-ring" style="--ring:#e07070">
+              <div class="sec-btn"><svg viewBox="0 0 48 48" class="ico" aria-hidden="true">
+                  <!-- heart -->
+                  <path d="M24 40.5 C24 40.5 8 29.5 8 18.8 C8 12.6 13.2 9 18.2 11.8 L24 16.8 L29.8 11.8 C34.8 9 40 12.6 40 18.8 C40 29.5 24 40.5 24 40.5 Z" fill="#2a3138" fill-opacity=".08"/>
+                  <path d="M24 40.5 C24 40.5 8 29.5 8 18.8 C8 12.6 13.2 9 18.2 11.8 L24 16.8 L29.8 11.8 C34.8 9 40 12.6 40 18.8 C40 29.5 24 40.5 24 40.5 Z"/>
+                </svg></div>
+            </div>
+            <span class="sec-label">Saúde</span>
+          </button>
+      </div>
+    </div>
+  </div>
+</nav>
 <script src="js/maplibre-gl.js"></script>
 <script src="js/pmtiles.js"></script>
-<script src="js/civic-usuario.js?v=saude-esportes-financas-v9"></script>
+<script src="js/civic-usuario.js?v=admin-barra-v10"></script>
 <script src="js/app-usuario.js"></script>
+<script src="js/barra-secretarias.js?v=admin-barra-v10"></script>
 </body></html>
