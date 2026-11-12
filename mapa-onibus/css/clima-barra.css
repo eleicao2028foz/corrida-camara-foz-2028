@@ -1,0 +1,107 @@
+/* Barrinha compacta de temperatura/clima — canto superior direito. */
+#clima-chip{
+  position:absolute;
+  top:8px;
+  right:8px;
+  z-index:6;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+  max-width:min(240px, calc(100vw - 16px));
+  padding:4px 8px 4px 5px;
+  pointer-events:none;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  color:#2a3138;
+  background:linear-gradient(180deg,rgba(248,249,251,.96) 0%,rgba(226,229,235,.96) 55%,rgba(210,214,221,.97) 100%);
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.22),0 1px 2px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.9);
+}
+#clima-chip[hidden]{display:none !important}
+
+#clima-chip .chip-icon{
+  flex:none;
+  width:22px;
+  height:22px;
+  display:grid;
+  place-items:center;
+}
+#clima-chip .chip-icon svg{
+  width:22px;
+  height:22px;
+  display:block;
+}
+
+#clima-chip .chip-body{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  line-height:1.15;
+}
+#clima-chip .chip-main{
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+  min-width:0;
+}
+#clima-chip .chip-temp{
+  flex:none;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:-.03em;
+  line-height:1.1;
+  margin:0;
+}
+#clima-chip .chip-desc{
+  font-size:11px;
+  font-weight:600;
+  color:#3a434c;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  min-width:0;
+}
+#clima-chip .chip-place{
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.01em;
+  color:#6a7380;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+#clima-chip .chip-range{
+  font-weight:600;
+  color:#5a6570;
+}
+
+body.night #clima-chip{
+  color:#e8eef6;
+  background:linear-gradient(180deg,rgba(40,48,62,.94) 0%,rgba(28,34,46,.96) 55%,rgba(22,26,36,.97) 100%);
+  border-color:rgba(180,200,230,.18);
+  box-shadow:0 4px 12px rgba(0,0,0,.4),0 1px 2px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12);
+}
+body.night #clima-chip .chip-desc{color:#e8eef6}
+body.night #clima-chip .chip-place{color:#c5d0e0}
+body.night #clima-chip .chip-range{color:#b8c4d4}
+
+/* Celular: uma linha — ícone + temperatura + descrição curta. */
+@media (max-width:640px){
+  #clima-chip{
+    top:calc(6px + env(safe-area-inset-top, 0px));
+    right:calc(6px + env(safe-area-inset-right, 0px));
+    gap:4px;
+    padding:3px 7px 3px 4px;
+    border-radius:8px;
+    max-width:min(200px, calc(100vw - 12px));
+  }
+  #clima-chip .chip-icon,
+  #clima-chip .chip-icon svg{width:16px;height:16px}
+  #clima-chip .chip-temp{font-size:12px}
+  #clima-chip .chip-desc{font-size:10px}
+  #clima-chip .chip-place{display:none}
+}

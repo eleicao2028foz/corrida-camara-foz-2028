@@ -8,7 +8,9 @@
     LAT +
     "&longitude=" +
     LON +
-    "&current=weather_code,cloud_cover,precipitation,is_day&timezone=America/Sao_Paulo";
+    "&current=weather_code,cloud_cover,precipitation,is_day,temperature_2m,apparent_temperature" +
+    "&daily=temperature_2m_max,temperature_2m_min&forecast_days=1" +
+    "&timezone=America/Sao_Paulo";
   var REFRESH_MS = 10 * 60 * 1000;
   var MODES = { sol: 1, nublado: 1, chuva: 1, tempestade: 1, neblina: 1 };
 
@@ -16,6 +18,8 @@
   var holdLightning = readFlag("relampago");
   var mode = forced || "sol";
   var lastWeather = null;
+  var lastDaily = null;
+  var chip = null;
   var reduce = false;
   var mobile = false;
   var hidden = false;
@@ -103,6 +107,7 @@
     document.body.setAttribute("data-clima", m);
     rebuild();
     kickLoop();
+    updateChip();
     publish();
   }
 
@@ -112,6 +117,8 @@
       forced: forced,
       weather: lastWeather,
       reduced: reduce,
+      daily: lastDaily,
+      chip: chipInfo(),
       setMode: function (m) {
         forced = MODES[m] ? m : null;
         setMode(forced || "sol");
@@ -617,8 +624,169 @@
     raf = requestAnimationFrame(loop);
   }
 
+
+  /* ——— Barrinha de temperatura / clima (canto superior direito) ——— */
+
+  var WMO_LABEL = {
+    0: { day: "Ensolarado", night: "Céu limpo" },
+    1: { day: "Céu limpo", night: "Céu limpo" },
+    2: "Parcialmente nublado",
+    3: "Nublado",
+    45: "Neblina",
+    48: "Neblina",
+    51: "Garoa",
+    53: "Garoa",
+    55: "Garoa forte",
+    56: "Garoa",
+    57: "Garoa",
+    61: "Chuva fraca",
+    63: "Chuva",
+    65: "Chuva forte",
+    66: "Chuva",
+    67: "Chuva",
+    71: "Neve",
+    73: "Neve",
+    75: "Neve",
+    77: "Neve",
+    80: "Pancadas de chuva",
+    81: "Pancadas de chuva",
+    82: "Pancadas fortes",
+    85: "Neve",
+    86: "Neve",
+    95: "Tempestade",
+    96: "Tempestade",
+    99: "Tempestade"
+  };
+  var FORCED_LABEL = {
+    sol: { day: "Ensolarado", night: "Céu limpo" },
+    nublado: "Nublado",
+    chuva: "Chuva",
+    tempestade: "Tempestade",
+    neblina: "Neblina"
+  };
+
+  function isNightLook() {
+    if (nightPhase() >= 0.5) return true;
+    try { return document.body.classList.contains("night"); } catch (e) { return false; }
+  }
+
+  function pickLabel(spec, night) {
+    if (!spec) return night ? "Céu limpo" : "Ensolarado";
+    if (typeof spec === "string") return spec;
+    return night ? (spec.night || spec.day) : (spec.day || spec.night);
+  }
+
+  function chipLabel(night) {
+    if (forced) return pickLabel(FORCED_LABEL[forced] || FORCED_LABEL.sol, night);
+    var code = lastWeather && lastWeather.weather_code;
+    if (code == null || code === "") return pickLabel(FORCED_LABEL[mode] || "", night);
+    if (WMO_LABEL[code] != null) return pickLabel(WMO_LABEL[code], night);
+    return pickLabel(FORCED_LABEL[mode] || "Nublado", night);
+  }
+
+  function chipKind(night) {
+    var k = forced || mode || "sol";
+    if (k === "sol" && night) return "lua";
+    return k;
+  }
+
+  function iconSvg(kind, night) {
+    if (kind === "lua" || (kind === "sol" && night)) {
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#2a3550"/><circle cx="14" cy="16" r="9" fill="#e8eef8"/><circle cx="18.5" cy="13.5" r="7.2" fill="#2a3550"/><circle cx="11.5" cy="20" r="1.1" fill="#c5d0e4" opacity=".7"/></svg>';
+    }
+    if (kind === "sol") {
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6.2" fill="#f0b429"/><g stroke="#f0b429" stroke-width="1.8" stroke-linecap="round"><path d="M16 4.2v3.2M16 24.6v3.2M4.2 16h3.2M24.6 16h3.2M7.5 7.5l2.3 2.3M22.2 22.2l2.3 2.3M7.5 24.5l2.3-2.3M22.2 9.8l2.3-2.3"/></g><circle cx="16" cy="16" r="4.6" fill="#ffe37a"/></svg>';
+    }
+    if (kind === "nublado") {
+      if (night) {
+        return '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11.5" cy="11" r="6" fill="#e8eef8"/><circle cx="15.2" cy="9.2" r="4.8" fill="#3a4560"/><ellipse cx="18" cy="20.2" rx="9.4" ry="6.1" fill="#7b8798"/><ellipse cx="12.2" cy="20.6" rx="7.2" ry="5.2" fill="#8b97a8"/><ellipse cx="18" cy="18.6" rx="8.4" ry="5.2" fill="#9aa6b6"/></svg>';
+      }
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11.2" cy="11.2" r="5.4" fill="#f0b429"/><g stroke="#f0b429" stroke-width="1.4" stroke-linecap="round"><path d="M11.2 3.6v1.8M4.2 11.2h1.8M6.2 6.2l1.3 1.3"/></g><ellipse cx="18.2" cy="20.4" rx="9.5" ry="6.2" fill="#8a96a6"/><ellipse cx="12.4" cy="20.8" rx="7.2" ry="5.2" fill="#9aa6b4"/><ellipse cx="18.2" cy="18.7" rx="8.4" ry="5.2" fill="#b0bac6"/></svg>';
+    }
+    if (kind === "chuva") {
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="17.6" cy="14.2" rx="9.2" ry="6" fill="#6e7c90"/><ellipse cx="12.2" cy="14.6" rx="7" ry="5" fill="#8090a4"/><ellipse cx="17.6" cy="12.6" rx="8.2" ry="5" fill="#95a4b6"/><g stroke="#4a7eae" stroke-width="1.7" stroke-linecap="round"><path d="M11 22.2l-1.4 4.2M16 22.6l-1.4 4.4M21 22.2l-1.4 4.2"/></g></svg>';
+    }
+    if (kind === "tempestade") {
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="17.4" cy="13.4" rx="9.2" ry="6" fill="#4d5668"/><ellipse cx="12" cy="13.8" rx="7" ry="5" fill="#5d677a"/><ellipse cx="17.4" cy="11.8" rx="8.2" ry="5" fill="#6e7a8e"/><path d="M17.8 18.2h-3.1l1.1 4.2h-2.7L19.6 29l-1.2-5.1h2.8z" fill="#f3d15a" stroke="#e6bc2a" stroke-width=".4" stroke-linejoin="round"/><g stroke="#6a90b8" stroke-width="1.5" stroke-linecap="round"><path d="M10.2 22.4l-1 2.8M22.4 22.2l-1 2.8"/></g></svg>';
+    }
+    if (kind === "neblina") {
+      return '<svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="#8a98a8" stroke-width="2" stroke-linecap="round"><path d="M6 12.5h14.5" opacity=".55"/><path d="M8.5 16.5h17"/><path d="M5.5 20.5h16.5" opacity=".8"/><path d="M9 24.5h15.5" opacity=".55"/></g></svg>';
+    }
+    return iconSvg("sol", night);
+  }
+
+  function chipInfo() {
+    if (!lastWeather || lastWeather.temperature_2m == null || lastWeather.temperature_2m === "") {
+      return { visible: false };
+    }
+    var night = isNightLook();
+    var t = Math.round(Number(lastWeather.temperature_2m));
+    var tmin = null, tmax = null;
+    if (lastDaily && lastDaily.temperature_2m_min && lastDaily.temperature_2m_min.length) {
+      tmin = Math.round(Number(lastDaily.temperature_2m_min[0]));
+    }
+    if (lastDaily && lastDaily.temperature_2m_max && lastDaily.temperature_2m_max.length) {
+      tmax = Math.round(Number(lastDaily.temperature_2m_max[0]));
+    }
+    return {
+      visible: true,
+      temp: t,
+      tmin: tmin,
+      tmax: tmax,
+      label: chipLabel(night),
+      kind: chipKind(night),
+      night: night,
+      place: "Foz do Iguaçu"
+    };
+  }
+
+  function hideChip() {
+    if (chip) chip.hidden = true;
+  }
+
+  function setupChip() {
+    chip = document.getElementById("clima-chip");
+    if (!chip) {
+      chip = document.createElement("aside");
+      chip.id = "clima-chip";
+      chip.hidden = true;
+      chip.setAttribute("aria-live", "polite");
+      document.body.appendChild(chip);
+    }
+    try {
+      var obs = new MutationObserver(function () { updateChip(); });
+      obs.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    } catch (e) {}
+    updateChip();
+  }
+
+  function updateChip() {
+    if (!chip) return;
+    var info = chipInfo();
+    if (!info.visible) {
+      chip.hidden = true;
+      return;
+    }
+    var range = "";
+    if (info.tmin != null && info.tmax != null && isFinite(info.tmin) && isFinite(info.tmax)) {
+      range = info.tmin + "°/" + info.tmax + "°";
+    }
+    chip.setAttribute("aria-label", "Clima em Foz do Iguaçu: " + info.temp + " graus, " + info.label);
+    chip.innerHTML =
+      '<div class="chip-icon" aria-hidden="true">' + iconSvg(info.kind, info.night) + "</div>" +
+      '<div class="chip-body">' +
+        '<div class="chip-main">' +
+          '<span class="chip-temp">' + info.temp + "°</span>" +
+          '<span class="chip-desc">' + info.label + "</span>" +
+        "</div>" +
+        '<div class="chip-place">Foz do Iguaçu' +
+          (range ? '<span class="chip-range"> · ' + range + "</span>" : "") +
+        "</div>" +
+      "</div>";
+    chip.hidden = false;
+  }
+
   function fetchWeather() {
-    if (forced) return Promise.resolve(mode);
     return fetch(API, { cache: "no-store" })
       .then(function (r) {
         if (!r.ok) throw new Error("meteo");
@@ -626,15 +794,23 @@
       })
       .then(function (j) {
         lastWeather = (j && j.current) || {};
-        setMode(mapWmo(lastWeather.weather_code, lastWeather.cloud_cover, lastWeather.precipitation));
+        lastDaily = (j && j.daily) || null;
+        if (!forced) {
+          setMode(mapWmo(lastWeather.weather_code, lastWeather.cloud_cover, lastWeather.precipitation));
+        } else {
+          updateChip();
+        }
         publish();
         return mode;
       })
       .catch(function () {
         lastWeather = null;
-        setMode("sol");
+        lastDaily = null;
+        hideChip();
+        if (!forced) setMode("sol");
+        else updateChip();
         publish();
-        return "sol";
+        return forced || "sol";
       });
   }
 
@@ -659,8 +835,9 @@
 
     fetchWeather();
     setInterval(function () {
-      if (!forced) fetchWeather();
+      fetchWeather();
     }, REFRESH_MS);
+    setupChip();
 
     whenMapReady(function () {
       ready = true;
