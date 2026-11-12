@@ -1,0 +1,85 @@
+{
+  "gerado_em": "2026-11-12T11:04:31-03:00",
+  "timezone": "America/Sao_Paulo",
+  "export": 160,
+  "secretarias": {
+    "fozhabita": {
+      "id": "fozhabita",
+      "feliz": "img/personagens/fozhabita/feliz.webp",
+      "normal": "img/personagens/fozhabita/normal.webp",
+      "triste": "img/personagens/fozhabita/triste.webp"
+    },
+    "hospital": {
+      "id": "hospital",
+      "feliz": "img/personagens/hospital/feliz.webp",
+      "normal": "img/personagens/hospital/normal.webp",
+      "triste": "img/personagens/hospital/triste.webp"
+    },
+    "planejamento": {
+      "id": "planejamento",
+      "feliz": "img/personagens/planejamento/feliz.webp",
+      "normal": "img/personagens/planejamento/normal.webp",
+      "triste": "img/personagens/planejamento/triste.webp"
+    },
+    "obras": {
+      "id": "obras",
+      "feliz": "img/personagens/obras/feliz.webp",
+      "normal": "img/personagens/obras/normal.webp",
+      "triste": "img/personagens/obras/triste.webp"
+    },
+    "administracao": {
+      "id": "administracao",
+      "feliz": "img/personagens/administracao/feliz.webp",
+      "normal": "img/personagens/administracao/normal.webp",
+      "triste": "img/personagens/administracao/triste.webp"
+    },
+    "educacao": {
+      "id": "educacao",
+      "feliz": "img/personagens/educacao/feliz.webp",
+      "normal": "img/personagens/educacao/normal.webp",
+      "triste": "img/personagens/educacao/triste.webp"
+    },
+    "turismo": {
+      "id": "turismo",
+      "feliz": "img/personagens/turismo/feliz.webp",
+      "normal": "img/personagens/turismo/normal.webp",
+      "triste": "img/personagens/turismo/triste.webp"
+    },
+    "guarda": {
+      "id": "guarda",
+      "feliz": "img/personagens/guarda/feliz.webp",
+      "normal": "img/personagens/guarda/normal.webp",
+      "triste": "img/personagens/guarda/triste.webp"
+    },
+    "meio_ambiente": {
+      "id": "meio_ambiente",
+      "feliz": "img/personagens/meio_ambiente/feliz.webp",
+      "normal": "img/personagens/meio_ambiente/normal.webp",
+      "triste": "img/personagens/meio_ambiente/triste.webp"
+    },
+    "fundacao": {
+      "id": "fundacao",
+      "feliz": "img/personagens/fundacao/feliz.webp",
+      "normal": "img/personagens/fundacao/normal.webp",
+      "triste": "img/personagens/fundacao/triste.webp"
+    },
+    "saude": {
+      "id": "saude",
+      "feliz": "img/personagens/saude/feliz.webp",
+      "normal": "img/personagens/saude/normal.webp",
+      "triste": "img/personagens/saude/triste.webp"
+    },
+    "financas": {
+      "id": "financas",
+      "feliz": "img/personagens/financas/feliz.webp",
+      "normal": "img/personagens/financas/normal.webp",
+      "triste": "img/personagens/financas/triste.webp"
+    },
+    "esporte": {
+      "id": "esporte",
+      "feliz": "img/personagens/esporte/feliz.webp",
+      "normal": "img/personagens/esporte/normal.webp",
+      "triste": "img/personagens/esporte/triste.webp"
+    }
+  }
+}

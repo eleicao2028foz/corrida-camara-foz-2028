@@ -32,11 +32,23 @@
   let tipLock = false;
 
   function barPadding() {
-    const h = Math.ceil(bar.getBoundingClientRect().height) + 16;
+    const news = document.getElementById('news-strip');
+    const newsOn = !!(news && !news.hasAttribute('hidden'));
+    const nh = newsOn ? Math.ceil(news.getBoundingClientRect().height) + 10 : 0;
+    const barH = Math.ceil(bar.getBoundingClientRect().height) + 16;
+    const h = barH + nh;
     document.documentElement.style.setProperty('--sec-h', h + 'px');
     bar.style.setProperty('--sec-h', h + 'px');
+    document.documentElement.style.setProperty('--bar-only-h', barH + 'px');
+    bar.style.setProperty('--bar-only-h', barH + 'px');
+    document.documentElement.style.setProperty('--news-h', nh + 'px');
     return { top: 28, bottom: h, left: 16, right: 16 };
   }
+  window.__fozBarPad = function(){
+    const p = barPadding();
+    try { if (window.__FOZ_CITY_SIM__ && window.__FOZ_CITY_SIM__.map) window.__FOZ_CITY_SIM__.map.setPadding(p); } catch (e) {}
+    return p;
+  };
 
   function placeTip(item) {
     if (!tip || !item) return;

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/barra-secretarias.css?v=admin-barra-v10">
 <link rel="stylesheet" href="css/noite.css?v=noite-auto-v11">
+<link rel="stylesheet" href="css/noticias-secretaria.css?v=noticias-barra-v12">
 </head>
 <body>
 <div id="map" role="region" aria-label="Mapa de Foz do Iguaçu com ônibus simulados pelo horário local do dispositivo"></div>
@@ -255,10 +256,35 @@
     </div>
   </div>
 </nav>
+<aside id="news-strip" hidden aria-live="polite">
+  <div class="news-panel">
+    <div class="news-hat" aria-hidden="true"></div>
+    <div class="news-hat-b" aria-hidden="true"></div>
+    <div class="news-accent" aria-hidden="true"></div>
+    <div class="news-char" aria-hidden="true"></div>
+    <div class="news-body">
+      <div class="news-kicker">
+        <span class="news-sec"></span>
+        <span class="news-tag" data-tipo="nota"></span>
+      </div>
+      <p class="news-title"></p>
+      <p class="news-empty" hidden></p>
+      <p class="news-meta">
+        <time class="news-date"></time>
+        <span aria-hidden="true">·</span>
+        <span class="news-src"></span>
+        <span class="news-mentions" hidden></span>
+        <a class="news-more" hidden target="_blank" rel="noopener noreferrer">Ler mais</a>
+      </p>
+    </div>
+    <button type="button" class="news-close" aria-label="Fechar notícia">×</button>
+  </div>
+</aside>
 <script src="js/maplibre-gl.js"></script>
 <script src="js/pmtiles.js"></script>
 <script src="js/civic-usuario.js?v=noite-auto-v11"></script>
 <script src="js/app-usuario.js"></script>
-<script src="js/barra-secretarias.js?v=admin-barra-v10"></script>
+<script src="js/barra-secretarias.js?v=noticias-barra-v12"></script>
 <script src="js/noite.js?v=noite-auto-v11"></script>
+<script src="js/noticias-secretaria.js?v=noticias-barra-v12"></script>
 </body></html>
