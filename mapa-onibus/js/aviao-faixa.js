@@ -1,11 +1,11 @@
-/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v12). */
+/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v14). */
 (function () {
   "use strict";
 
   var DATA_URL = "data/aviao-faixa.json";
   var REFRESH_MS = 10 * 60 * 1000;
   var FALLBACK = "FOZ DO IGUAÇU";
-  var SPEED_MS = 260; /* cartoony cruise, visible at city zoom */
+  var SPEED_MS = 130; /* calm banner-plane cruise (about half of v12) */
   var ALT = 60;
   /* Screen size tracks zoom as a real object at fixed altitude.
      Text is readable from ~zoom 16 up to the fade; far out it stays tiny.
@@ -18,145 +18,26 @@
   var SCALE_MAX = 5;
   var PROP_HX = 168;
   var PROP_HY = 46;
+  var PIVOT_VX = 108;
+  var PIVOT_VY = 46;
+  var TAIL_VX = 40;
+  var TAIL_VY = 48;
   var PLANE_W = 96;
   var PLANE_H = 54;
   var PLANE_W_MOBILE = 68;
   var PLANE_H_MOBILE = 38;
 
-  /* City-wide loop of straight-ish legs with gentle turns. Most crossings
-     pass near Avenida Costa e Silva at varied angles and offsets (not along the street). */
-  var ROUTES = [
-    { a: [-54.532499, -25.54387], b: [-54.53171, -25.542874] },
-    { a: [-54.53171, -25.542874], b: [-54.531042, -25.541807] },
-    { a: [-54.531042, -25.541807], b: [-54.530503, -25.540681] },
-    { a: [-54.530503, -25.540681], b: [-54.5301, -25.539509] },
-    { a: [-54.5301, -25.539509], b: [-54.529837, -25.538304] },
-    { a: [-54.529837, -25.538304], b: [-54.529717, -25.537081] },
-    { a: [-54.529717, -25.537081], b: [-54.529742, -25.535854] },
-    { a: [-54.529742, -25.535854], b: [-54.529911, -25.534636] },
-    { a: [-54.529911, -25.534636], b: [-54.530222, -25.533441] },
-    { a: [-54.530222, -25.533441], b: [-54.530673, -25.532283] },
-    { a: [-54.530673, -25.532283], b: [-54.531256, -25.531176] },
-    { a: [-54.531256, -25.531176], b: [-54.531967, -25.530132] },
-    { a: [-54.531967, -25.530132], b: [-54.551719, -25.504301] },
-    { a: [-54.551719, -25.504301], b: [-54.552571, -25.503302] },
-    { a: [-54.552571, -25.503302], b: [-54.553531, -25.502387] },
-    { a: [-54.553531, -25.502387], b: [-54.554589, -25.501567] },
-    { a: [-54.554589, -25.501567], b: [-54.555734, -25.50085] },
-    { a: [-54.555734, -25.50085], b: [-54.556955, -25.500243] },
-    { a: [-54.556955, -25.500243], b: [-54.558237, -25.499754] },
-    { a: [-54.558237, -25.499754], b: [-54.559568, -25.499387] },
-    { a: [-54.559568, -25.499387], b: [-54.560933, -25.499146] },
-    { a: [-54.560933, -25.499146], b: [-54.562319, -25.499034] },
-    { a: [-54.562319, -25.499034], b: [-54.563709, -25.499052] },
-    { a: [-54.563709, -25.499052], b: [-54.565091, -25.4992] },
-    { a: [-54.565091, -25.4992], b: [-54.566448, -25.499476] },
-    { a: [-54.566448, -25.499476], b: [-54.568057, -25.499883] },
-    { a: [-54.568057, -25.499883], b: [-54.569365, -25.500282] },
-    { a: [-54.569365, -25.500282], b: [-54.570621, -25.500805] },
-    { a: [-54.570621, -25.500805], b: [-54.571809, -25.501444] },
-    { a: [-54.571809, -25.501444], b: [-54.572917, -25.502193] },
-    { a: [-54.572917, -25.502193], b: [-54.573931, -25.503044] },
-    { a: [-54.573931, -25.503044], b: [-54.574842, -25.503987] },
-    { a: [-54.574842, -25.503987], b: [-54.575639, -25.505012] },
-    { a: [-54.575639, -25.505012], b: [-54.576313, -25.506108] },
-    { a: [-54.576313, -25.506108], b: [-54.576856, -25.507261] },
-    { a: [-54.576856, -25.507261], b: [-54.577263, -25.50846] },
-    { a: [-54.577263, -25.50846], b: [-54.577529, -25.509692] },
-    { a: [-54.577529, -25.509692], b: [-54.577651, -25.510941] },
-    { a: [-54.577651, -25.510941], b: [-54.578872, -25.541787] },
-    { a: [-54.578872, -25.541787], b: [-54.578849, -25.543039] },
-    { a: [-54.578849, -25.543039], b: [-54.578681, -25.544282] },
-    { a: [-54.578681, -25.544282], b: [-54.578369, -25.545502] },
-    { a: [-54.578369, -25.545502], b: [-54.577918, -25.546685] },
-    { a: [-54.577918, -25.546685], b: [-54.577332, -25.547818] },
-    { a: [-54.577332, -25.547818], b: [-54.576618, -25.548889] },
-    { a: [-54.576618, -25.548889], b: [-54.575784, -25.549885] },
-    { a: [-54.575784, -25.549885], b: [-54.574839, -25.550796] },
-    { a: [-54.574839, -25.550796], b: [-54.573793, -25.551612] },
-    { a: [-54.573793, -25.551612], b: [-54.572659, -25.552322] },
-    { a: [-54.572659, -25.552322], b: [-54.571448, -25.55292] },
-    { a: [-54.571448, -25.55292], b: [-54.570175, -25.553399] },
-    { a: [-54.570175, -25.553399], b: [-54.568603, -25.553904] },
-    { a: [-54.568603, -25.553904], b: [-54.56727, -25.554263] },
-    { a: [-54.56727, -25.554263], b: [-54.565904, -25.554496] },
-    { a: [-54.565904, -25.554496], b: [-54.564519, -25.554601] },
-    { a: [-54.564519, -25.554601], b: [-54.563129, -25.554575] },
-    { a: [-54.563129, -25.554575], b: [-54.56175, -25.554421] },
-    { a: [-54.56175, -25.554421], b: [-54.560395, -25.554139] },
-    { a: [-54.560395, -25.554139], b: [-54.559079, -25.553732] },
-    { a: [-54.559079, -25.553732], b: [-54.557816, -25.553204] },
-    { a: [-54.557816, -25.553204], b: [-54.556619, -25.552562] },
-    { a: [-54.556619, -25.552562], b: [-54.555501, -25.551811] },
-    { a: [-54.555501, -25.551811], b: [-54.554474, -25.55096] },
-    { a: [-54.554474, -25.55096], b: [-54.553548, -25.550018] },
-    { a: [-54.553548, -25.550018], b: [-54.531757, -25.525418] },
-    { a: [-54.531757, -25.525418], b: [-54.530969, -25.524423] },
-    { a: [-54.530969, -25.524423], b: [-54.530303, -25.523358] },
-    { a: [-54.530303, -25.523358], b: [-54.529765, -25.522234] },
-    { a: [-54.529765, -25.522234], b: [-54.529363, -25.521065] },
-    { a: [-54.529363, -25.521065], b: [-54.529101, -25.519863] },
-    { a: [-54.529101, -25.519863], b: [-54.528981, -25.518642] },
-    { a: [-54.528981, -25.518642], b: [-54.529006, -25.517417] },
-    { a: [-54.529006, -25.517417], b: [-54.529175, -25.516202] },
-    { a: [-54.529175, -25.516202], b: [-54.529485, -25.515009] },
-    { a: [-54.529485, -25.515009], b: [-54.529934, -25.513854] },
-    { a: [-54.529934, -25.513854], b: [-54.530517, -25.512749] },
-    { a: [-54.530517, -25.512749], b: [-54.531226, -25.511707] },
-    { a: [-54.531226, -25.511707], b: [-54.532162, -25.510483] },
-    { a: [-54.532162, -25.510483], b: [-54.532998, -25.509501] },
-    { a: [-54.532998, -25.509501], b: [-54.53394, -25.508603] },
-    { a: [-54.53394, -25.508603], b: [-54.53498, -25.507798] },
-    { a: [-54.53498, -25.507798], b: [-54.536104, -25.507093] },
-    { a: [-54.536104, -25.507093], b: [-54.537303, -25.506498] },
-    { a: [-54.537303, -25.506498], b: [-54.538562, -25.506017] },
-    { a: [-54.538562, -25.506017], b: [-54.539869, -25.505657] },
-    { a: [-54.539869, -25.505657], b: [-54.54121, -25.505421] },
-    { a: [-54.54121, -25.505421], b: [-54.54257, -25.505311] },
-    { a: [-54.54257, -25.505311], b: [-54.543936, -25.505328] },
-    { a: [-54.543936, -25.505328], b: [-54.545293, -25.505473] },
-    { a: [-54.545293, -25.505473], b: [-54.546626, -25.505744] },
-    { a: [-54.546626, -25.505744], b: [-54.581187, -25.514485] },
-    { a: [-54.581187, -25.514485], b: [-54.58246, -25.514874] },
-    { a: [-54.58246, -25.514874], b: [-54.583681, -25.515382] },
-    { a: [-54.583681, -25.515382], b: [-54.584837, -25.516004] },
-    { a: [-54.584837, -25.516004], b: [-54.585914, -25.516733] },
-    { a: [-54.585914, -25.516733], b: [-54.586901, -25.517561] },
-    { a: [-54.586901, -25.517561], b: [-54.587787, -25.518478] },
-    { a: [-54.587787, -25.518478], b: [-54.588562, -25.519475] },
-    { a: [-54.588562, -25.519475], b: [-54.589218, -25.520541] },
-    { a: [-54.589218, -25.520541], b: [-54.589746, -25.521663] },
-    { a: [-54.589746, -25.521663], b: [-54.590142, -25.522829] },
-    { a: [-54.590142, -25.522829], b: [-54.590401, -25.524027] },
-    { a: [-54.590401, -25.524027], b: [-54.59052, -25.525243] },
-    { a: [-54.59052, -25.525243], b: [-54.590578, -25.526718] },
-    { a: [-54.590578, -25.526718], b: [-54.590556, -25.527938] },
-    { a: [-54.590556, -25.527938], b: [-54.590392, -25.529148] },
-    { a: [-54.590392, -25.529148], b: [-54.590089, -25.530336] },
-    { a: [-54.590089, -25.530336], b: [-54.589649, -25.531488] },
-    { a: [-54.589649, -25.531488], b: [-54.589078, -25.532592] },
-    { a: [-54.589078, -25.532592], b: [-54.588383, -25.533635] },
-    { a: [-54.588383, -25.533635], b: [-54.587571, -25.534605] },
-    { a: [-54.587571, -25.534605], b: [-54.58665, -25.535492] },
-    { a: [-54.58665, -25.535492], b: [-54.585632, -25.536287] },
-    { a: [-54.585632, -25.536287], b: [-54.584527, -25.536979] },
-    { a: [-54.584527, -25.536979], b: [-54.583348, -25.537561] },
-    { a: [-54.583348, -25.537561], b: [-54.582108, -25.538027] },
-    { a: [-54.582108, -25.538027], b: [-54.548361, -25.548861] },
-    { a: [-54.548361, -25.548861], b: [-54.547049, -25.549215] },
-    { a: [-54.547049, -25.549215], b: [-54.545703, -25.549445] },
-    { a: [-54.545703, -25.549445], b: [-54.544338, -25.549548] },
-    { a: [-54.544338, -25.549548], b: [-54.542969, -25.549523] },
-    { a: [-54.542969, -25.549523], b: [-54.54161, -25.549371] },
-    { a: [-54.54161, -25.549371], b: [-54.540275, -25.549092] },
-    { a: [-54.540275, -25.549092], b: [-54.538979, -25.548691] },
-    { a: [-54.538979, -25.548691], b: [-54.537734, -25.548172] },
-    { a: [-54.537734, -25.548172], b: [-54.536555, -25.547539] },
-    { a: [-54.536555, -25.547539], b: [-54.535454, -25.546799] },
-    { a: [-54.535454, -25.546799], b: [-54.534442, -25.545961] },
-    { a: [-54.534442, -25.545961], b: [-54.53353, -25.545033] },
-    { a: [-54.53353, -25.545033], b: [-54.532499, -25.54387] }
-  ];
+  /* v14: straight viewport passes. The plane keeps a constant heading
+     until the plane AND trailing banner are fully off-screen, then
+     re-enters from another edge with a new heading. Passes are planned
+     from the current viewport and prefer crossing Costa e Silva when it
+     is in view. Recalc only after the current pass exits. */
+  var CES_SW = [-54.576172, -25.534372];
+  var CES_MID = [-54.563357, -25.523353];
+  var CES_NE = [-54.550671, -25.512197];
+  var PAUSE_MS = 800;
+  var PASS_SAFETY_M = 25000;
+
 
   var query = new URLSearchParams(location.search);
   var disabled = query.get("aviao") === "0";
@@ -359,18 +240,7 @@
       });
   }
 
-  /* ---- path: straight legs across Foz, then the next leg (reappear) ---- */
-  function routeMeta() {
-    var total = 0;
-    var parts = ROUTES.map(function (r) {
-      var d = distM(r.a[0], r.a[1], r.b[0], r.b[1]);
-      total += d;
-      return { r: r, d: d };
-    });
-    return { total: total, parts: parts };
-  }
-  var META = routeMeta();
-
+  /* ---- path helpers (pass planner lives later, after overlay helpers) ---- */
   function distM(lng1, lat1, lng2, lat2) {
     var R = 6371000;
     var p1 = lat1 * Math.PI / 180, p2 = lat2 * Math.PI / 180;
@@ -381,33 +251,15 @@
     return 2 * R * Math.atan2(Math.sqrt(s), Math.sqrt(1 - s));
   }
 
-  function nowPhase() {
-    if (frozen && forcedT != null) return forcedT;
-    if (frozen) return frac(phase0);
-    var sec = (performance.now() - t0) / 1000;
-    var dist = phase0 * META.total + sec * SPEED_MS;
-    return frac(dist / META.total);
+  function destPoint(lng, lat, headingRad, meters) {
+    var dLng = (Math.sin(headingRad) * meters) / (111320 * Math.cos(lat * Math.PI / 180));
+    var dLat = (Math.cos(headingRad) * meters) / 110540;
+    return { lng: lng + dLng, lat: lat + dLat };
   }
 
-  function poseAt(phase) {
-    var dist = clamp01(phase) * META.total;
-    var acc = 0;
-    var i, p, t, lng, lat, heading;
-    for (i = 0; i < META.parts.length; i++) {
-      p = META.parts[i];
-      if (acc + p.d >= dist || i === META.parts.length - 1) {
-        t = p.d <= 0 ? 0 : Math.min(1, Math.max(0, (dist - acc) / p.d));
-        lng = p.r.a[0] + (p.r.b[0] - p.r.a[0]) * t;
-        lat = p.r.a[1] + (p.r.b[1] - p.r.a[1]) * t;
-        heading = Math.atan2(
-          (p.r.b[0] - p.r.a[0]) * Math.cos((lat * Math.PI) / 180),
-          p.r.b[1] - p.r.a[1]
-        );
-        return { lng: lng, lat: lat, alt: ALT, heading: heading, phase: phase, leg: i, t: t };
-      }
-      acc += p.d;
-    }
-    return { lng: ROUTES[0].a[0], lat: ROUTES[0].a[1], alt: ALT, heading: 0, phase: phase, leg: 0, t: 0 };
+  function headingBetween(lng0, lat0, lng1, lat1) {
+    var mid = (lat0 + lat1) / 2;
+    return Math.atan2((lng1 - lng0) * Math.cos((mid * Math.PI) / 180), lat1 - lat0);
   }
 
   function getPose() {
@@ -556,14 +408,14 @@
   var STYLE = [
     "#foz-aviao-overlay{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden;font-family:inherit}",
     "#foz-aviao-overlay .foz-aviao-shadow{position:absolute;width:80px;height:18px;margin-left:-40px;margin-top:-9px;background:radial-gradient(ellipse at center,rgba(0,0,0,.28) 0%,rgba(0,0,0,.08) 55%,rgba(0,0,0,0) 75%);border-radius:50%;transform-origin:center}",
-    "#foz-aviao-overlay .foz-aviao-rig{position:absolute;left:0;top:0;display:flex;flex-direction:row;align-items:center;will-change:transform;filter:drop-shadow(0 3px 3px rgba(0,0,0,.25))}",
-    "#foz-aviao-overlay .foz-aviao-rig.is-left{flex-direction:row-reverse}",
-    "#foz-aviao-overlay .foz-aviao-banner{display:block;image-rendering:pixelated;image-rendering:crisp-edges;border-radius:2px}",
+    "#foz-aviao-overlay .foz-aviao-rig{position:absolute;inset:0;will-change:opacity}",
+    "#foz-aviao-overlay .foz-aviao-tow{position:absolute;left:0;top:0;display:flex;flex-direction:row;align-items:center;will-change:transform;filter:drop-shadow(0 3px 3px rgba(0,0,0,.25))}",
+    "#foz-aviao-overlay .foz-aviao-tow.is-flipped{flex-direction:row-reverse}",
+    "#foz-aviao-overlay .foz-aviao-banner{display:block;image-rendering:pixelated;image-rendering:crisp-edges;border-radius:2px;flex:0 0 auto}",
     "#foz-aviao-overlay.is-night .foz-aviao-banner{filter:brightness(1.08) drop-shadow(0 0 6px rgba(255,220,140,.45))}",
     "#foz-aviao-overlay .foz-aviao-strings{width:48px;height:32px;flex:0 0 48px;overflow:visible}",
-    "#foz-aviao-overlay .foz-aviao-plane{position:relative;width:96px;height:54px;flex:0 0 96px}",
+    "#foz-aviao-overlay .foz-aviao-plane{position:absolute;left:0;top:0;width:96px;height:54px;will-change:transform;filter:drop-shadow(0 3px 3px rgba(0,0,0,.25))}",
     "#foz-aviao-overlay .foz-aviao-plane svg{width:100%;height:100%;display:block;overflow:visible}",
-    "#foz-aviao-overlay .foz-aviao-plane.is-left svg{transform:scaleX(-1)}",
     "#foz-aviao-overlay .strobe{fill:#fff6c8;opacity:0}",
     "#foz-aviao-overlay.is-night .strobe{animation:foz-strobe 1.15s steps(1) infinite}",
     "#foz-aviao-overlay.is-night.is-frozen .strobe{animation:none;opacity:1}",
@@ -609,8 +461,10 @@
     overlay.id = "foz-aviao-overlay";
     overlay.innerHTML = '<div class="foz-aviao-shadow" hidden></div>'
       + '<div class="foz-aviao-rig">'
+      + '<div class="foz-aviao-tow">'
       + '<canvas class="foz-aviao-banner"></canvas>'
       + STRINGS_SVG
+      + "</div>"
       + '<div class="foz-aviao-plane">' + PLANE_SVG + "</div>"
       + "</div>";
     var host = document.getElementById("map") || document.body;
@@ -619,12 +473,82 @@
       overlay: overlay,
       shadow: overlay.querySelector(".foz-aviao-shadow"),
       rig: overlay.querySelector(".foz-aviao-rig"),
+      tow: overlay.querySelector(".foz-aviao-tow"),
       banner: overlay.querySelector(".foz-aviao-banner"),
       plane: overlay.querySelector(".foz-aviao-plane"),
       strings: overlay.querySelector(".foz-aviao-strings"),
       prop: overlay.querySelector(".prop")
     };
     return els;
+  }
+
+  var smoothScreenAngle = null;
+  var bannerFlipped = false;
+  var lastAngleMs = 0;
+
+  function lerpAngle(a, b, t) {
+    var d = ((b - a + 540) % 360) - 180;
+    return a + d * t;
+  }
+
+  function wrapAngle(a) {
+    return ((a + 180) % 360 + 360) % 360 - 180;
+  }
+
+  function screenTravelAngle(air, pose) {
+    var aheadM = 80;
+    var dLng = (Math.sin(pose.heading) * aheadM) / (111320 * mathCosLat(pose.lat));
+    var dLat = (Math.cos(pose.heading) * aheadM) / 110540;
+    var air2 = project3d(mapRef, pose.lng + dLng, pose.lat + dLat, pose.alt);
+    var dx = air2.x - air.x, dy = air2.y - air.y;
+    if (!isFinite(dx) || !isFinite(dy) || (dx * dx + dy * dy) < 1e-6) {
+      return smoothScreenAngle != null ? smoothScreenAngle : 0;
+    }
+    return Math.atan2(dy, dx) * 180 / Math.PI;
+  }
+
+  function mathCosLat(lat) {
+    return Math.cos((lat * Math.PI) / 180);
+  }
+
+  function updateSmoothAngle(target) {
+    var now = passClock();
+    if (frozen || smoothScreenAngle == null || Math.abs(wrapAngle(target - smoothScreenAngle)) > 40) {
+      smoothScreenAngle = target;
+      lastAngleMs = now;
+      return target;
+    }
+    var dt = Math.max(0, Math.min(0.08, (now - lastAngleMs) / 1000));
+    lastAngleMs = now;
+    /* Tight follow: v14 has no visible turns, this only kills projection jitter. */
+    var k = 1 - Math.exp(-dt / 0.08);
+    smoothScreenAngle = lerpAngle(smoothScreenAngle, target, k);
+    return smoothScreenAngle;
+  }
+
+  function updateBannerFlip(theta, snap) {
+    var c = Math.cos((theta * Math.PI) / 180);
+    if (snap) {
+      bannerFlipped = c < 0;
+      return bannerFlipped;
+    }
+    if (bannerFlipped) {
+      if (c > 0.17) bannerFlipped = false; /* unflip below ~80° from vertical */
+    } else if (c < -0.17) {
+      bannerFlipped = true; /* flip past ~100° */
+    }
+    return bannerFlipped;
+  }
+
+  function contentBox() {
+    var mapBox = els.overlay.getBoundingClientRect();
+    var p = els.plane.getBoundingClientRect();
+    var tbox = els.tow.getBoundingClientRect();
+    var left = Math.min(p.left, tbox.left) - mapBox.left;
+    var top = Math.min(p.top, tbox.top) - mapBox.top;
+    var right = Math.max(p.right, tbox.right) - mapBox.left;
+    var bottom = Math.max(p.bottom, tbox.bottom) - mapBox.top;
+    return { left: left, top: top, right: right, bottom: bottom, width: right - left, height: bottom - top, absLeft: left + mapBox.left, absTop: top + mapBox.top };
   }
 
   function updateOverlay() {
@@ -635,42 +559,68 @@
     var gnd = project3d(mapRef, pose.lng, pose.lat, 0);
     if (!isFinite(air.x) || !isFinite(air.y)) return;
 
-    /* Screen direction of travel: project a point a few meters ahead */
-    var aheadM = 80;
-    var dLng = (Math.sin(pose.heading) * aheadM) / (111320 * Math.cos(pose.lat * Math.PI / 180));
-    var dLat = (Math.cos(pose.heading) * aheadM) / 110540;
-    var air2 = project3d(mapRef, pose.lng + dLng, pose.lat + dLat, pose.alt);
-    flyingRight = air2.x >= air.x;
-    els.rig.classList.toggle("is-left", !flyingRight);
-    els.plane.classList.toggle("is-left", !flyingRight);
+    var targetAng = screenTravelAngle(air, pose);
+    var theta = updateSmoothAngle(targetAng);
+    flyingRight = Math.cos((theta * Math.PI) / 180) >= 0;
+    var flipped = updateBannerFlip(theta, frozen || (passCtrl && passCtrl.snapFlip));
+    if (passCtrl) passCtrl.snapFlip = false;
+    var bannerTheta = flipped ? theta + 180 : theta;
+
+    var hiding = isPauseNow();
+    if (els.rig) els.rig.style.visibility = hiding ? "hidden" : "visible";
+    if (els.shadow) els.shadow.style.visibility = hiding ? "hidden" : "visible";
+    if (hiding) {
+      els.overlay.classList.toggle("is-frozen", frozen);
+      return;
+    }
+
     els.overlay.classList.toggle("is-frozen", frozen);
     applyRigScale();
     paintBanner();
 
     var fade = currentFade();
-    var clock = (demoFlight && demoFlight.clock != null) ? demoFlight.clock : performance.now();
-    var angle = (frozen && !(demoFlight && demoFlight.clock != null)) ? 28 : (clock * 0.85) % 360;
+    var clock = passClock();
+    var hasClock = (timeline && timeline.clock != null) || (passCtrl.clock != null);
+    var angle = (frozen && !hasClock) ? 28 : (clock * 0.85) % 360;
     if (els.prop) {
       els.prop.setAttribute("transform", "translate(" + PROP_HX + " " + PROP_HY + ") rotate(" + angle + ")");
     }
 
-    /* Place the rig so the plane sprite sits on the projected plane point */
+    var pw = els.plane.offsetWidth || PLANE_W;
+    var ph = els.plane.offsetHeight || PLANE_H;
+    var sx = pw / 184, sy = ph / 90;
+    var pivotX = PIVOT_VX * sx, pivotY = PIVOT_VY * sy;
+    var tailLx = TAIL_VX * sx - pivotX;
+    var tailLy = TAIL_VY * sy - pivotY;
+    var rad = (theta * Math.PI) / 180;
+    var c = Math.cos(rad), s = Math.sin(rad);
+    var tailX = air.x + tailLx * c - tailLy * s;
+    var tailY = air.y + tailLx * s + tailLy * c;
+
     els.rig.style.opacity = "1";
     els.rig.style.visibility = "hidden";
-    els.rig.style.transform = "translate(0px, 0px)";
-    var mapBox = els.overlay.getBoundingClientRect();
-    var planeBox = els.plane.getBoundingClientRect();
-    var rigBox = els.rig.getBoundingClientRect();
-    var planeOffX = planeBox.left + planeBox.width / 2 - rigBox.left;
-    var planeOffY = planeBox.top + planeBox.height / 2 - rigBox.top;
-    var x = air.x - planeOffX;
-    var y = air.y - planeOffY;
-    els.rig.style.transform = "translate(" + x + "px," + y + "px)";
+    els.plane.style.transformOrigin = pivotX + "px " + pivotY + "px";
+    els.plane.style.left = air.x + "px";
+    els.plane.style.top = air.y + "px";
+    els.plane.style.transform = "translate(" + (-pivotX) + "px," + (-pivotY) + "px) rotate(" + theta + "deg)";
 
-    /* Hide only when the whole rig is far off-screen, or faded out */
+    els.tow.classList.toggle("is-flipped", flipped);
+    els.tow.style.left = "0px";
+    els.tow.style.top = "0px";
+    els.tow.style.transform = "none";
+    var tb = els.tow.getBoundingClientRect();
+    var ox = flipped ? 0 : tb.width;
+    var oy = tb.height / 2;
+    els.tow.style.left = (tailX - ox) + "px";
+    els.tow.style.top = (tailY - oy) + "px";
+    els.tow.style.transformOrigin = ox + "px " + oy + "px";
+    els.tow.style.transform = "rotate(" + bannerTheta + "deg)";
+
+    var box = contentBox();
+    var mapBox = els.overlay.getBoundingClientRect();
     var pad = 80;
-    var on = fade >= 0.02 && !(x + rigBox.width < -pad || x > mapBox.width + pad || y + rigBox.height < -pad || y > mapBox.height + pad);
-    els.rig.style.display = on || fade >= 0.02 ? "flex" : "none";
+    var on = fade >= 0.02 && !(box.right < -pad || box.left > mapBox.width + pad || box.bottom < -pad || box.top > mapBox.height + pad);
+    els.rig.style.display = on || fade >= 0.02 ? "block" : "none";
     els.rig.style.visibility = on ? "visible" : "hidden";
     els.rig.style.opacity = String(fade);
 
@@ -716,7 +666,7 @@
       updateOverlay();
       var pose = poseOverride || lastPose;
       if (!pose) return;
-      var rigBox = els.rig.getBoundingClientRect();
+      var rigBox = contentBox();
       if (!rigBox.width) return;
       var targetX;
       if (rigBox.width > mapBox.width - pad * 2) {
@@ -725,8 +675,8 @@
         targetX = mapBox.left + Math.max(pad, (mapBox.width - rigBox.width) / 2);
       }
       var targetY = mapBox.top + Math.max(16, (visH - rigBox.height) / 2);
-      var dx = targetX - rigBox.left;
-      var dy = targetY - rigBox.top;
+      var dx = targetX - rigBox.absLeft;
+      var dy = targetY - rigBox.absTop;
       if (Math.abs(dx) < 1 && Math.abs(dy) < 1) break;
       var air = project3d(mapRef, pose.lng, pose.lat, pose.alt || ALT);
       var next = map.unproject([air.x + dx, air.y + dy]);
@@ -744,36 +694,607 @@
     updateOverlay();
   }
 
-  var demoFlight = null;
+  var passCtrl = {
+    pass: null,
+    last: null,
+    phase: "idle",
+    tStart: 0,
+    pauseUntil: 0,
+    everVisible: false,
+    holdPose: null,
+    clock: null,
+    snapFlip: false,
+    holdFrozenElapsed: null
+  };
+  var timeline = null;
+  var PASS_INDEX = 0;
+
+  function passClock() {
+    if (timeline && timeline.clock != null) return timeline.clock;
+    if (passCtrl.clock != null) return passCtrl.clock;
+    return performance.now();
+  }
+
+  function fallbackPose() {
+    return { lng: CES_MID[0], lat: CES_MID[1], alt: ALT, heading: 0, phase: 0, leg: 0, t: 0 };
+  }
+
+  function eventAtClock(ms) {
+    if (!timeline || !timeline.events || !timeline.events.length) return null;
+    var i, ev;
+    for (i = 0; i < timeline.events.length; i++) {
+      ev = timeline.events[i];
+      if (ms < ev.t1 || i === timeline.events.length - 1) return ev;
+    }
+    return ev;
+  }
+
+  function isPauseNow() {
+    if (poseOverride) return false;
+    if (timeline) {
+      var ev = eventAtClock(timeline.clock != null ? timeline.clock : 0);
+      return !ev || ev.type === "pause";
+    }
+    if (!passCtrl.pass) return true;
+    return passCtrl.phase === "pause";
+  }
+
+  function viewSize() {
+    var w = 0, h = 0;
+    if (els && els.overlay) {
+      w = els.overlay.clientWidth;
+      h = els.overlay.clientHeight;
+    }
+    if ((!w || !h) && mapRef) {
+      var c = mapRef.getContainer();
+      w = c.clientWidth;
+      h = c.clientHeight;
+    }
+    w = w || 1440;
+    h = h || 900;
+    var bar = document.getElementById("sec-bar");
+    var barH = bar ? bar.getBoundingClientRect().height : 0;
+    return { w: w, h: h, barH: barH, usableH: Math.max(120, h - barH) };
+  }
+
+  function rigPadPx() {
+    var scale = currentScale();
+    var bw = 0;
+    if (els && els.banner && els.banner.style && els.banner.style.width) {
+      bw = parseFloat(els.banner.style.width) || 0;
+    }
+    if (!bw) {
+      var chars = Array.from(normalizeText(bannerTextValue || FALLBACK)).length;
+      var px = Math.max(0.25, 2 * scale);
+      bw = chars * 6 * px + 80 * scale;
+    }
+    var strings = (isMobile() ? 32 : 48) * scale;
+    var plane = (isMobile() ? PLANE_W_MOBILE : PLANE_W) * scale;
+    return bw + strings + plane + 80;
+  }
+
+  function pointWellOutside(scr, pad) {
+    var vs = viewSize();
+    return !isFinite(scr.x) || !isFinite(scr.y) ||
+      scr.x < -pad || scr.x > vs.w + pad || scr.y < -pad || scr.y > vs.h + pad;
+  }
+
+  function isRigOffscreen() {
+    if (!els || !els.plane || !els.tow) return true;
+    var box = contentBox();
+    var vs = viewSize();
+    var m = 4;
+    return box.right < -m || box.left > vs.w + m || box.bottom < -m || box.top > vs.usableH + m;
+  }
+
+  function cesSamples() {
+    var pts = [CES_SW, CES_MID, CES_NE];
+    var out = [];
+    var i, k, a, b, t;
+    for (i = 0; i < pts.length - 1; i++) {
+      a = pts[i];
+      b = pts[i + 1];
+      for (k = 0; k <= 5; k++) {
+        t = k / 5;
+        out.push({ lng: a[0] + (b[0] - a[0]) * t, lat: a[1] + (b[1] - a[1]) * t });
+      }
+    }
+    return out;
+  }
+
+  function pickTarget() {
+    var vs = viewSize();
+    var pad = 60;
+    var vis = [];
+    var samples = cesSamples();
+    var i, s, p;
+    for (i = 0; i < samples.length; i++) {
+      s = samples[i];
+      p = project3d(mapRef, s.lng, s.lat, 0);
+      if (isFinite(p.x) && p.x > -pad && p.x < vs.w + pad && p.y > -pad && p.y < vs.usableH + pad) {
+        vis.push({ lng: s.lng, lat: s.lat, x: p.x, y: p.y });
+      }
+    }
+    if (vis.length) {
+      var idx = (Math.floor(vis.length / 2) + (PASS_INDEX % 3) - 1 + vis.length) % vis.length;
+      var mid = vis[idx];
+      var cesH = headingBetween(CES_SW[0], CES_SW[1], CES_NE[0], CES_NE[1]);
+      var sign = (PASS_INDEX % 2) ? 1 : -1;
+      var off = 70 + (PASS_INDEX % 4) * 40;
+      return destPoint(mid.lng, mid.lat, cesH + sign * Math.PI / 2, off);
+    }
+    var c = mapRef.unproject([vs.w / 2, (vs.barH || 0) + vs.usableH * 0.42]);
+    return { lng: c.lng, lat: c.lat };
+  }
+
+  function absAngleDiff(a, b) {
+    return Math.abs(wrapAngle(a - b));
+  }
+
+  function wrap360(a) {
+    return ((a % 360) + 360) % 360;
+  }
+
+  function lineRectHits(ox, oy, angDeg, x0, y0, x1, y1) {
+    var ang = angDeg * Math.PI / 180;
+    var dx = Math.cos(ang), dy = Math.sin(ang);
+    var ts = [];
+    function hit(t, x, y) {
+      if (x >= x0 - 0.5 && x <= x1 + 0.5 && y >= y0 - 0.5 && y <= y1 + 0.5) {
+        ts.push({ t: t, x: x, y: y });
+      }
+    }
+    var t;
+    if (Math.abs(dx) > 1e-8) {
+      t = (x0 - ox) / dx; hit(t, x0, oy + dy * t);
+      t = (x1 - ox) / dx; hit(t, x1, oy + dy * t);
+    }
+    if (Math.abs(dy) > 1e-8) {
+      t = (y0 - oy) / dy; hit(t, ox + dx * t, y0);
+      t = (y1 - oy) / dy; hit(t, ox + dx * t, y1);
+    }
+    ts.sort(function (a, b) { return a.t - b.t; });
+    var uniq = [];
+    for (var i = 0; i < ts.length; i++) {
+      if (!uniq.length || Math.abs(ts[i].t - uniq[uniq.length - 1].t) > 0.5) {
+        uniq.push(ts[i]);
+      }
+    }
+    return uniq;
+  }
+
+  function edgeOf(pt, vs) {
+    var eps = 3;
+    if (pt.x <= eps) return "left";
+    if (pt.x >= vs.w - eps) return "right";
+    if (pt.y <= eps) return "top";
+    if (pt.y >= vs.usableH - eps) return "bottom";
+    return "inside";
+  }
+
+  function scoreAngle(ang, target, vs, last) {
+    var tScr = project3d(mapRef, target.lng, target.lat, ALT);
+    if (!isFinite(tScr.x) || !isFinite(tScr.y)) return null;
+    var hits = lineRectHits(tScr.x, tScr.y, ang, 0, 0, vs.w, vs.usableH);
+    if (hits.length < 2) return null;
+    var a = hits[0], b = hits[hits.length - 1];
+    var chord = Math.hypot(b.x - a.x, b.y - a.y);
+    var minChord = Math.min(vs.w, vs.usableH) * 0.4;
+    if (chord < minChord) return null;
+    var entry = a, exit = b;
+    var entryEdge = edgeOf(entry, vs);
+    var exitEdge = edgeOf(exit, vs);
+    if (entryEdge === "inside" || exitEdge === "inside" || entryEdge === exitEdge) return null;
+    var score = chord;
+    var rad = ang * Math.PI / 180;
+    var horiz = Math.abs(Math.cos(rad));
+    score += horiz * 400;
+    if (last) {
+      if (absAngleDiff(ang, last.screenAngle) < 30) score -= 8000;
+      if (absAngleDiff(ang, last.screenAngle + 180) < 25) score -= 3000;
+      if (entryEdge === last.entryEdge) score -= 1500;
+      if (entryEdge === last.exitEdge && absAngleDiff(ang, last.screenAngle + 180) < 50) score -= 1200;
+    }
+    return {
+      screenAngle: ang,
+      entryEdge: entryEdge,
+      exitEdge: exitEdge,
+      chord: chord,
+      score: score,
+      horiz: horiz
+    };
+  }
+
+  function screenAngleToHeading(angDeg, target) {
+    var tScr = project3d(mapRef, target.lng, target.lat, ALT);
+    var ang = angDeg * Math.PI / 180;
+    var ll = mapRef.unproject([tScr.x + Math.cos(ang) * 80, tScr.y + Math.sin(ang) * 80]);
+    return headingBetween(target.lng, target.lat, ll.lng, ll.lat);
+  }
+
+  function offscreenStart(target, heading, pad) {
+    var d = 200;
+    var p = destPoint(target.lng, target.lat, heading + Math.PI, d);
+    for (var i = 0; i < 24; i++) {
+      p = destPoint(target.lng, target.lat, heading + Math.PI, d);
+      var scr = project3d(mapRef, p.lng, p.lat, ALT);
+      if (pointWellOutside(scr, pad)) return p;
+      d *= 1.35;
+      if (d > PASS_SAFETY_M) break;
+    }
+    return p;
+  }
+
+  function offscreenEnd(target, heading, pad) {
+    var d = 200;
+    var seenOn = false;
+    var p = destPoint(target.lng, target.lat, heading, d);
+    for (var i = 0; i < 30; i++) {
+      p = destPoint(target.lng, target.lat, heading, d);
+      var scr = project3d(mapRef, p.lng, p.lat, ALT);
+      var outside = pointWellOutside(scr, pad);
+      if (!outside) seenOn = true;
+      if (seenOn && outside) return { point: p, dist: d };
+      d *= 1.35;
+      if (d > PASS_SAFETY_M) break;
+    }
+    return { point: p, dist: d };
+  }
+
+  function planPass(opts) {
+    opts = opts || {};
+    if (!mapRef) return null;
+    var vs = viewSize();
+    var target = opts.target || pickTarget();
+    var last = opts.last != null ? opts.last : passCtrl.last;
+    var preferred = opts.preferredScreenAngles || null;
+    var buckets = [
+      20, 28, 36, 44, 52,
+      128, 136, 144, 152, 160,
+      200, 208, 216, 224, 232,
+      308, 316, 324, 332, 340
+    ];
+    var jitter = ((PASS_INDEX * 17) % 9) - 4;
+    var candidates = [];
+    var used = {};
+    function consider(raw) {
+      var ang = wrap360(raw);
+      var key = Math.round(ang * 10) / 10;
+      if (used[key]) return;
+      used[key] = true;
+      var scored = scoreAngle(ang, target, vs, last);
+      if (!scored) return;
+      if (preferred) {
+        var i;
+        for (i = 0; i < preferred.length; i++) {
+          if (absAngleDiff(ang, preferred[i]) < 8) {
+            scored.score += 2500;
+            scored.preferred = true;
+            break;
+          }
+        }
+      }
+      candidates.push(scored);
+    }
+    var i;
+    if (preferred) {
+      for (i = 0; i < preferred.length; i++) consider(preferred[i]);
+    }
+    for (i = 0; i < buckets.length; i++) consider(buckets[i] + jitter);
+    if (!candidates.length) {
+      consider(28);
+      consider(208);
+      consider(0);
+    }
+    if (!candidates.length) return null;
+    candidates.sort(function (a, b) { return b.score - a.score; });
+    var pool = candidates;
+    if (preferred) {
+      var prefOnly = candidates.filter(function (c) { return c.preferred; });
+      if (prefOnly.length) pool = prefOnly;
+    }
+    var pick = pool[Math.min(pool.length - 1, PASS_INDEX % Math.min(3, pool.length))];
+    var heading = screenAngleToHeading(pick.screenAngle, target);
+    var start = offscreenStart(target, heading, 220);
+    var endInfo = offscreenEnd(target, heading, rigPadPx());
+    var distFromStart = distM(start.lng, start.lat, endInfo.point.lng, endInfo.point.lat);
+    if (distFromStart < 200) {
+      endInfo.point = destPoint(start.lng, start.lat, heading, 3000);
+      distFromStart = 3000;
+    }
+    var dur = (distFromStart / SPEED_MS) * 1000;
+    PASS_INDEX++;
+    return {
+      lng0: start.lng, lat0: start.lat,
+      lng1: endInfo.point.lng, lat1: endInfo.point.lat,
+      heading: heading,
+      screenAngle: pick.screenAngle,
+      entryEdge: pick.entryEdge,
+      exitEdge: pick.exitEdge,
+      dist: distFromStart,
+      dur: dur,
+      target: target
+    };
+  }
+
+  function poseOnPass(pass, u) {
+    u = clamp01(u);
+    return {
+      lng: pass.lng0 + (pass.lng1 - pass.lng0) * u,
+      lat: pass.lat0 + (pass.lat1 - pass.lat0) * u,
+      alt: ALT,
+      heading: pass.heading,
+      phase: u,
+      leg: 0,
+      t: u,
+      screenAngle: pass.screenAngle,
+      entryEdge: pass.entryEdge,
+      exitEdge: pass.exitEdge
+    };
+  }
+
+  function poseFromEvent(ev, ms) {
+    if (!ev) return fallbackPose();
+    if (ev.type === "pause") return ev.pose;
+    var span = ev.t1 - ev.t0;
+    var u = span <= 0 ? ev.u1 : ev.u0 + (ev.u1 - ev.u0) * clamp01((ms - ev.t0) / span);
+    return poseOnPass(ev.pass, u);
+  }
+
+  function elementOnScreen(el, vs, pad) {
+    if (!el) return false;
+    pad = pad || 0;
+    var r = el.getBoundingClientRect();
+    var mapBox = els.overlay.getBoundingClientRect();
+    var left = r.left - mapBox.left, right = r.right - mapBox.left;
+    var top = r.top - mapBox.top, bottom = r.bottom - mapBox.top;
+    return right > pad && left < vs.w - pad && bottom > pad && top < vs.usableH - pad;
+  }
+
+  function measureVisibility(pass, steps) {
+    steps = steps || 80;
+    var savedOverride = poseOverride;
+    var savedFrozen = frozen;
+    var savedSmooth = smoothScreenAngle;
+    frozen = true;
+    var vs = viewSize();
+    var uOn = null, uOff = null, uPlaneOn = null, uPlaneOff = null, uNice = null;
+    var i, u, off, planeOn, bannerLeftOk, mapBox, b;
+    for (i = 0; i <= steps; i++) {
+      u = i / steps;
+      poseOverride = poseOnPass(pass, u);
+      lastPose = poseOverride;
+      updateOverlay();
+      off = isRigOffscreen();
+      planeOn = elementOnScreen(els.plane, vs, 4);
+      mapBox = els.overlay.getBoundingClientRect();
+      b = els.banner.getBoundingClientRect();
+      bannerLeftOk = (b.left - mapBox.left) > 8;
+      if (uOn == null && !off) uOn = u;
+      if (uPlaneOn == null && planeOn) uPlaneOn = u;
+      if (uNice == null && planeOn && bannerLeftOk) uNice = u;
+      if (uPlaneOn != null && !planeOn && uPlaneOff == null) uPlaneOff = u;
+      if (uOn != null && off && uOff == null) {
+        uOff = u;
+        break;
+      }
+    }
+    poseOverride = savedOverride;
+    frozen = savedFrozen;
+    smoothScreenAngle = savedSmooth;
+    if (uOn == null) uOn = 0.15;
+    if (uOff == null) uOff = 0.9;
+    if (uPlaneOn == null) uPlaneOn = uOn;
+    if (uPlaneOff == null) uPlaneOff = uOff;
+    if (uNice == null) uNice = uPlaneOn;
+    return {
+      uOn: uOn,
+      uOff: uOff,
+      uPlaneOn: uPlaneOn,
+      uPlaneOff: uPlaneOff,
+      uNice: uNice,
+      dur: pass.dur
+    };
+  }
+
+  function startNewPass() {
+    if (!mapRef) return null;
+    var pass = planPass({ last: passCtrl.last });
+    if (!pass) return null;
+    passCtrl.pass = pass;
+    passCtrl.phase = "fly";
+    passCtrl.tStart = passClock();
+    passCtrl.everVisible = false;
+    passCtrl.holdPose = null;
+    passCtrl.snapFlip = true;
+    smoothScreenAngle = null;
+    return pass;
+  }
+
+  function advanceLivePass() {
+    if (!mapRef || timeline) return;
+    var now = passClock();
+    if (passCtrl.phase === "pause") {
+      if (now >= passCtrl.pauseUntil) startNewPass();
+      return;
+    }
+    if (!passCtrl.pass) startNewPass();
+  }
+
+  function finishPassIfOffscreen() {
+    if (timeline || poseOverride) return;
+    if (passCtrl.phase !== "fly" || !passCtrl.pass || !els) return;
+    var off = isRigOffscreen();
+    if (!off) passCtrl.everVisible = true;
+    if (passCtrl.everVisible && off) {
+      passCtrl.phase = "pause";
+      passCtrl.pauseUntil = passClock() + PAUSE_MS;
+      passCtrl.last = passCtrl.pass;
+      passCtrl.holdPose = lastPose;
+      if (els.rig) els.rig.style.visibility = "hidden";
+      if (els.shadow) els.shadow.style.visibility = "hidden";
+    } else if (!passCtrl.everVisible && (passClock() - passCtrl.tStart) > 18000) {
+      startNewPass();
+    }
+  }
+
+  function poseAt(phase) {
+    if (poseOverride) return poseOverride;
+    if (timeline) {
+      var ms = timeline.clock != null ? timeline.clock : 0;
+      return poseFromEvent(eventAtClock(ms), ms);
+    }
+    if (!passCtrl.pass) return fallbackPose();
+    if (passCtrl.phase === "pause" && passCtrl.holdPose) return passCtrl.holdPose;
+    var elapsed = Math.max(0, (passClock() - passCtrl.tStart) / 1000);
+    var p = destPoint(passCtrl.pass.lng0, passCtrl.pass.lat0, passCtrl.pass.heading, elapsed * SPEED_MS);
+    var u = passCtrl.pass.dur ? clamp01((elapsed * 1000) / passCtrl.pass.dur) : 0;
+    return {
+      lng: p.lng,
+      lat: p.lat,
+      alt: ALT,
+      heading: passCtrl.pass.heading,
+      phase: u,
+      leg: 0,
+      t: u,
+      screenAngle: passCtrl.pass.screenAngle,
+      entryEdge: passCtrl.pass.entryEdge,
+      exitEdge: passCtrl.pass.exitEdge
+    };
+  }
+
+  function nowPhase() {
+    if (timeline) {
+      var total = timeline.totalMs || 1;
+      return clamp01((timeline.clock || 0) / total);
+    }
+    if (!passCtrl.pass) return 0;
+    if (passCtrl.phase === "pause") return 1;
+    var elapsed = Math.max(0, (passClock() - passCtrl.tStart) / 1000);
+    return passCtrl.pass.dur ? clamp01((elapsed * 1000) / passCtrl.pass.dur) : 0;
+  }
+
+  function buildPreviewScenario(totalMs) {
+    totalMs = totalMs || 10000;
+    var pauseMs = PAUSE_MS;
+    var reentryMs = 3200;
+    var p1 = planPass({ preferredScreenAngles: [16, 10, 8, 20, 350, 6] });
+    var p2 = planPass({ last: p1, preferredScreenAngles: [196, 188, 204, 170, 164, 210] });
+    if (!p1 || !p2) return null;
+    var vis1 = measureVisibility(p1, 80);
+    var vis2 = measureVisibility(p2, 80);
+    var tNice = (vis1.uNice != null ? vis1.uNice : vis1.uPlaneOn) * p1.dur;
+    var tRigOff = vis1.uOff * p1.dur;
+    var tStart = tNice;
+    if (tStart >= tRigOff - 800) tStart = Math.max(0, tRigOff - 5000);
+    var uStart = clamp01(tStart / p1.dur);
+    var uOff = vis1.uOff;
+    var p1SegMs = Math.max(800, (uOff - uStart) * p1.dur);
+    /* A full banner exit at 130 m/s takes several seconds; extend the
+       clip if needed so the video can show cross, full exit, pause, re-entry. */
+    var needed = p1SegMs + pauseMs + reentryMs;
+    if (needed > totalMs) totalMs = Math.ceil(needed / 100) * 100;
+    var pauseStart = p1SegMs;
+    var p2Start = p1SegMs + pauseMs;
+    var remain = Math.max(800, totalMs - p2Start);
+    var u2End = clamp01(remain / p2.dur);
+    if (u2End < (vis2.uNice || vis2.uOn) + 0.04) {
+      u2End = Math.min(1, (vis2.uNice || vis2.uOn) + 0.06);
+    }
+    timeline = {
+      clock: 0,
+      totalMs: totalMs,
+      pauseMs: pauseMs,
+      events: [
+        { type: "fly", t0: 0, t1: p1SegMs, pass: p1, u0: uStart, u1: uOff },
+        { type: "pause", t0: pauseStart, t1: p2Start, pose: poseOnPass(p1, uOff) },
+        { type: "fly", t0: p2Start, t1: p2Start + remain, pass: p2, u0: 0, u1: u2End }
+      ]
+    };
+    passCtrl.pass = p1;
+    passCtrl.last = null;
+    passCtrl.phase = "fly";
+    frozen = true;
+    if (els) els.overlay.classList.add("is-frozen");
+    poseOverride = null;
+    placed = null;
+    smoothScreenAngle = null;
+    passCtrl.snapFlip = true;
+    updateOverlay();
+    return {
+      totalMs: totalMs,
+      pauseMs: pauseMs,
+      p1: summarizePass(p1, vis1, uStart, uOff, p1SegMs),
+      p2: summarizePass(p2, vis2, 0, u2End, remain),
+      events: timeline.events.map(function (ev) {
+        return { type: ev.type, t0: Math.round(ev.t0), t1: Math.round(ev.t1), u0: ev.u0, u1: ev.u1, entry: ev.pass && ev.pass.entryEdge, exit: ev.pass && ev.pass.exitEdge, angle: ev.pass && ev.pass.screenAngle };
+      })
+    };
+  }
+
+  function summarizePass(pass, vis, u0, u1, ms) {
+    return {
+      entryEdge: pass.entryEdge,
+      exitEdge: pass.exitEdge,
+      screenAngle: Math.round(pass.screenAngle * 10) / 10,
+      headingDeg: Math.round(pass.heading * 180 / Math.PI * 10) / 10,
+      dur: Math.round(pass.dur),
+      dist: Math.round(pass.dist),
+      uOn: vis && vis.uOn,
+      uOff: vis && vis.uOff,
+      uPlaneOn: vis && vis.uPlaneOn,
+      uPlaneOff: vis && vis.uPlaneOff,
+      uNice: vis && vis.uNice,
+      u0: u0,
+      u1: u1,
+      windowMs: Math.round(ms),
+      target: pass.target
+    };
+  }
+
+  function setTimelineClock(ms) {
+    if (!timeline) return getPose();
+    timeline.clock = Math.max(0, +ms || 0);
+    frozen = true;
+    if (els) els.overlay.classList.add("is-frozen");
+    var ev = eventAtClock(timeline.clock);
+    if (!ev || ev.type !== "fly" || !lastEvent || ev !== lastEvent) {
+      smoothScreenAngle = null;
+      passCtrl.snapFlip = true;
+    }
+    lastEvent = ev;
+    updateOverlay();
+    return getPose();
+  }
+
+  var lastEvent = null;
 
   function flyAcrossScreen(durationMs, setupOnly) {
-    if (!mapRef || !els) return;
-    var map = mapRef;
-    var w = els.overlay.clientWidth || map.getContainer().clientWidth;
-    var h = els.overlay.clientHeight || map.getContainer().clientHeight;
-    var bar = document.getElementById("sec-bar");
-    var barH = bar ? bar.getBoundingClientRect().height : 120;
-    var y = Math.max(80, (h - barH) * 0.42);
-    var start = map.unproject([-160, y]);
-    var end = map.unproject([w + 1400, y]);
-    var heading = ((map.getBearing() || 0) + 90) * Math.PI / 180;
-    demoFlight = {
-      t0: performance.now(),
-      dur: durationMs || 5200,
-      lng0: start.lng, lat0: start.lat,
-      lng1: end.lng, lat1: end.lat,
-      heading: heading
+    if (!mapRef) return;
+    var pass = planPass({ preferredScreenAngles: [8, 0, 16, 352] });
+    if (!pass) return;
+    var dur = durationMs || pass.dur || 5200;
+    timeline = {
+      clock: 0,
+      totalMs: dur,
+      events: [{ type: "fly", t0: 0, t1: dur, pass: pass, u0: 0, u1: 1 }]
     };
     poseOverride = null;
     placed = null;
+    smoothScreenAngle = null;
     if (setupOnly) {
-      demoFlight.fixedU = 0;
-      demoFlight.clock = 0;
       frozen = true;
       if (els) els.overlay.classList.add("is-frozen");
       updateOverlay();
       return;
     }
+    passCtrl.pass = pass;
+    passCtrl.phase = "fly";
+    passCtrl.tStart = performance.now();
+    passCtrl.everVisible = false;
+    passCtrl.holdPose = null;
+    passCtrl.snapFlip = true;
+    timeline = null;
     frozen = false;
     if (els) els.overlay.classList.remove("is-frozen");
     updateOverlay();
@@ -781,13 +1302,9 @@
   }
 
   function setFlightProgress(u, clockMs) {
-    u = Math.max(0, Math.min(1, +u || 0));
-    if (!demoFlight) flyAcrossScreen(5200, true);
-    demoFlight.fixedU = u;
-    demoFlight.clock = clockMs != null ? clockMs : u * (demoFlight.dur || 5200);
-    frozen = true;
-    if (els) els.overlay.classList.add("is-frozen");
-    updateOverlay();
+    u = clamp01(+u || 0);
+    if (!timeline || !timeline.events || !timeline.events.length) flyAcrossScreen(5200, true);
+    setTimelineClock(clockMs != null ? clockMs : u * ((timeline && timeline.totalMs) || 5200));
     return getPose();
   }
 
@@ -811,26 +1328,6 @@
   }
 
   var poseOverride = null;
-  var _poseAt = poseAt;
-  poseAt = function (phase) {
-    if (demoFlight) {
-      var u = demoFlight.fixedU != null
-        ? demoFlight.fixedU
-        : (performance.now() - demoFlight.t0) / demoFlight.dur;
-      if (u >= 1) { u = 1; }
-      return {
-        lng: demoFlight.lng0 + (demoFlight.lng1 - demoFlight.lng0) * u,
-        lat: demoFlight.lat0 + (demoFlight.lat1 - demoFlight.lat0) * u,
-        alt: ALT,
-        heading: demoFlight.heading,
-        phase: phase,
-        leg: 0,
-        t: u
-      };
-    }
-    if (poseOverride) return poseOverride;
-    return _poseAt(phase);
-  };
 
   function clearPlace() {
     poseOverride = null;
@@ -839,7 +1336,13 @@
 
   function tick() {
     if (disabled) return;
+    if (!frozen && !timeline) {
+      advanceLivePass();
+    }
     updateOverlay();
+    if (!frozen && !timeline) {
+      finishPassIfOffscreen();
+    }
     if (!frozen && document.visibilityState !== "hidden") {
       requestAnimationFrame(tick);
     }
@@ -897,11 +1400,17 @@
     getPose: function () { return getPose(); },
     nowPhase: nowPhase,
     setFrozen: function (v) {
-      if (v && !frozen) phase0 = nowPhase();
+      if (v && !frozen && passCtrl.pass && passCtrl.phase === "fly") {
+        passCtrl.holdFrozenElapsed = passClock() - passCtrl.tStart;
+      }
       if (!v && frozen) {
-        t0 = performance.now();
         clearPlace();
-        demoFlight = null;
+        timeline = null;
+        passCtrl.clock = null;
+        if (passCtrl.pass && passCtrl.phase === "fly" && passCtrl.holdFrozenElapsed != null) {
+          passCtrl.tStart = performance.now() - passCtrl.holdFrozenElapsed;
+        }
+        passCtrl.holdFrozenElapsed = null;
       }
       frozen = !!v;
       if (els) els.overlay.classList.toggle("is-frozen", frozen);
@@ -909,11 +1418,23 @@
       if (!frozen) requestAnimationFrame(tick);
     },
     setPhase: function (p) {
-      forcedT = clamp01(p);
-      phase0 = forcedT;
-      t0 = performance.now();
+      p = clamp01(p);
       clearPlace();
-      demoFlight = null;
+      if (timeline) {
+        setTimelineClock(p * (timeline.totalMs || 10000));
+        return getPose();
+      }
+      if (!passCtrl.pass && mapRef) startNewPass();
+      if (passCtrl.pass) {
+        passCtrl.clock = null;
+        passCtrl.tStart = performance.now() - p * (passCtrl.pass.dur || 1);
+        passCtrl.phase = "fly";
+        passCtrl.everVisible = p > 0.05 && p < 0.95;
+        passCtrl.snapFlip = true;
+        smoothScreenAngle = null;
+      }
+      frozen = true;
+      if (els) els.overlay.classList.add("is-frozen");
       updateOverlay();
       return getPose();
     },
@@ -921,6 +1442,24 @@
     frameInView: frameInView,
     flyAcrossScreen: flyAcrossScreen,
     setFlightProgress: setFlightProgress,
+    planPass: planPass,
+    startPass: startNewPass,
+    getPass: function () { return passCtrl.pass; },
+    getPassState: function () {
+      return {
+        phase: passCtrl.phase,
+        u: nowPhase(),
+        everVisible: passCtrl.everVisible,
+        entry: passCtrl.pass && passCtrl.pass.entryEdge,
+        exit: passCtrl.pass && passCtrl.pass.exitEdge,
+        screenAngle: passCtrl.pass && passCtrl.pass.screenAngle
+      };
+    },
+    buildPreviewScenario: buildPreviewScenario,
+    setTimelineClock: setTimelineClock,
+    getTimeline: function () { return timeline; },
+    isRigOffscreen: isRigOffscreen,
+    SPEED_MS: SPEED_MS,
     getScale: currentScale,
     getFade: currentFade,
     update: updateOverlay
