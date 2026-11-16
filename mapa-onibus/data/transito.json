@@ -1,100 +1,53 @@
 {
- "atualizado": "2026-11-16T15:27:00-03:00",
+ "atualizado": "2026-11-16T19:27:00-03:00",
  "fonte": "Waze",
  "modo": "navegador-manual",
- "obs": "Leitura pelo Live Map no navegador da caixa às 15h27 de 16/11/2026 (API 404); trechos vermelhos/laranjas vistos na Ponte da Amizade/BR-277, Carlos Gomes, José Maria de Brito (laranja) e República Argentina. Geometria das vias do mapa.",
+ "obs": "Leitura pelo Live Map no navegador da caixa às 19h27 de 16/11/2026 (API 404): vermelho na Av. República Argentina e Av. José Maria de Brito; laranja no acesso BR-277/Av. Paraná perto da Ponte da Amizade (vão da ponte verde, sem alertas). Geometria das vias do mapa.",
  "trechos": [
   {
-   "id": "pesado-carlos-gomes",
-   "rua": "Avenida Carlos Gomes",
+   "id": "pesado-rep-argentina",
+   "rua": "Avenida República Argentina",
    "nivel": "pesado",
-   "velocidade_kmh": 8.0,
-   "atraso_s": 240,
-   "comprimento_m": 326,
+   "velocidade_kmh": 9.0,
+   "atraso_s": 160,
+   "comprimento_m": 350,
    "linha": [
     [
-     -54.588154,
-     -25.513397
+     -54.55612,
+     -25.535495
     ],
     [
-     -54.588154,
-     -25.513397
+     -54.555508,
+     -25.535528
     ],
     [
-     -54.586662,
-     -25.513488
+     -54.555296,
+     -25.535539
     ],
     [
-     -54.585161,
-     -25.513579
+     -54.553971,
+     -25.535613
     ],
     [
-     -54.58492,
-     -25.5136
+     -54.552642,
+     -25.535689
     ]
    ],
    "centro": [
-    -54.58661,
-    -25.513492
+    -54.554707,
+    -25.535573
    ],
-   "bairro": "PORTES",
-   "cls": "conectora",
-   "mao": "dupla-pistas",
-   "sentido": null,
-   "pistas": [
-    [
-     [
-      -54.588154,
-      -25.513397
-     ],
-     [
-      -54.588154,
-      -25.513397
-     ],
-     [
-      -54.586662,
-      -25.513488
-     ],
-     [
-      -54.585161,
-      -25.513579
-     ],
-     [
-      -54.58492,
-      -25.5136
-     ]
-    ],
-    [
-     [
-      -54.584907,
-      -25.513477
-     ],
-     [
-      -54.585151,
-      -25.513456
-     ],
-     [
-      -54.586653,
-      -25.513365
-     ],
-     [
-      -54.588145,
-      -25.513274
-     ],
-     [
-      -54.588291,
-      -25.513397
-     ]
-    ]
-   ],
-   "dist_pistas_m": 13.73
+   "bairro": "PANORAMA",
+   "cls": "estrutural",
+   "mao": "dupla",
+   "sentido": null
   },
   {
-   "id": "medio-jose-maria",
+   "id": "pesado-jose-maria",
    "rua": "Avenida José Maria de Brito",
-   "nivel": "medio",
-   "velocidade_kmh": 18.0,
-   "atraso_s": 90,
+   "nivel": "pesado",
+   "velocidade_kmh": 7.0,
+   "atraso_s": 210,
    "comprimento_m": 280,
    "linha": [
     [
@@ -136,11 +89,11 @@
    "sentido": null
   },
   {
-   "id": "pesado-ponte-amizade",
+   "id": "medio-ponte-amizade",
    "rua": "Acesso BR-277 / Ponte da Amizade",
-   "nivel": "pesado",
-   "velocidade_kmh": 5.0,
-   "atraso_s": 360,
+   "nivel": "medio",
+   "velocidade_kmh": 22.0,
+   "atraso_s": 90,
    "comprimento_m": 400,
    "linha": [
     [
@@ -206,44 +159,6 @@
    ],
    "bairro": "PORTES",
    "cls": "arterial",
-   "mao": "dupla",
-   "sentido": null
-  },
-  {
-   "id": "pesado-rep-argentina",
-   "rua": "Avenida República Argentina",
-   "nivel": "pesado",
-   "velocidade_kmh": 9.0,
-   "atraso_s": 160,
-   "comprimento_m": 350,
-   "linha": [
-    [
-     -54.55612,
-     -25.535495
-    ],
-    [
-     -54.555508,
-     -25.535528
-    ],
-    [
-     -54.555296,
-     -25.535539
-    ],
-    [
-     -54.553971,
-     -25.535613
-    ],
-    [
-     -54.552642,
-     -25.535689
-    ]
-   ],
-   "centro": [
-    -54.554707,
-    -25.535573
-   ],
-   "bairro": "PANORAMA",
-   "cls": "estrutural",
    "mao": "dupla",
    "sentido": null
   }
