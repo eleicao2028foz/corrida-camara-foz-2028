@@ -1,8 +1,8 @@
 {
- "atualizado": "2026-11-16T11:20:00-03:00",
+ "atualizado": "2026-11-16T15:27:00-03:00",
  "fonte": "Waze",
- "modo": "navegador",
- "obs": "Leitura visual do Waze Live Map pelo navegador às 11h20 de 16/11/2026: vermelho no acesso BR-277/Ponte da Amizade e na Av. Carlos Gomes (perto da Beira Rio). Geometria das vias do mapa.",
+ "modo": "navegador-manual",
+ "obs": "Leitura pelo Live Map no navegador da caixa às 15h27 de 16/11/2026 (API 404); trechos vermelhos/laranjas vistos na Ponte da Amizade/BR-277, Carlos Gomes, José Maria de Brito (laranja) e República Argentina. Geometria das vias do mapa.",
  "trechos": [
   {
    "id": "pesado-carlos-gomes",
@@ -90,6 +90,52 @@
    "dist_pistas_m": 13.73
   },
   {
+   "id": "medio-jose-maria",
+   "rua": "Avenida José Maria de Brito",
+   "nivel": "medio",
+   "velocidade_kmh": 18.0,
+   "atraso_s": 90,
+   "comprimento_m": 280,
+   "linha": [
+    [
+     -54.585152,
+     -25.516503
+    ],
+    [
+     -54.585149,
+     -25.516481
+    ],
+    [
+     -54.584067,
+     -25.516561
+    ],
+    [
+     -54.583983,
+     -25.516566
+    ],
+    [
+     -54.584067,
+     -25.516561
+    ],
+    [
+     -54.583983,
+     -25.516566
+    ],
+    [
+     -54.582559,
+     -25.516643
+    ]
+   ],
+   "centro": [
+    -54.584137,
+    -25.516554
+   ],
+   "bairro": "MONJOLO",
+   "cls": "conectora",
+   "mao": "dupla",
+   "sentido": null
+  },
+  {
    "id": "pesado-ponte-amizade",
    "rua": "Acesso BR-277 / Ponte da Amizade",
    "nivel": "pesado",
@@ -160,6 +206,44 @@
    ],
    "bairro": "PORTES",
    "cls": "arterial",
+   "mao": "dupla",
+   "sentido": null
+  },
+  {
+   "id": "pesado-rep-argentina",
+   "rua": "Avenida República Argentina",
+   "nivel": "pesado",
+   "velocidade_kmh": 9.0,
+   "atraso_s": 160,
+   "comprimento_m": 350,
+   "linha": [
+    [
+     -54.55612,
+     -25.535495
+    ],
+    [
+     -54.555508,
+     -25.535528
+    ],
+    [
+     -54.555296,
+     -25.535539
+    ],
+    [
+     -54.553971,
+     -25.535613
+    ],
+    [
+     -54.552642,
+     -25.535689
+    ]
+   ],
+   "centro": [
+    -54.554707,
+    -25.535573
+   ],
+   "bairro": "PANORAMA",
+   "cls": "estrutural",
    "mao": "dupla",
    "sentido": null
   }
