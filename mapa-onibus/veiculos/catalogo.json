@@ -1,0 +1,279 @@
+{
+  "atualizado": "2026-11-16",
+  "estilo": "top-down com leve perspectiva e sombra, nariz para cima, traço redondo no estilo do mapa de Foz",
+  "unidade": "metro",
+  "svgUnitsPerMeter": 20.0,
+  "referencia_tamanho": "onibus-urbano = 1.0 (12 m)",
+  "veiculos": [
+    {
+      "id": "hatch-azul",
+      "nome": "Hatch azul",
+      "categoria": "passeio",
+      "arquivo": "hatch-azul.svg",
+      "comprimento_m": 3.95,
+      "largura_m": 1.72,
+      "tamanho": 0.329
+    },
+    {
+      "id": "hatch-vermelho",
+      "nome": "Hatch vermelho",
+      "categoria": "passeio",
+      "arquivo": "hatch-vermelho.svg",
+      "comprimento_m": 3.95,
+      "largura_m": 1.72,
+      "tamanho": 0.329
+    },
+    {
+      "id": "sedan-prata",
+      "nome": "Sedan prata",
+      "categoria": "passeio",
+      "arquivo": "sedan-prata.svg",
+      "comprimento_m": 4.55,
+      "largura_m": 1.78,
+      "tamanho": 0.379
+    },
+    {
+      "id": "sedan-preto",
+      "nome": "Sedan preto",
+      "categoria": "passeio",
+      "arquivo": "sedan-preto.svg",
+      "comprimento_m": 4.55,
+      "largura_m": 1.78,
+      "tamanho": 0.379
+    },
+    {
+      "id": "suv-branco",
+      "nome": "SUV branco",
+      "categoria": "passeio",
+      "arquivo": "suv-branco.svg",
+      "comprimento_m": 4.8,
+      "largura_m": 1.9,
+      "tamanho": 0.4
+    },
+    {
+      "id": "picape-prata",
+      "nome": "Picape prata",
+      "categoria": "passeio",
+      "arquivo": "picape-prata.svg",
+      "comprimento_m": 5.25,
+      "largura_m": 1.88,
+      "tamanho": 0.438
+    },
+    {
+      "id": "taxi",
+      "nome": "Táxi",
+      "categoria": "transporte",
+      "arquivo": "taxi.svg",
+      "comprimento_m": 4.5,
+      "largura_m": 1.76,
+      "tamanho": 0.375
+    },
+    {
+      "id": "uber",
+      "nome": "Carro de aplicativo",
+      "categoria": "transporte",
+      "arquivo": "uber.svg",
+      "comprimento_m": 4.55,
+      "largura_m": 1.78,
+      "tamanho": 0.379
+    },
+    {
+      "id": "comprista-py",
+      "nome": "Comprista (placa PY)",
+      "categoria": "passeio",
+      "arquivo": "comprista-py.svg",
+      "comprimento_m": 4.5,
+      "largura_m": 1.78,
+      "tamanho": 0.375
+    },
+    {
+      "id": "comprista-ar",
+      "nome": "Comprista (placa AR)",
+      "categoria": "passeio",
+      "arquivo": "comprista-ar.svg",
+      "comprimento_m": 4.8,
+      "largura_m": 1.9,
+      "tamanho": 0.4
+    },
+    {
+      "id": "moto",
+      "nome": "Motocicleta",
+      "categoria": "duas-rodas",
+      "arquivo": "moto.svg",
+      "comprimento_m": 2.15,
+      "largura_m": 0.78,
+      "tamanho": 0.179
+    },
+    {
+      "id": "moto-entrega",
+      "nome": "Moto de entrega",
+      "categoria": "duas-rodas",
+      "arquivo": "moto-entrega.svg",
+      "comprimento_m": 2.2,
+      "largura_m": 0.85,
+      "tamanho": 0.183
+    },
+    {
+      "id": "bicicleta",
+      "nome": "Bicicleta",
+      "categoria": "duas-rodas",
+      "arquivo": "bicicleta.svg",
+      "comprimento_m": 1.8,
+      "largura_m": 0.58,
+      "tamanho": 0.15
+    },
+    {
+      "id": "patinete",
+      "nome": "Patinete elétrico",
+      "categoria": "duas-rodas",
+      "arquivo": "patinete.svg",
+      "comprimento_m": 1.15,
+      "largura_m": 0.52,
+      "tamanho": 0.096
+    },
+    {
+      "id": "van",
+      "nome": "Van",
+      "categoria": "van",
+      "arquivo": "van.svg",
+      "comprimento_m": 5.05,
+      "largura_m": 1.92,
+      "tamanho": 0.421
+    },
+    {
+      "id": "kombi-escolar",
+      "nome": "Van escolar",
+      "categoria": "van",
+      "arquivo": "kombi-escolar.svg",
+      "comprimento_m": 4.55,
+      "largura_m": 1.82,
+      "tamanho": 0.379
+    },
+    {
+      "id": "onibus-urbano",
+      "nome": "Ônibus urbano",
+      "categoria": "onibus",
+      "arquivo": "onibus-urbano.svg",
+      "comprimento_m": 12.0,
+      "largura_m": 2.5,
+      "tamanho": 1.0
+    },
+    {
+      "id": "onibus-turismo",
+      "nome": "Ônibus de turismo",
+      "categoria": "onibus",
+      "arquivo": "onibus-turismo.svg",
+      "comprimento_m": 13.0,
+      "largura_m": 2.55,
+      "tamanho": 1.083
+    },
+    {
+      "id": "micro-onibus",
+      "nome": "Micro-ônibus",
+      "categoria": "onibus",
+      "arquivo": "micro-onibus.svg",
+      "comprimento_m": 7.6,
+      "largura_m": 2.25,
+      "tamanho": 0.633
+    },
+    {
+      "id": "caminhao-bau",
+      "nome": "Caminhão baú",
+      "categoria": "caminhao",
+      "arquivo": "caminhao-bau.svg",
+      "comprimento_m": 8.2,
+      "largura_m": 2.48,
+      "tamanho": 0.683
+    },
+    {
+      "id": "carreta",
+      "nome": "Carreta (fronteira)",
+      "categoria": "caminhao",
+      "arquivo": "carreta.svg",
+      "comprimento_m": 16.4,
+      "largura_m": 2.55,
+      "tamanho": 1.367
+    },
+    {
+      "id": "caminhao-lixo",
+      "nome": "Caminhão de lixo",
+      "categoria": "caminhao",
+      "arquivo": "caminhao-lixo.svg",
+      "comprimento_m": 8.4,
+      "largura_m": 2.5,
+      "tamanho": 0.7
+    },
+    {
+      "id": "caminhao-pipa",
+      "nome": "Caminhão-pipa Sanepar",
+      "categoria": "caminhao",
+      "arquivo": "caminhao-pipa.svg",
+      "comprimento_m": 8.0,
+      "largura_m": 2.48,
+      "tamanho": 0.667
+    },
+    {
+      "id": "betoneira",
+      "nome": "Betoneira",
+      "categoria": "caminhao",
+      "arquivo": "betoneira.svg",
+      "comprimento_m": 8.3,
+      "largura_m": 2.5,
+      "tamanho": 0.692
+    },
+    {
+      "id": "samu",
+      "nome": "Ambulância SAMU",
+      "categoria": "emergencia",
+      "arquivo": "samu.svg",
+      "comprimento_m": 5.6,
+      "largura_m": 2.1,
+      "tamanho": 0.467
+    },
+    {
+      "id": "viatura-pm",
+      "nome": "Viatura PM",
+      "categoria": "oficial",
+      "arquivo": "viatura-pm.svg",
+      "comprimento_m": 4.7,
+      "largura_m": 1.85,
+      "tamanho": 0.392
+    },
+    {
+      "id": "viatura-guarda",
+      "nome": "Viatura Guarda Municipal",
+      "categoria": "oficial",
+      "arquivo": "viatura-guarda.svg",
+      "comprimento_m": 4.8,
+      "largura_m": 1.9,
+      "tamanho": 0.4
+    },
+    {
+      "id": "bombeiros",
+      "nome": "Caminhão de bombeiros",
+      "categoria": "emergencia",
+      "arquivo": "bombeiros.svg",
+      "comprimento_m": 8.8,
+      "largura_m": 2.5,
+      "tamanho": 0.733
+    },
+    {
+      "id": "receita-pf",
+      "nome": "Viatura Receita / PF",
+      "categoria": "oficial",
+      "arquivo": "receita-pf.svg",
+      "comprimento_m": 4.9,
+      "largura_m": 1.92,
+      "tamanho": 0.408
+    },
+    {
+      "id": "guincho",
+      "nome": "Guincho",
+      "categoria": "caminhao",
+      "arquivo": "guincho.svg",
+      "comprimento_m": 7.4,
+      "largura_m": 2.35,
+      "tamanho": 0.617
+    }
+  ]
+}

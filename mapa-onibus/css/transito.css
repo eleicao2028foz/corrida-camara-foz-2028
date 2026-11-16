@@ -1,0 +1,163 @@
+/* Barra lateral de trânsito — botões redondos estilo SimCity BuildIt.
+   Não cobre a barra de secretarias (em baixo) nem a de notícias. */
+#traf-dock{
+  --traf-btn:56px;
+  --traf-gap:10px;
+  position:absolute;
+  left:calc(10px + env(safe-area-inset-left,0px));
+  top:calc(12px + env(safe-area-inset-top,0px));
+  bottom:calc(var(--sec-h, 150px) + 18px);
+  z-index:8;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  pointer-events:none;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  color:#2a3138;
+}
+#traf-dock *{box-sizing:border-box}
+#traf-dock .traf-rail{
+  pointer-events:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:var(--traf-gap);
+  padding:10px 8px;
+  border-radius:28px;
+  background:linear-gradient(#f4f7fa, #e4eaf1);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 6px 16px rgba(30,40,55,.22),
+    0 0 0 1px rgba(160,175,190,.45);
+  position:relative;
+}
+/* Botão esférico branco, ícone cinza-azul */
+#traf-dock .traf-btn{
+  position:relative;
+  width:var(--traf-btn); height:var(--traf-btn);
+  border:0; padding:0; margin:0;
+  border-radius:50%;
+  cursor:pointer;
+  color:#3a5a8c;
+  background:
+    radial-gradient(circle at 50% 32%, #ffffff 0%, #f3f6f9 58%, #d5dde6 100%);
+  box-shadow:
+    inset 0 2px 2px rgba(255,255,255,.95),
+    inset 0 -3px 5px rgba(120,135,155,.28),
+    0 3px 6px rgba(40,50,70,.25);
+  border:1px solid rgba(170,182,196,.65);
+  display:grid; place-items:center;
+  transition:transform .12s ease, box-shadow .12s ease, color .12s ease;
+}
+#traf-dock .traf-btn:before{
+  content:"";
+  position:absolute;
+  left:14%; right:14%; top:8%;
+  height:42%;
+  border-radius:50% 50% 45% 45%;
+  background:linear-gradient(to bottom, rgba(255,255,255,.95), rgba(255,255,255,.05));
+  pointer-events:none;
+}
+#traf-dock .traf-btn svg{
+  width:30px; height:30px;
+  display:block;
+  position:relative;
+  z-index:1;
+  overflow:visible;
+}
+#traf-dock .traf-btn:hover{transform:translateY(-1px)}
+#traf-dock .traf-btn:active{transform:translateY(1px)}
+#traf-dock .traf-btn:focus,
+#traf-dock .traf-btn:focus-visible{outline:none}
+#traf-dock .traf-btn[aria-pressed="true"]{
+  color:#1e4b8a;
+  box-shadow:
+    inset 0 2px 6px rgba(40,70,110,.25),
+    0 0 0 2px rgba(80,140,200,.35),
+    0 3px 6px rgba(40,50,70,.2);
+}
+
+#traf-dock .traf-panel{
+  pointer-events:auto;
+  width:min(340px, calc(100vw - 96px));
+  max-height:100%;
+  overflow:auto;
+  background:linear-gradient(#fffefb, #f4f1ea);
+  border-radius:16px;
+  box-shadow:0 10px 28px rgba(30,40,50,.28), 0 0 0 1px rgba(80,90,100,.12);
+  padding:12px 12px 10px;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+#traf-dock .traf-panel[hidden]{display:none !important}
+#traf-dock .traf-head{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:8px;
+  margin-bottom:6px;
+}
+#traf-dock .traf-title{
+  font-weight:800; font-size:16px; letter-spacing:.01em; color:#22302a; margin:0;
+}
+#traf-dock .traf-meta{
+  margin:2px 0 10px; font-size:11px; color:#5a655c; line-height:1.35;
+}
+#traf-dock .traf-close{
+  border:0; background:#ece8dc; color:#2a3138; width:28px; height:28px;
+  border-radius:50%; font-size:18px; line-height:1; cursor:pointer; flex:0 0 auto;
+}
+#traf-dock .traf-close:hover{background:#e0d8c6}
+#traf-dock .traf-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px}
+#traf-dock .traf-item{
+  display:grid;
+  grid-template-columns:8px 1fr;
+  gap:0 10px;
+  align-items:start;
+  width:100%;
+  text-align:left;
+  border:0;
+  cursor:pointer;
+  padding:8px 10px;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,.8) inset, 0 1px 3px rgba(40,50,40,.08);
+  color:inherit;
+  font:inherit;
+}
+#traf-dock .traf-item:hover,#traf-dock .traf-item:focus-visible{
+  background:#f7f3e8; outline:none;
+}
+#traf-dock .traf-item.is-active{
+  background:#eef4ea;
+  box-shadow:0 0 0 2px rgba(35,91,70,.35);
+}
+#traf-dock .traf-pip{
+  grid-row:1 / span 3;
+  width:8px; align-self:stretch; border-radius:4px; margin:1px 0;
+  background:#e23c31;
+}
+#traf-dock .traf-item[data-nivel="medio"] .traf-pip{background:#e8921a}
+#traf-dock .traf-rua{font-weight:700; font-size:13px; color:#1f2a24; line-height:1.25}
+#traf-dock .traf-sub{font-size:11px; color:#5a655c; margin-top:2px}
+#traf-dock .traf-badge{
+  display:inline-block; margin-right:6px; padding:1px 6px; border-radius:999px;
+  font-weight:700; font-size:10px; letter-spacing:.04em; text-transform:uppercase;
+}
+#traf-dock .traf-item[data-nivel="pesado"] .traf-badge{background:#e23c31; color:#fff}
+#traf-dock .traf-item[data-nivel="medio"] .traf-badge{background:#e8921a; color:#fff}
+#traf-dock .traf-empty{font-size:13px; color:#5a655c; margin:8px 4px}
+
+@media (max-width:960px){
+  #traf-dock{
+    --traf-btn:50px;
+    left:calc(6px + env(safe-area-inset-left,0px));
+    top:calc(8px + env(safe-area-inset-top,0px));
+    bottom:calc(var(--sec-h, 122px) + 12px);
+  }
+  #traf-dock .traf-btn svg{width:26px;height:26px}
+  #traf-dock .traf-panel{width:min(300px, calc(100vw - 84px))}
+}
+@media (max-width:520px){
+  #traf-dock{--traf-btn:46px; bottom:calc(var(--sec-h, 112px) + 10px)}
+  #traf-dock .traf-title{font-size:15px}
+}
