@@ -1,11 +1,11 @@
-/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v14). */
+/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v15). */
 (function () {
   "use strict";
 
   var DATA_URL = "data/aviao-faixa.json";
   var REFRESH_MS = 10 * 60 * 1000;
   var FALLBACK = "FOZ DO IGUAÇU";
-  var SPEED_MS = 130; /* calm banner-plane cruise (about half of v12) */
+  var SPEED_MS = 65; /* half of v14 cruise (130 m/s) */
   var ALT = 60;
   /* Screen size tracks zoom as a real object at fixed altitude.
      Text is readable from ~zoom 16 up to the fade; far out it stays tiny.
