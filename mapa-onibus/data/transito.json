@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-21T15:19:21-03:00",
+  "atualizado": "2026-11-21T19:21:53-03:00",
   "fonte": "Google Maps (trânsito)",
   "modo": "navegador-google-maps",
   "obs": "Camada de trânsito do Google Maps lida em navegador headless; amarelo=medio, vermelho/vinho=pesado; sem velocidade (o mapa não exibe km/h).",
@@ -33,34 +33,165 @@
       "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 107,
+      "comprimento_m": 109,
       "linha": [
         [
-          -54.574971,
-          -25.516978
+          -54.577383,
+          -25.54697
         ],
         [
-          -54.574948,
-          -25.516652
+          -54.577521,
+          -25.546985
         ],
         [
-          -54.574914,
-          -25.516233
+          -54.578319,
+          -25.547002
         ],
         [
-          -54.574906,
-          -25.51615
-        ],
-        [
-          -54.574895,
-          -25.516009
+          -54.578344,
+          -25.547
         ]
       ],
       "centro": [
-        -54.574927,
-        -25.516404
+        -54.578062,
+        -25.547043
       ],
-      "bairro": "MONJOLO"
+      "partes": [
+        [
+          [
+            -54.577383,
+            -25.54697
+          ],
+          [
+            -54.577521,
+            -25.546985
+          ],
+          [
+            -54.578319,
+            -25.547002
+          ],
+          [
+            -54.578344,
+            -25.547
+          ]
+        ],
+        [
+          [
+            -54.578341,
+            -25.547115
+          ],
+          [
+            -54.578309,
+            -25.547119
+          ],
+          [
+            -54.578214,
+            -25.547112
+          ]
+        ]
+      ],
+      "bairro": "CENTRO"
+    },
+    {
+      "id": "g-pesado-avenida-das-cataratas",
+      "rua": "Avenida das Cataratas",
+      "nivel": "pesado",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 95,
+      "linha": [
+        [
+          -54.578167,
+          -25.547494
+        ],
+        [
+          -54.578247,
+          -25.547399
+        ],
+        [
+          -54.578314,
+          -25.547298
+        ],
+        [
+          -54.578371,
+          -25.5472
+        ]
+      ],
+      "centro": [
+        -54.578388,
+        -25.547276
+      ],
+      "partes": [
+        [
+          [
+            -54.578167,
+            -25.547494
+          ],
+          [
+            -54.578247,
+            -25.547399
+          ],
+          [
+            -54.578314,
+            -25.547298
+          ],
+          [
+            -54.578371,
+            -25.5472
+          ]
+        ],
+        [
+          [
+            -54.578762,
+            -25.547111
+          ],
+          [
+            -54.578653,
+            -25.547172
+          ],
+          [
+            -54.57858,
+            -25.547226
+          ],
+          [
+            -54.578568,
+            -25.547236
+          ]
+        ],
+        [
+          [
+            -54.57816,
+            -25.547459
+          ],
+          [
+            -54.578166,
+            -25.547416
+          ],
+          [
+            -54.578151,
+            -25.547323
+          ],
+          [
+            -54.578121,
+            -25.547259
+          ]
+        ],
+        [
+          [
+            -54.578513,
+            -25.547145
+          ],
+          [
+            -54.578536,
+            -25.547179
+          ],
+          [
+            -54.578511,
+            -25.547223
+          ]
+        ]
+      ],
+      "bairro": "CENTRO"
     },
     {
       "id": "g-pesado-acesso-br-277",
@@ -106,49 +237,6 @@
       "bairro": "PORTES"
     },
     {
-      "id": "g-pesado-acesso-travessa-augusto-dos-anjos",
-      "rua": "Acesso – Travessa Augusto dos Anjos",
-      "nivel": "pesado",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 84,
-      "linha": [
-        [
-          -54.596408,
-          -25.510191
-        ],
-        [
-          -54.596269,
-          -25.51019
-        ],
-        [
-          -54.596137,
-          -25.510168
-        ],
-        [
-          -54.596032,
-          -25.510088
-        ],
-        [
-          -54.595888,
-          -25.509928
-        ],
-        [
-          -54.595816,
-          -25.509816
-        ],
-        [
-          -54.595778,
-          -25.509773
-        ]
-      ],
-      "centro": [
-        -54.596047,
-        -25.510022
-      ],
-      "bairro": "PORTES"
-    },
-    {
       "id": "g-pesado-acesso-avenida-paran",
       "rua": "Acesso – Avenida Paraná",
       "nivel": "pesado",
@@ -172,57 +260,7 @@
       "bairro": "MONJOLO"
     },
     {
-      "id": "g-pesado-avenida-juscelino-kubitschek",
-      "rua": "Avenida Juscelino Kubitschek",
-      "nivel": "pesado",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 77,
-      "linha": [
-        [
-          -54.585116,
-          -25.512684
-        ],
-        [
-          -54.585161,
-          -25.513272
-        ],
-        [
-          -54.585169,
-          -25.513383
-        ]
-      ],
-      "centro": [
-        -54.585149,
-        -25.513113
-      ],
-      "bairro": "PORTES"
-    },
-    {
-      "id": "g-pesado-avenida-general-meira",
-      "rua": "Avenida General Meira",
-      "nivel": "pesado",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 69,
-      "linha": [
-        [
-          -54.58225,
-          -25.575448
-        ],
-        [
-          -54.58226,
-          -25.576067
-        ]
-      ],
-      "centro": [
-        -54.582255,
-        -25.575758
-      ],
-      "bairro": "TRÊS FRONTEIRAS"
-    },
-    {
-      "id": "g-pesado-avenida-das-cataratas",
+      "id": "g-pesado-avenida-das-cataratas-2",
       "rua": "Avenida das Cataratas",
       "nivel": "pesado",
       "velocidade_kmh": null,
@@ -249,31 +287,39 @@
       "bairro": "YOLANDA"
     },
     {
-      "id": "g-pesado-avenida-costa-e-silva",
-      "rua": "Avenida Costa e Silva",
+      "id": "g-pesado-acesso-travessa-augusto-dos-anjos",
+      "rua": "Acesso – Travessa Augusto dos Anjos",
       "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
       "comprimento_m": 64,
       "linha": [
         [
-          -54.5715,
-          -25.53059
+          -54.596408,
+          -25.510191
         ],
         [
-          -54.571061,
-          -25.530176
+          -54.596269,
+          -25.51019
         ],
         [
-          -54.571059,
-          -25.530174
+          -54.596137,
+          -25.510168
+        ],
+        [
+          -54.596032,
+          -25.510088
+        ],
+        [
+          -54.595891,
+          -25.509932
         ]
       ],
       "centro": [
-        -54.571207,
-        -25.530313
+        -54.596147,
+        -25.510114
       ],
-      "bairro": "CAMPOS DO IGUAÇU"
+      "bairro": "PORTES"
     },
     {
       "id": "g-medio-avenida-costa-e-silva",
@@ -281,7 +327,7 @@
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 216,
+      "comprimento_m": 220,
       "linha": [
         [
           -54.575015,
@@ -300,13 +346,13 @@
           -25.532788
         ],
         [
-          -54.573902,
-          -25.532757
+          -54.573923,
+          -25.532777
         ]
       ],
       "centro": [
-        -54.574285,
-        -25.533039
+        -54.574419,
+        -25.533165
       ],
       "partes": [
         [
@@ -327,32 +373,26 @@
             -25.532788
           ],
           [
-            -54.573902,
-            -25.532757
+            -54.573923,
+            -25.532777
           ]
         ],
         [
           [
-            -54.57427,
-            -25.532968
+            -54.574291,
+            -25.532988
           ],
           [
             -54.574345,
             -25.533036
           ],
           [
-            -54.574678,
-            -25.533336
-          ]
-        ],
-        [
-          [
-            -54.573948,
-            -25.532677
+            -54.574693,
+            -25.53335
           ],
           [
-            -54.573969,
-            -25.532697
+            -54.574779,
+            -25.533415
           ]
         ]
       ],
@@ -492,7 +532,7 @@
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 150,
+      "comprimento_m": 154,
       "linha": [
         [
           -54.582072,
@@ -508,8 +548,8 @@
         ]
       ],
       "centro": [
-        -54.582096,
-        -25.569483
+        -54.582105,
+        -25.569402
       ],
       "partes": [
         [
@@ -529,7 +569,11 @@
         [
           [
             -54.58215,
-            -25.569059
+            -25.569022
+          ],
+          [
+            -54.58215,
+            -25.569039
           ],
           [
             -54.58215,
@@ -537,135 +581,42 @@
           ]
         ]
       ],
-      "bairro": "PORTO MEIRA"
+      "bairro": "TRÊS FRONTEIRAS"
     },
     {
-      "id": "g-medio-avenida-das-cataratas",
-      "rua": "Avenida das Cataratas",
-      "nivel": "medio",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 143,
-      "linha": [
-        [
-          -54.578357,
-          -25.547512
-        ],
-        [
-          -54.578166,
-          -25.547709
-        ],
-        [
-          -54.57804,
-          -25.547861
-        ],
-        [
-          -54.577943,
-          -25.547952
-        ]
-      ],
-      "centro": [
-        -54.578277,
-        -25.547431
-      ],
-      "partes": [
-        [
-          [
-            -54.578357,
-            -25.547512
-          ],
-          [
-            -54.578166,
-            -25.547709
-          ],
-          [
-            -54.57804,
-            -25.547861
-          ],
-          [
-            -54.577943,
-            -25.547952
-          ]
-        ],
-        [
-          [
-            -54.578167,
-            -25.547494
-          ],
-          [
-            -54.578247,
-            -25.547399
-          ],
-          [
-            -54.578314,
-            -25.547298
-          ],
-          [
-            -54.578371,
-            -25.5472
-          ]
-        ],
-        [
-          [
-            -54.57816,
-            -25.547459
-          ],
-          [
-            -54.578166,
-            -25.547416
-          ],
-          [
-            -54.578151,
-            -25.547323
-          ],
-          [
-            -54.578121,
-            -25.547259
-          ]
-        ],
-        [
-          [
-            -54.578602,
-            -25.54721
-          ],
-          [
-            -54.57858,
-            -25.547226
-          ],
-          [
-            -54.578549,
-            -25.547252
-          ],
-          [
-            -54.578503,
-            -25.547334
-          ]
-        ]
-      ],
-      "bairro": "CENTRO"
-    },
-    {
-      "id": "g-medio-avenida-gramado",
-      "rua": "Avenida Gramado",
+      "id": "g-medio-avenida-m-rio-filho",
+      "rua": "Avenida Mário Filho",
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
       "comprimento_m": 139,
       "linha": [
         [
-          -54.507654,
-          -25.483896
+          -54.534379,
+          -25.523156
         ],
         [
-          -54.508926,
-          -25.484394
+          -54.534254,
+          -25.523453
+        ],
+        [
+          -54.534187,
+          -25.5237
+        ],
+        [
+          -54.534103,
+          -25.523981
+        ],
+        [
+          -54.534078,
+          -25.524371
         ]
       ],
       "centro": [
-        -54.50829,
-        -25.484145
+        -54.5342,
+        -25.523732
       ],
-      "bairro": "TRÊS LAGOAS"
+      "bairro": "MORUMBI"
     },
     {
       "id": "g-medio-rua-mato-grosso",
@@ -719,37 +670,6 @@
         ]
       ],
       "bairro": "MARACANÃ"
-    },
-    {
-      "id": "g-medio-avenida-felipe-wandscher",
-      "rua": "Avenida Felipe Wandscher",
-      "nivel": "medio",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 130,
-      "linha": [
-        [
-          -54.54028,
-          -25.549616
-        ],
-        [
-          -54.54034,
-          -25.549612
-        ],
-        [
-          -54.541519,
-          -25.549519
-        ],
-        [
-          -54.541573,
-          -25.549513
-        ]
-      ],
-      "centro": [
-        -54.540928,
-        -25.549565
-      ],
-      "bairro": "PANORAMA"
     }
   ],
   "alertas": []
