@@ -1,6 +1,6 @@
 /* Modelos 3D low-poly + camada custom instanciada (mesmo desenho dos ônibus 3D).
    Eixos locais: x direita, y frente (nariz +Y), z cima. Medidas em metros.
-   Cabine e baú dos caminhões encostados no mesmo eixo (transito-v11). */
+   Cabine e baú dos caminhões encostados no mesmo eixo (transito-v12). */
 (function (root) {
   "use strict";
 
@@ -263,7 +263,7 @@
     const L = 16.4, W = 2.55;
     const yCab = L / 2 - CAB_L / 2 - 0.04;
     const cabG = truckCab(B, yCab, 2.35, "#3a3d42");
-    const cargo = cargoBox(B, cabG, -L / 2 + 0.08, W, 2.55, "#e8e6df");
+    const cargo = cargoBox(B, cabG, -L / 2 + 0.08, W, 2.55, "#1e5fd6");
     const wr = 0.42, ax = W * 0.54, trY = cargo.boxY;
     B.wheel(ax, trY - 4.2, wr); B.wheel(-ax, trY - 4.2, wr);
     B.wheel(ax, trY - 3.3, wr); B.wheel(-ax, trY - 3.3, wr);
@@ -433,13 +433,32 @@
 
   function models() {
     return {
-      "hatch-azul": hatch("#2a5fa8"),
-      "hatch-vermelho": hatch("#c4342a"),
+      "hatch-azul": hatch("#1e5fd6"),
+      "hatch-vermelho": hatch("#e03131"),
+      "hatch-amarelo": hatch("#f0c400"),
+      "hatch-verde": hatch("#1f9a4a"),
+      "hatch-branco": hatch("#f7f6f2"),
       "sedan-prata": sedan("#c5c8cc"),
       "sedan-preto": sedan("#2a2c2e"),
+      "sedan-vermelho": sedan("#e03131"),
+      "sedan-azul": sedan("#1e5fd6"),
+      "sedan-amarelo": sedan("#f0c400"),
+      "sedan-verde": sedan("#1f9a4a"),
+      "sedan-branco": sedan("#f7f6f2"),
       "suv-branco": suv("#f2f0ea"),
+      "suv-vermelho": suv("#e03131"),
+      "suv-azul": suv("#1e5fd6"),
+      "suv-verde": suv("#1f9a4a"),
+      "suv-amarelo": suv("#f0c400"),
       "picape-prata": pickup("#b7bcc2"),
+      "picape-azul": pickup("#1e5fd6"),
+      "picape-vermelha": pickup("#e03131"),
+      "picape-branca": pickup("#f7f6f2"),
       "van": van("#ece8de"),
+      "van-azul": van("#1e5fd6"),
+      "van-verde": van("#1f9a4a"),
+      "van-vermelha": van("#e03131"),
+      "van-branca": van("#f7f6f2"),
       "taxi": sedan("#e6c22e", { sign: "#2a2a2c", stripe: "#1a1a1a" }),
       "uber": sedan("#f4f1ea", { sign: "#1a1a1a" }),
       "comprista-py": sedan("#f0eee8", { plate: "#d01818" }),
@@ -452,7 +471,12 @@
       "onibus-urbano": onibus({ L: 12.0, W: 2.50, body: "#eee5c8", accent: "#235b46" }),
       "onibus-turismo": onibus({ L: 13.0, W: 2.55, body: "#d8dde3", accent: "#2a4a7a", band: "#c5a15d" }),
       "micro-onibus": onibus({ L: 7.6, W: 2.25, body: "#e7e0cc", accent: "#3a5c4a", H: 2.65 }),
-      "caminhao-bau": truckBau("#c9c4af", "#e8e2d4", 8.2),
+      "caminhao-bau": truckBau("#4a4c50", "#e03131", 8.2),
+      "caminhao-bau-vermelho": truckBau("#4a4c50", "#e03131", 8.2),
+      "caminhao-bau-azul": truckBau("#3a4658", "#1e5fd6", 8.2),
+      "caminhao-bau-verde": truckBau("#3d5a3a", "#1f9a4a", 8.2),
+      "caminhao-bau-amarelo": truckBau("#5a5240", "#f0c400", 8.2),
+      "caminhao-bau-branco": truckBau("#5a5a5c", "#f4f1ea", 8.2),
       "carreta": carreta(),
       "caminhao-pipa": pipa(),
       "caminhao-lixo": lixo(),

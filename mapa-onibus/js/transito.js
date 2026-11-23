@@ -1,4 +1,4 @@
-/* Trânsito no mapa leve de Foz — prévia local (transito-v11).
+/* Trânsito no mapa leve de Foz — prévia local (transito-v12).
    Tingimento suave no asfalto + veículos 3D instanciados (como o ônibus 3D).
    Não altera noite/avião. */
 (function () {
@@ -12,22 +12,36 @@
   const PACK = 1.8;
   const GAP_HEAVY = 5.2;
   const GAP_MED = 9.5;
-  const JAM_COLORS = { pesado: "#e23c31", medio: "#e8921a" };
-  const CIVIL = ["hatch-azul","hatch-vermelho","sedan-prata","sedan-preto","suv-branco","picape-prata","van"];
+  const JAM_COLORS = { pesado: "#ff2d2d", medio: "#ffb020" };
+  const JAM_GLOW = { pesado: "#ff6b6b", medio: "#ffd24a" };
+  const CIVIL = [
+    "hatch-azul","hatch-vermelho","hatch-amarelo","hatch-verde","hatch-branco",
+    "sedan-vermelho","sedan-azul","sedan-amarelo","sedan-verde","sedan-branco","sedan-prata",
+    "suv-vermelho","suv-azul","suv-verde","suv-amarelo","suv-branco",
+    "picape-azul","picape-vermelha","picape-branca",
+    "van-azul","van-verde","van-vermelha","van-branca"
+  ];
   const APP = ["taxi","uber","comprista-py","comprista-ar"];
   const TWO = ["moto","moto-entrega","bicicleta","patinete"];
   const RARE = ["samu","viatura-pm","viatura-guarda","receita-pf","bombeiros"];
-  const HEAVY = ["caminhao-bau","carreta","caminhao-pipa","caminhao-lixo","betoneira","guincho","micro-onibus","onibus-urbano","kombi-escolar"];
+  const HEAVY = [
+    "caminhao-bau","caminhao-bau-azul","caminhao-bau-verde","caminhao-bau-amarelo","caminhao-bau-vermelho","caminhao-bau-branco",
+    "carreta","caminhao-pipa","caminhao-lixo","betoneira","guincho","micro-onibus","onibus-urbano","kombi-escolar"
+  ];
   const ROAD_LAYERS = [
     "road-asphalt-estrutural","road-asphalt-arterial","road-asphalt-especial",
     "road-asphalt-conectora","road-asphalt-coletora","road-asphalt-binario",
     "road-asphalt-local"
   ];
 
-  const ICON = '<svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="18.7" cy="28.35" rx="9.6" ry="1.3" fill="#1c2430" opacity=".2"/><rect x="4.05" y="17.7" width="1.2" height="9.1" rx=".45" fill="#5c6774"/><rect x="1.4" y="2.35" width="6.55" height="15.4" rx="1.9" fill="#3a4554"/><rect x="1.75" y="2.75" width="5.85" height="14.6" rx="1.55" fill="#2d3642"/><circle cx="4.68" cy="6.15" r="1.78" fill="#b71c1c"/><circle cx="4.68" cy="6.15" r="1.32" fill="#e23c31"/><circle cx="4.22" cy="5.7" r=".48" fill="#ffb0a8" opacity=".8"/><circle cx="4.68" cy="10.35" r="1.78" fill="#b8860b"/><circle cx="4.68" cy="10.35" r="1.32" fill="#f0b31a"/><circle cx="4.22" cy="9.9" r=".42" fill="#ffe58a" opacity=".85"/><circle cx="4.68" cy="14.55" r="1.78" fill="#1b7a40"/><circle cx="4.68" cy="14.55" r="1.32" fill="#3cba6a"/><circle cx="4.22" cy="14.1" r=".42" fill="#b6f0c8" opacity=".75"/><ellipse cx="12.05" cy="25.85" rx="2.6" ry="3.2" fill="#23282f"/><ellipse cx="12.05" cy="25.85" rx="1.15" ry="1.45" fill="#d0d5dc"/><ellipse cx="25.5" cy="25.85" rx="2.6" ry="3.2" fill="#23282f"/><ellipse cx="25.5" cy="25.85" rx="1.15" ry="1.45" fill="#d0d5dc"/><path fill="#3d587e" stroke="#2a3d58" stroke-width=".65" stroke-linejoin="round" d="M10.15 25.05 C9.35 25.05 8.85 24.35 8.9 23.5 L9.2 17.35 C9.3 15.7 10.2 14.55 12.0 13.7 C12.7 12.35 14.15 9.85 16.0 8.85 C16.7 8.5 17.5 8.35 18.75 8.35 C20.0 8.35 20.8 8.5 21.5 8.85 C23.35 9.85 24.8 12.35 25.5 13.7 C27.3 14.55 28.2 15.7 28.3 17.35 L28.6 23.5 C28.65 24.35 28.15 25.05 27.35 25.05 Z"/><path fill="#4d6d98" d="M15.35 9.15 C16.0 8.75 17.0 8.6 18.75 8.6 C20.5 8.6 21.5 8.75 22.15 9.15 C23.15 9.75 23.85 11.15 24.15 12.35 L13.35 12.35 C13.65 11.15 14.35 9.75 15.35 9.15 Z"/><path fill="#b9d0e8" stroke="#5b7798" stroke-width=".45" stroke-linejoin="round" d="M13.7 13.95 L14.85 11.15 C15.25 10.25 16.2 9.8 17.2 9.8 L20.3 9.8 C21.3 9.8 22.25 10.25 22.65 11.15 L23.8 13.95 C23.95 14.3 23.7 14.7 23.3 14.7 L14.2 14.7 C13.8 14.7 13.55 14.3 13.7 13.95 Z"/><path fill="#4d6d98" d="M12.15 15.55 C13.0 15.2 15.1 14.95 18.75 14.95 C22.4 14.95 24.5 15.2 25.35 15.55 L26.15 18.55 C26.25 18.95 25.95 19.3 25.55 19.3 L11.95 19.3 C11.55 19.3 11.25 18.95 11.35 18.55 Z"/><rect x="15.05" y="16.4" width="7.4" height="2.2" rx=".55" fill="#2a3340"/><path d="M16.0 16.85 h5.5 M16.0 17.55 h5.5" stroke="#7a8490" stroke-width=".4" stroke-linecap="round"/><ellipse cx="12.45" cy="17.4" rx="1.95" ry="1.25" fill="#d4b84a"/><ellipse cx="12.45" cy="17.4" rx="1.45" ry=".9" fill="#f6e27a"/><ellipse cx="12.55" cy="17.15" rx=".75" ry=".45" fill="#fff8d0"/><ellipse cx="25.05" cy="17.4" rx="1.95" ry="1.25" fill="#d4b84a"/><ellipse cx="25.05" cy="17.4" rx="1.45" ry=".9" fill="#f6e27a"/><ellipse cx="25.15" cy="17.15" rx=".75" ry=".45" fill="#fff8d0"/><rect x="10.0" y="20.7" width="17.5" height="2.4" rx=".75" fill="#33455f"/><rect x="16.2" y="21.2" width="5.1" height=".85" rx=".35" fill="#c5ccd4"/></svg>';
+  const ICON = '<svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="18.7" cy="28.35" rx="9.6" ry="1.3" fill="#1c2430" opacity=".2"/><rect x="4.05" y="17.7" width="1.2" height="9.1" rx=".45" fill="#5c6774"/><rect x="1.4" y="2.35" width="6.55" height="15.4" rx="1.9" fill="#3a4554"/><rect x="1.75" y="2.75" width="5.85" height="14.6" rx="1.55" fill="#2d3642"/><circle cx="4.68" cy="6.15" r="1.78" fill="#b71c1c"/><circle cx="4.68" cy="6.15" r="1.32" fill="#ff2d2d"/><circle cx="4.22" cy="5.7" r=".48" fill="#ffb0a8" opacity=".8"/><circle cx="4.68" cy="10.35" r="1.78" fill="#b8860b"/><circle cx="4.68" cy="10.35" r="1.32" fill="#ffb020"/><circle cx="4.22" cy="9.9" r=".42" fill="#ffe58a" opacity=".85"/><circle cx="4.68" cy="14.55" r="1.78" fill="#1b7a40"/><circle cx="4.68" cy="14.55" r="1.32" fill="#3cba6a"/><circle cx="4.22" cy="14.1" r=".42" fill="#b6f0c8" opacity=".75"/><ellipse cx="12.05" cy="25.85" rx="2.6" ry="3.2" fill="#23282f"/><ellipse cx="12.05" cy="25.85" rx="1.15" ry="1.45" fill="#d0d5dc"/><ellipse cx="25.5" cy="25.85" rx="2.6" ry="3.2" fill="#23282f"/><ellipse cx="25.5" cy="25.85" rx="1.15" ry="1.45" fill="#d0d5dc"/><path fill="#3d587e" stroke="#2a3d58" stroke-width=".65" stroke-linejoin="round" d="M10.15 25.05 C9.35 25.05 8.85 24.35 8.9 23.5 L9.2 17.35 C9.3 15.7 10.2 14.55 12.0 13.7 C12.7 12.35 14.15 9.85 16.0 8.85 C16.7 8.5 17.5 8.35 18.75 8.35 C20.0 8.35 20.8 8.5 21.5 8.85 C23.35 9.85 24.8 12.35 25.5 13.7 C27.3 14.55 28.2 15.7 28.3 17.35 L28.6 23.5 C28.65 24.35 28.15 25.05 27.35 25.05 Z"/><path fill="#4d6d98" d="M15.35 9.15 C16.0 8.75 17.0 8.6 18.75 8.6 C20.5 8.6 21.5 8.75 22.15 9.15 C23.15 9.75 23.85 11.15 24.15 12.35 L13.35 12.35 C13.65 11.15 14.35 9.75 15.35 9.15 Z"/><path fill="#b9d0e8" stroke="#5b7798" stroke-width=".45" stroke-linejoin="round" d="M13.7 13.95 L14.85 11.15 C15.25 10.25 16.2 9.8 17.2 9.8 L20.3 9.8 C21.3 9.8 22.25 10.25 22.65 11.15 L23.8 13.95 C23.95 14.3 23.7 14.7 23.3 14.7 L14.2 14.7 C13.8 14.7 13.55 14.3 13.7 13.95 Z"/><path fill="#4d6d98" d="M12.15 15.55 C13.0 15.2 15.1 14.95 18.75 14.95 C22.4 14.95 24.5 15.2 25.35 15.55 L26.15 18.55 C26.25 18.95 25.95 19.3 25.55 19.3 L11.95 19.3 C11.55 19.3 11.25 18.95 11.35 18.55 Z"/><rect x="15.05" y="16.4" width="7.4" height="2.2" rx=".55" fill="#2a3340"/><path d="M16.0 16.85 h5.5 M16.0 17.55 h5.5" stroke="#7a8490" stroke-width=".4" stroke-linecap="round"/><ellipse cx="12.45" cy="17.4" rx="1.95" ry="1.25" fill="#d4b84a"/><ellipse cx="12.45" cy="17.4" rx="1.45" ry=".9" fill="#f6e27a"/><ellipse cx="12.55" cy="17.15" rx=".75" ry=".45" fill="#fff8d0"/><ellipse cx="25.05" cy="17.4" rx="1.95" ry="1.25" fill="#d4b84a"/><ellipse cx="25.05" cy="17.4" rx="1.45" ry=".9" fill="#f6e27a"/><ellipse cx="25.15" cy="17.15" rx=".75" ry=".45" fill="#fff8d0"/><rect x="10.0" y="20.7" width="17.5" height="2.4" rx=".75" fill="#33455f"/><rect x="16.2" y="21.2" width="5.1" height=".85" rx=".35" fill="#c5ccd4"/></svg>';
 
   let map, data, catalog = [], byId = {}, vehicles = [];
   let running = false, lastTs = 0, selected = null, raf = 0, traf3d = null;
+  let flow = null, lastFlowTs = 0;
+  const FLOW_TILE_W = 128, FLOW_TILE_H = 32;
+  const FLOW_SPEED_PESADO = 22; /* px/s no tile — lento no vermelho */
+  const FLOW_SPEED_MEDIO = 44;  /* ~2x, um pouco mais rápido no laranja */
 
   function ready(fn) {
     if (window.__FOZ_CITY_SIM__ && window.__FOZ_CITY_SIM__.ready && window.__FOZ_CITY_SIM__.map) {
@@ -135,8 +149,10 @@
     arterial: 14.84500179938373,
     estrutural: 18.556252249229665
   };
-  const TINT_OPACITY = 0.16;
-  const HL_OPACITY = 0.18;
+  const TINT_OPACITY = ["match", ["get", "nivel"], "pesado", 0.55, 0.50];
+  const HL_OPACITY = 0.35;
+  const GLOW_OPACITY_PESADO = 0.30;
+  const GLOW_OPACITY_MEDIO = 0.26;
 
   function asphaltWidthM(cls, lat) {
     const px = ASPHALT_PX16[cls] || ASPHALT_PX16.local;
@@ -360,7 +376,103 @@
       103.91501259568611]
   ];
 
+
+  function drawFlowChevrons(ctx, w, h, offset, fill) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = fill;
+    const period = 40;
+    const o = ((offset % period) + period) % period;
+    const mid = h / 2, margin = h * 0.16, tip = 15, thick = 7;
+    for (let x = -period; x <= w + period; x += period) {
+      const xx = x + o;
+      ctx.beginPath();
+      ctx.moveTo(xx, margin);
+      ctx.lineTo(xx + tip, mid);
+      ctx.lineTo(xx, h - margin);
+      ctx.lineTo(xx + thick, h - margin);
+      ctx.lineTo(xx + tip + thick, mid);
+      ctx.lineTo(xx + thick, margin);
+      ctx.closePath();
+      ctx.fill();
+    }
+  }
+
+  function flowImageData(entry) {
+    return entry.ctx.getImageData(0, 0, FLOW_TILE_W, FLOW_TILE_H);
+  }
+
+  function ensureFlowImages() {
+    if (!flow) {
+      function make(fill) {
+        const canvas = document.createElement("canvas");
+        canvas.width = FLOW_TILE_W;
+        canvas.height = FLOW_TILE_H;
+        return { canvas: canvas, ctx: canvas.getContext("2d", { willReadFrequently: true }), offset: 0, fill: fill };
+      }
+      flow = {
+        pesado: make("rgba(255,255,255,0.64)"),
+        medio: make("rgba(255,248,220,0.68)")
+      };
+      drawFlowChevrons(flow.pesado.ctx, FLOW_TILE_W, FLOW_TILE_H, 0, flow.pesado.fill);
+      drawFlowChevrons(flow.medio.ctx, FLOW_TILE_W, FLOW_TILE_H, 0, flow.medio.fill);
+    }
+    if (!map) return;
+    ["pesado", "medio"].forEach(function (k) {
+      const id = "traf-flow-" + k;
+      const img = flowImageData(flow[k]);
+      if (map.hasImage(id)) {
+        try { map.updateImage(id, img); } catch (e) {}
+      } else {
+        map.addImage(id, img, { pixelRatio: 2 });
+      }
+    });
+  }
+
+  function tickFlow(ts) {
+    if (!map || !flow) return;
+    const dt = lastFlowTs ? Math.min(0.08, (ts - lastFlowTs) / 1000) : 0.016;
+    lastFlowTs = ts;
+    flow.pesado.offset += FLOW_SPEED_PESADO * dt;
+    flow.medio.offset += FLOW_SPEED_MEDIO * dt;
+    drawFlowChevrons(flow.pesado.ctx, FLOW_TILE_W, FLOW_TILE_H, flow.pesado.offset, flow.pesado.fill);
+    drawFlowChevrons(flow.medio.ctx, FLOW_TILE_W, FLOW_TILE_H, flow.medio.offset, flow.medio.fill);
+    try {
+      if (map.hasImage("traf-flow-pesado")) map.updateImage("traf-flow-pesado", flowImageData(flow.pesado));
+      if (map.hasImage("traf-flow-medio")) map.updateImage("traf-flow-medio", flowImageData(flow.medio));
+    } catch (e) {}
+  }
+
+  function paintFlowLayer(id, nivel, imageId) {
+    const before = layerBefore();
+    const filter = ["==", ["get", "nivel"], nivel];
+    if (!map.getLayer(id)) {
+      map.addLayer({
+        id: id,
+        type: "line",
+        source: "foz-transito",
+        filter: filter,
+        layout: { "line-cap": "butt", "line-join": "bevel" },
+        paint: {
+          "line-pattern": imageId,
+          "line-width": TINT_W,
+          "line-opacity": 0.92,
+          "line-blur": 0
+        }
+      }, before);
+    } else {
+      map.setFilter(id, filter);
+      map.setLayoutProperty(id, "line-cap", "butt");
+      map.setLayoutProperty(id, "line-join", "bevel");
+      map.setPaintProperty(id, "line-pattern", imageId);
+      map.setPaintProperty(id, "line-width", TINT_W);
+      map.setPaintProperty(id, "line-opacity", 0.92);
+      map.setPaintProperty(id, "line-blur", 0);
+    }
+  }
+
   function ensureLayers() {
+    ensureFlowImages();
+
     if (!map.getSource("foz-transito")) {
       map.addSource("foz-transito", { type: "geojson", data: jamFC() });
     } else {
@@ -374,14 +486,46 @@
     if (map.getLayer("foz-transito-cars")) {
       try { map.removeLayer("foz-transito-cars"); } catch (e) {}
     }
+    function paintGlow(id, nivel, color, opacity) {
+      const filter = ["==", ["get", "nivel"], nivel];
+      if (!map.getLayer(id)) {
+        map.addLayer({
+          id: id,
+          type: "line",
+          source: "foz-transito",
+          filter: filter,
+          layout: { "line-cap": "butt", "line-join": "bevel" },
+          paint: {
+            "line-color": color,
+            "line-width": TINT_W,
+            "line-opacity": opacity,
+            "line-blur": 3.4
+          }
+        }, before);
+      } else {
+        map.setFilter(id, filter);
+        map.setLayoutProperty(id, "line-cap", "butt");
+        map.setLayoutProperty(id, "line-join", "bevel");
+        map.setPaintProperty(id, "line-color", color);
+        map.setPaintProperty(id, "line-width", TINT_W);
+        map.setPaintProperty(id, "line-opacity", opacity);
+        map.setPaintProperty(id, "line-blur", 3.4);
+      }
+    }
+    paintGlow("foz-transito-glow-pesado", "pesado", JAM_GLOW.pesado, GLOW_OPACITY_PESADO);
+    paintGlow("foz-transito-glow-medio", "medio", JAM_GLOW.medio, GLOW_OPACITY_MEDIO);
+    paintFlowLayer("foz-transito-flow-pesado", "pesado", "traf-flow-pesado");
+    paintFlowLayer("foz-transito-flow-medio", "medio", "traf-flow-medio");
+
     if (!map.getLayer("foz-transito-linha")) {
+
       map.addLayer({
         id: "foz-transito-linha",
         type: "line",
         source: "foz-transito",
         layout: { "line-cap": "butt", "line-join": "bevel" },
         paint: {
-          "line-color": ["match", ["get", "nivel"], "pesado", "#c5362e", "#d48914"],
+          "line-color": ["match", ["get", "nivel"], "pesado", JAM_COLORS.pesado, JAM_COLORS.medio],
           "line-width": TINT_W,
           "line-opacity": TINT_OPACITY,
           "line-blur": 0
@@ -390,7 +534,7 @@
     } else {
       map.setLayoutProperty("foz-transito-linha", "line-cap", "butt");
       map.setLayoutProperty("foz-transito-linha", "line-join", "bevel");
-      map.setPaintProperty("foz-transito-linha", "line-color", ["match", ["get", "nivel"], "pesado", "#c5362e", "#d48914"]);
+      map.setPaintProperty("foz-transito-linha", "line-color", ["match", ["get", "nivel"], "pesado", JAM_COLORS.pesado, JAM_COLORS.medio]);
       map.setPaintProperty("foz-transito-linha", "line-width", TINT_W);
       map.setPaintProperty("foz-transito-linha", "line-opacity", TINT_OPACITY);
       map.setPaintProperty("foz-transito-linha", "line-blur", 0);
@@ -403,7 +547,7 @@
         filter: ["==", ["get", "selected"], 1],
         layout: { "line-cap": "butt", "line-join": "bevel" },
         paint: {
-          "line-color": "#f0d27a",
+          "line-color": "#ffe566",
           "line-width": TINT_W,
           "line-opacity": HL_OPACITY,
           "line-blur": 0
@@ -411,14 +555,14 @@
       }, before);
     } else {
       map.setLayoutProperty("foz-transito-hl", "line-cap", "butt");
-      map.setPaintProperty("foz-transito-hl", "line-color", "#f0d27a");
+      map.setPaintProperty("foz-transito-hl", "line-color", "#ffe566");
       map.setPaintProperty("foz-transito-hl", "line-width", TINT_W);
       map.setPaintProperty("foz-transito-hl", "line-opacity", HL_OPACITY);
       map.setPaintProperty("foz-transito-hl", "line-blur", 0);
     }
     const b = layerBefore();
     if (b) {
-      ["foz-transito-linha", "foz-transito-hl"].forEach(function (id) {
+      ["foz-transito-glow-pesado", "foz-transito-glow-medio", "foz-transito-linha", "foz-transito-flow-pesado", "foz-transito-flow-medio", "foz-transito-hl"].forEach(function (id) {
         if (map.getLayer(id)) {
           try { map.moveLayer(id, b); } catch (e) {}
         }
@@ -484,7 +628,7 @@
         let n = 0;
         const cap = heavy ? 22 : 12;
         const showcase = (t.id === "pesado-carlos-gomes" && li === 0)
-          ? ["taxi","samu","viatura-pm","onibus-urbano","sedan-prata","caminhao-bau","suv-branco","hatch-vermelho"]
+          ? ["taxi","sedan-vermelho","suv-azul","caminhao-bau-amarelo","hatch-verde","sedan-branco","caminhao-bau-vermelho","suv-amarelo"]
           : null;
         while (s < pathLen - 6 && n < cap) {
           const sprite = (showcase && n < showcase.length) ? showcase[n] : pickSprite(heavy ? "jam-heavy" : "jam-medium");
@@ -637,6 +781,7 @@
 
   function tick(ts) {
     raf = requestAnimationFrame(tick);
+    tickFlow(ts);
     if (!running) return;
     const z = map.getZoom();
     if (z < MIN_ZOOM) {

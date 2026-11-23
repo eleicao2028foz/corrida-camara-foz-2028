@@ -1,4 +1,4 @@
-/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v15). */
+/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v16). */
 (function () {
   "use strict";
 
@@ -6,7 +6,7 @@
   var REFRESH_MS = 10 * 60 * 1000;
   var FALLBACK = "FOZ DO IGUAÇU";
   var SPEED_MS = 65; /* half of v14 cruise (130 m/s) */
-  var ALT = 60;
+  var ALT = 36; /* v15 was 60 m; just above mid civic (~32 m) and all municipal rooftops (~10 m). The 100 m Prefeitura palace already poked through at 60 m. */
   /* Screen size tracks zoom as a real object at fixed altitude.
      Text is readable from ~zoom 16 up to the fade; far out it stays tiny.
      Fade starts after a comfortable readable window, when the camera

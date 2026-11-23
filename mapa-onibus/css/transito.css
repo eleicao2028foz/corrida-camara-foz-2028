@@ -134,17 +134,17 @@
 #traf-dock .traf-pip{
   grid-row:1 / span 3;
   width:8px; align-self:stretch; border-radius:4px; margin:1px 0;
-  background:#e23c31;
+  background:#ff2d2d;
 }
-#traf-dock .traf-item[data-nivel="medio"] .traf-pip{background:#e8921a}
+#traf-dock .traf-item[data-nivel="medio"] .traf-pip{background:#ffb020}
 #traf-dock .traf-rua{font-weight:700; font-size:13px; color:#1f2a24; line-height:1.25}
 #traf-dock .traf-sub{font-size:11px; color:#5a655c; margin-top:2px}
 #traf-dock .traf-badge{
   display:inline-block; margin-right:6px; padding:1px 6px; border-radius:999px;
   font-weight:700; font-size:10px; letter-spacing:.04em; text-transform:uppercase;
 }
-#traf-dock .traf-item[data-nivel="pesado"] .traf-badge{background:#e23c31; color:#fff}
-#traf-dock .traf-item[data-nivel="medio"] .traf-badge{background:#e8921a; color:#fff}
+#traf-dock .traf-item[data-nivel="pesado"] .traf-badge{background:#ff2d2d; color:#fff}
+#traf-dock .traf-item[data-nivel="medio"] .traf-badge{background:#ffb020; color:#2a1a00}
 #traf-dock .traf-empty{font-size:13px; color:#5a655c; margin:8px 4px}
 
 @media (max-width:960px){
