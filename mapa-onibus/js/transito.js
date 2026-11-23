@@ -1,4 +1,4 @@
-/* Trânsito no mapa leve de Foz — prévia local (transito-v12).
+/* Trânsito no mapa leve de Foz — prévia local (transito-v13).
    Tingimento suave no asfalto + veículos 3D instanciados (como o ônibus 3D).
    Não altera noite/avião. */
 (function () {
@@ -156,7 +156,11 @@
 
   function asphaltWidthM(cls, lat) {
     const px = ASPHALT_PX16[cls] || ASPHALT_PX16.local;
-    const mpp = 156543.03392804097 * Math.cos((lat || -25.517) * Math.PI / 180) / 65536;
+    /* MapLibre usa tileSize 512, então 1 px no zoom 16 vale
+       40075016.686 * cos(lat) / (512 * 2^16) metros — metade da constante 256.
+       Com a constante antiga os carros caíam exatamente na borda do asfalto
+       (offset = largura visual / 2). */
+    const mpp = 78271.51696402031 * Math.cos((lat || -25.517) * Math.PI / 180) / 65536;
     return px * mpp;
   }
 
