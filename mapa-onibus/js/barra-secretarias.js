@@ -64,7 +64,6 @@
     if (left < min) left = min;
     if (left > max) left = max;
     tip.style.left = left + 'px';
-    tip.style.top = '4px';
   }
 
   function hideTip() {
@@ -89,6 +88,17 @@
       // Keep the active button visible on the horizontal mobile scroller.
       item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
+  }
+
+
+  function clearActive() {
+    activeId = null;
+    tipLock = false;
+    items.forEach((el) => {
+      el.classList.remove('is-active', 'selected');
+      el.setAttribute('aria-pressed', 'false');
+    });
+    if (tip) tip.classList.remove('is-on');
   }
 
   function getMap() {
@@ -138,7 +148,7 @@
     const s = window.__FOZ_CITY_SIM__;
     if (s && s.ready && s.map) {
       // Expose for tests / console.
-      window.__FOZ_SECRETARIAS__ = { flyTo, cameras: CAMERAS, bar, setActive };
+      window.__FOZ_SECRETARIAS__ = { flyTo, cameras: CAMERAS, bar, setActive, clearActive };
       return;
     }
     setTimeout(boot, 80);
