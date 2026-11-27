@@ -1,4 +1,4 @@
-/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v16). */
+/* Banner plane over Foz. Screen-aligned overlay (aviao-faixa-v17). */
 (function () {
   "use strict";
 
@@ -6,7 +6,7 @@
   var REFRESH_MS = 10 * 60 * 1000;
   var FALLBACK = "FOZ DO IGUAÇU";
   var SPEED_MS = 65; /* half of v14 cruise (130 m/s) */
-  var ALT = 36; /* v15 was 60 m; just above mid civic (~32 m) and all municipal rooftops (~10 m). The 100 m Prefeitura palace already poked through at 60 m. */
+  var ALT = 22; /* v16 was 36 m. Above typical houses (~10 m) and Foztrans (~16 m), just under mid civic rooftops (Prefeitura ~30 m, Fundação/Saúde/Hospital ~32 m). The tall Bordin towers (~79–99 m) still rise above. */
   /* Screen size tracks zoom as a real object at fixed altitude.
      Text is readable from ~zoom 16 up to the fade; far out it stays tiny.
      Fade starts after a comfortable readable window, when the camera
@@ -27,11 +27,10 @@
   var PLANE_W_MOBILE = 68;
   var PLANE_H_MOBILE = 38;
 
-  /* v14: straight viewport passes. The plane keeps a constant heading
-     until the plane AND trailing banner are fully off-screen, then
-     re-enters from another edge with a new heading. Passes are planned
-     from the current viewport and prefer crossing Costa e Silva when it
-     is in view. Recalc only after the current pass exits. */
+  /* v17: continuous closed circuit over urban Foz. Long N–S straights
+     on two parallel lanes, joined by wide 180° turns past the north and
+     south tips of the city. The nose stays tangent to the path; there is
+     no pause or teleport. planPass() remains for preview/debug APIs. */
   var CES_SW = [-54.576172, -25.534372];
   var CES_MID = [-54.563357, -25.523353];
   var CES_NE = [-54.550671, -25.512197];
@@ -260,6 +259,91 @@
   function headingBetween(lng0, lat0, lng1, lat1) {
     var mid = (lat0 + lat1) / 2;
     return Math.atan2((lng1 - lng0) * Math.cos((mid * Math.PI) / 180), lat1 - lat0);
+  }
+
+  function wrapRad(a) {
+    return Math.atan2(Math.sin(a), Math.cos(a));
+  }
+
+  /* Stadium circuit: almost N–S over the urban fabric.
+     West lane ~Centro / América / Itaipu B; east lane ~Costa e Silva /
+     Campos do Iguaçu / Lancaster. Caps sit just past Cidade Nova (N)
+     and Carimã / Porto Meira (S). Radius 1600 m ≈ 41 s per 180° at 65 m/s. */
+  var CIRCUIT_SOUTH = [-54.570, -25.578];
+  var CIRCUIT_NORTH = [-54.562, -25.452];
+  var CIRCUIT_RADIUS = 1600;
+
+  function buildStadiumCircuit() {
+    var south = { lng: CIRCUIT_SOUTH[0], lat: CIRCUIT_SOUTH[1] };
+    var north = { lng: CIRCUIT_NORTH[0], lat: CIRCUIT_NORTH[1] };
+    var h = headingBetween(south.lng, south.lat, north.lng, north.lat);
+    var left = h - Math.PI / 2;
+    var right = h + Math.PI / 2;
+    var R = CIRCUIT_RADIUS;
+    var sw = destPoint(south.lng, south.lat, left, R);
+    var se = destPoint(south.lng, south.lat, right, R);
+    var nw = destPoint(north.lng, north.lat, left, R);
+    var ne = destPoint(north.lng, north.lat, right, R);
+    var segs = [
+      { type: "line", a: sw, b: nw, heading: h, len: distM(sw.lng, sw.lat, nw.lng, nw.lat) },
+      { type: "arc", c: north, r: R, phi0: left, phi1: left + Math.PI, dir: 1, len: Math.PI * R },
+      { type: "line", a: ne, b: se, heading: wrapRad(h + Math.PI), len: distM(ne.lng, ne.lat, se.lng, se.lat) },
+      { type: "arc", c: south, r: R, phi0: right, phi1: right + Math.PI, dir: 1, len: Math.PI * R }
+    ];
+    var total = 0;
+    var i;
+    for (i = 0; i < segs.length; i++) total += segs[i].len;
+    return { segs: segs, totalLen: total, heading: h, sw: sw, se: se, nw: nw, ne: ne, south: south, north: north, radius: R };
+  }
+
+  var circuit = buildStadiumCircuit();
+  var circuitT0 = performance.now();
+  var circuitS0 = (forcedT != null ? forcedT : Math.random()) * circuit.totalLen;
+  var circuitHoldDist = startFrozen ? circuitS0 : null;
+
+  function circuitDist() {
+    if (circuitHoldDist != null) return circuitHoldDist;
+    var elapsed = Math.max(0, (passClock() - circuitT0) / 1000);
+    return circuitS0 + elapsed * SPEED_MS;
+  }
+
+  function poseOnCircuit(dist) {
+    var total = circuit.totalLen || 1;
+    var s = ((dist % total) + total) % total;
+    var acc = 0;
+    var i, seg, u, phi, p, heading, local;
+    for (i = 0; i < circuit.segs.length; i++) {
+      seg = circuit.segs[i];
+      if (s > acc + seg.len && i < circuit.segs.length - 1) {
+        acc += seg.len;
+        continue;
+      }
+      local = Math.max(0, Math.min(seg.len, s - acc));
+      u = seg.len > 0 ? local / seg.len : 0;
+      if (seg.type === "arc") {
+        phi = seg.phi0 + seg.dir * u * (seg.phi1 - seg.phi0);
+        p = destPoint(seg.c.lng, seg.c.lat, phi, seg.r);
+        heading = wrapRad(phi + seg.dir * Math.PI / 2);
+      } else {
+        p = {
+          lng: seg.a.lng + (seg.b.lng - seg.a.lng) * u,
+          lat: seg.a.lat + (seg.b.lat - seg.a.lat) * u
+        };
+        heading = seg.heading;
+      }
+      return {
+        lng: p.lng,
+        lat: p.lat,
+        alt: ALT,
+        heading: heading,
+        phase: s / total,
+        leg: i,
+        t: u,
+        dist: s,
+        onArc: seg.type === "arc"
+      };
+    }
+    return fallbackPose();
   }
 
   function getPose() {
@@ -735,8 +819,8 @@
       var ev = eventAtClock(timeline.clock != null ? timeline.clock : 0);
       return !ev || ev.type === "pause";
     }
-    if (!passCtrl.pass) return true;
-    return passCtrl.phase === "pause";
+    /* Live v17 circuit is continuous: never hide for a teleport pause. */
+    return false;
   }
 
   function viewSize() {
@@ -1144,23 +1228,7 @@
       var ms = timeline.clock != null ? timeline.clock : 0;
       return poseFromEvent(eventAtClock(ms), ms);
     }
-    if (!passCtrl.pass) return fallbackPose();
-    if (passCtrl.phase === "pause" && passCtrl.holdPose) return passCtrl.holdPose;
-    var elapsed = Math.max(0, (passClock() - passCtrl.tStart) / 1000);
-    var p = destPoint(passCtrl.pass.lng0, passCtrl.pass.lat0, passCtrl.pass.heading, elapsed * SPEED_MS);
-    var u = passCtrl.pass.dur ? clamp01((elapsed * 1000) / passCtrl.pass.dur) : 0;
-    return {
-      lng: p.lng,
-      lat: p.lat,
-      alt: ALT,
-      heading: passCtrl.pass.heading,
-      phase: u,
-      leg: 0,
-      t: u,
-      screenAngle: passCtrl.pass.screenAngle,
-      entryEdge: passCtrl.pass.entryEdge,
-      exitEdge: passCtrl.pass.exitEdge
-    };
+    return poseOnCircuit(circuitDist());
   }
 
   function nowPhase() {
@@ -1168,10 +1236,8 @@
       var total = timeline.totalMs || 1;
       return clamp01((timeline.clock || 0) / total);
     }
-    if (!passCtrl.pass) return 0;
-    if (passCtrl.phase === "pause") return 1;
-    var elapsed = Math.max(0, (passClock() - passCtrl.tStart) / 1000);
-    return passCtrl.pass.dur ? clamp01((elapsed * 1000) / passCtrl.pass.dur) : 0;
+    var len = circuit.totalLen || 1;
+    return (((circuitDist() % len) + len) % len) / len;
   }
 
   function buildPreviewScenario(totalMs) {
@@ -1336,13 +1402,7 @@
 
   function tick() {
     if (disabled) return;
-    if (!frozen && !timeline) {
-      advanceLivePass();
-    }
     updateOverlay();
-    if (!frozen && !timeline) {
-      finishPassIfOffscreen();
-    }
     if (!frozen && document.visibilityState !== "hidden") {
       requestAnimationFrame(tick);
     }
@@ -1400,13 +1460,21 @@
     getPose: function () { return getPose(); },
     nowPhase: nowPhase,
     setFrozen: function (v) {
-      if (v && !frozen && passCtrl.pass && passCtrl.phase === "fly") {
-        passCtrl.holdFrozenElapsed = passClock() - passCtrl.tStart;
+      if (v && !frozen) {
+        circuitHoldDist = circuitDist();
+        if (passCtrl.pass && passCtrl.phase === "fly") {
+          passCtrl.holdFrozenElapsed = passClock() - passCtrl.tStart;
+        }
       }
       if (!v && frozen) {
         clearPlace();
         timeline = null;
         passCtrl.clock = null;
+        if (circuitHoldDist != null) {
+          circuitS0 = circuitHoldDist;
+          circuitT0 = performance.now();
+          circuitHoldDist = null;
+        }
         if (passCtrl.pass && passCtrl.phase === "fly" && passCtrl.holdFrozenElapsed != null) {
           passCtrl.tStart = performance.now() - passCtrl.holdFrozenElapsed;
         }
@@ -1424,15 +1492,10 @@
         setTimelineClock(p * (timeline.totalMs || 10000));
         return getPose();
       }
-      if (!passCtrl.pass && mapRef) startNewPass();
-      if (passCtrl.pass) {
-        passCtrl.clock = null;
-        passCtrl.tStart = performance.now() - p * (passCtrl.pass.dur || 1);
-        passCtrl.phase = "fly";
-        passCtrl.everVisible = p > 0.05 && p < 0.95;
-        passCtrl.snapFlip = true;
-        smoothScreenAngle = null;
-      }
+      circuitHoldDist = p * (circuit.totalLen || 1);
+      circuitS0 = circuitHoldDist;
+      circuitT0 = performance.now();
+      smoothScreenAngle = null;
       frozen = true;
       if (els) els.overlay.classList.add("is-frozen");
       updateOverlay();
@@ -1460,6 +1523,20 @@
     getTimeline: function () { return timeline; },
     isRigOffscreen: isRigOffscreen,
     SPEED_MS: SPEED_MS,
+    ALT: ALT,
+    getCircuit: function () {
+      return {
+        totalLen: circuit.totalLen,
+        radius: circuit.radius,
+        heading: circuit.heading,
+        south: circuit.south,
+        north: circuit.north,
+        sw: circuit.sw,
+        se: circuit.se,
+        nw: circuit.nw,
+        ne: circuit.ne
+      };
+    },
     getScale: currentScale,
     getFade: currentFade,
     update: updateOverlay
