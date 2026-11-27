@@ -8,10 +8,34 @@
   const track = el.querySelector(".sec-term-track");
   const knob = el.querySelector(".sec-term-knob");
   const tip = el.querySelector(".sec-term-tip");
+  const ticksBox = el.querySelector(".sec-term-ticks");
   if (!track || !knob) return;
 
   let data = null;
   let scopeId = null; // null = cidade
+
+  function scalePad() {
+    const raw = getComputedStyle(el).getPropertyValue("--term-pad").trim();
+    const n = parseFloat(raw);
+    return isFinite(n) && n > 0 ? n : 14;
+  }
+
+  function scaleLeft(pct) {
+    const pad = scalePad();
+    return "calc(" + pad + "px + (100% - " + pad * 2 + "px) * " + pct / 100 + ")";
+  }
+
+  function buildTicks() {
+    if (!ticksBox) return;
+    ticksBox.innerHTML = "";
+    // 10 divisões principais (0,10,...,100) + intermediários a cada 5.
+    for (let i = 0; i <= 20; i++) {
+      const tick = document.createElement("span");
+      tick.className = "sec-term-tick " + (i % 2 === 0 ? "is-major" : "is-minor");
+      tick.style.left = scaleLeft((i / 20) * 100);
+      ticksBox.appendChild(tick);
+    }
+  }
 
   function fmtDate(iso) {
     if (!iso) return "";
@@ -68,8 +92,7 @@
     const known = !!(rec && !rec.sem_indice && rec.nivel != null);
     el.classList.toggle("is-unknown", !known);
     const pct = known ? positionPct(rec.nivel) : 50;
-    const pad = 11; // keep knob inside rounded caps
-    knob.style.left = "calc(" + pad + "px + (100% - " + pad * 2 + "px) * " + pct / 100 + ")";
+    knob.style.left = scaleLeft(pct);
     const label = tipText(scopeId, rec);
     if (tip) tip.textContent = label;
     el.setAttribute("aria-label", "Termômetro de problemas. " + label);
@@ -159,12 +182,15 @@
       if (tip) tip.classList.remove("is-on");
     });
     window.addEventListener("resize", function () {
+      buildTicks();
+      apply(scopeId);
       if (typeof window.__fozBarPad === "function") window.__fozBarPad();
     });
   }
 
   function boot(term) {
     data = term || null;
+    buildTicks();
     hook();
     apply(null);
     window.__FOZ_TERMOMETRO__ = {

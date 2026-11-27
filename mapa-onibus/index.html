@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/barra-secretarias.css?v=admin-barra-v10">
 <link rel="stylesheet" href="css/noite.css?v=noite-auto-v11">
 <link rel="stylesheet" href="css/noticias-secretaria.css?v=noticias-barra-v13">
-<link rel="stylesheet" href="css/termometro-secretarias.css?v=termometro-sec-v1">
+<link rel="stylesheet" href="css/termometro-secretarias.css?v=termometro-sec-v2">
 <link rel="stylesheet" href="css/clima.css?v=clima-auto-v14">
 <link rel="stylesheet" href="css/clima-barra.css?v=clima-barra-v15">
 <link rel="stylesheet" href="css/transito.css?v=transito-v12">
@@ -28,8 +28,14 @@
 <nav id="sec-bar" aria-label="Secretarias da Prefeitura de Foz">
   <div class="sec-tooltip" role="status"></div>
   <div id="sec-termometro" class="sec-term" role="meter" aria-valuemin="0" aria-valuemax="100" tabindex="0">
-    <div class="sec-term-track" aria-hidden="true">
-      <div class="sec-term-knob"></div>
+    <div class="sec-term-shell" aria-hidden="true">
+      <div class="sec-term-track">
+        <div class="sec-term-ticks"></div>
+        <div class="sec-term-knob">
+          <span class="sec-term-knob-head"></span>
+          <span class="sec-term-knob-blade"></span>
+        </div>
+      </div>
     </div>
     <div class="sec-term-tip" role="tooltip"></div>
   </div>
@@ -299,7 +305,7 @@
 <script src="js/barra-secretarias.js?v=termometro-sec-v1"></script>
 <script src="js/noite.js?v=noite-auto-v11"></script>
 <script src="js/noticias-secretaria.js?v=noticias-barra-v13"></script>
-<script src="js/termometro-secretarias.js?v=termometro-sec-v1"></script>
+<script src="js/termometro-secretarias.js?v=termometro-sec-v2"></script>
 <script src="js/clima.js?v=clima-barra-v15"></script>
 <script src="js/aviao-faixa.js?v=aviao-faixa-v17"></script>
 <script src="js/veiculos-3d.js?v=transito-v12"></script>
