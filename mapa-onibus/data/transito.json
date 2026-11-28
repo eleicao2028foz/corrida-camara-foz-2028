@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-28T07:24:04-03:00",
+  "atualizado": "2026-11-28T11:22:36-03:00",
   "fonte": "Google Maps (trânsito)",
   "modo": "navegador-google-maps",
   "obs": "Camada de trânsito do Google Maps lida em navegador headless; amarelo=medio, vermelho/vinho=pesado; sem velocidade (o mapa não exibe km/h).",
@@ -253,7 +253,7 @@
       "comprimento_m": 267,
       "linha": [
         [
-          -54.598166,
+          -54.598167,
           -25.509494
         ],
         [
@@ -323,144 +323,62 @@
       "bairro": "PORTES"
     },
     {
-      "id": "g-pesado-acesso-rua-santo-rafagnin",
-      "rua": "Acesso – Rua Santo Rafagnin",
+      "id": "g-pesado-br-277-2",
+      "rua": "BR-277",
       "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 119,
+      "comprimento_m": 138,
       "linha": [
         [
-          -54.596408,
-          -25.510191
+          -54.565812,
+          -25.510059
         ],
         [
-          -54.596269,
-          -25.51019
-        ],
-        [
-          -54.596137,
-          -25.510168
-        ],
-        [
-          -54.596032,
-          -25.510088
-        ],
-        [
-          -54.595888,
-          -25.509928
-        ],
-        [
-          -54.595816,
-          -25.509816
-        ],
-        [
-          -54.595758,
-          -25.509749
+          -54.567188,
+          -25.509993
         ]
       ],
       "centro": [
-        -54.595759,
-        -25.509716
+        -54.5665,
+        -25.510026
       ],
-      "partes": [
-        [
-          [
-            -54.596408,
-            -25.510191
-          ],
-          [
-            -54.596269,
-            -25.51019
-          ],
-          [
-            -54.596137,
-            -25.510168
-          ],
-          [
-            -54.596032,
-            -25.510088
-          ],
-          [
-            -54.595888,
-            -25.509928
-          ],
-          [
-            -54.595816,
-            -25.509816
-          ],
-          [
-            -54.595758,
-            -25.509749
-          ]
-        ],
-        [
-          [
-            -54.595688,
-            -25.509688
-          ],
-          [
-            -54.595624,
-            -25.509638
-          ],
-          [
-            -54.595559,
-            -25.509601
-          ],
-          [
-            -54.595522,
-            -25.509587
-          ]
-        ],
-        [
-          [
-            -54.595451,
-            -25.50931
-          ],
-          [
-            -54.595513,
-            -25.509294
-          ]
-        ],
-        [
-          [
-            -54.595467,
-            -25.509408
-          ],
-          [
-            -54.595491,
-            -25.509404
-          ],
-          [
-            -54.595513,
-            -25.509401
-          ]
-        ]
-      ],
-      "bairro": "PORTES"
+      "bairro": "ITAIPU A"
     },
     {
-      "id": "g-pesado-avenida-costa-e-silva",
-      "rua": "Avenida Costa e Silva",
+      "id": "g-pesado-avenida-paran",
+      "rua": "Avenida Paraná",
       "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
       "comprimento_m": 107,
       "linha": [
         [
-          -54.558169,
-          -25.51861
+          -54.574971,
+          -25.516978
         ],
         [
-          -54.55894,
-          -25.519272
+          -54.574948,
+          -25.516652
+        ],
+        [
+          -54.574914,
+          -25.516233
+        ],
+        [
+          -54.574906,
+          -25.51615
+        ],
+        [
+          -54.574895,
+          -25.516009
         ]
       ],
       "centro": [
-        -54.558554,
-        -25.518941
+        -54.574927,
+        -25.516404
       ],
-      "bairro": "POLO CENTRO"
+      "bairro": "MONJOLO"
     },
     {
       "id": "g-pesado-acesso-br-277-2",
@@ -468,11 +386,11 @@
       "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 104,
+      "comprimento_m": 98,
       "linha": [
         [
-          -54.597996,
-          -25.509578
+          -54.597953,
+          -25.509616
         ],
         [
           -54.597925,
@@ -500,14 +418,14 @@
         ]
       ],
       "centro": [
-        -54.597797,
-        -25.509758
+        -54.597793,
+        -25.509762
       ],
       "partes": [
         [
           [
-            -54.597996,
-            -25.509578
+            -54.597953,
+            -25.509616
           ],
           [
             -54.597925,
@@ -552,6 +470,103 @@
       "bairro": "PORTES"
     },
     {
+      "id": "g-pesado-avenida-juscelino-kubitschek",
+      "rua": "Avenida Juscelino Kubitschek",
+      "nivel": "pesado",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 90,
+      "linha": [
+        [
+          -54.585107,
+          -25.512568
+        ],
+        [
+          -54.585161,
+          -25.513272
+        ],
+        [
+          -54.585169,
+          -25.513383
+        ]
+      ],
+      "centro": [
+        -54.585146,
+        -25.513074
+      ],
+      "bairro": "PORTES"
+    },
+    {
+      "id": "g-pesado-avenida-juscelino-kubitschek-2",
+      "rua": "Avenida Juscelino Kubitschek",
+      "nivel": "pesado",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 86,
+      "linha": [
+        [
+          -54.586638,
+          -25.531425
+        ],
+        [
+          -54.586641,
+          -25.531802
+        ],
+        [
+          -54.586663,
+          -25.532203
+        ]
+      ],
+      "centro": [
+        -54.586647,
+        -25.53181
+      ],
+      "bairro": "AMÉRICA"
+    },
+    {
+      "id": "g-pesado-acesso-travessa-augusto-dos-anjos",
+      "rua": "Acesso – Travessa Augusto dos Anjos",
+      "nivel": "pesado",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 84,
+      "linha": [
+        [
+          -54.596408,
+          -25.510191
+        ],
+        [
+          -54.596269,
+          -25.51019
+        ],
+        [
+          -54.596137,
+          -25.510168
+        ],
+        [
+          -54.596032,
+          -25.510088
+        ],
+        [
+          -54.595888,
+          -25.509928
+        ],
+        [
+          -54.595816,
+          -25.509816
+        ],
+        [
+          -54.595778,
+          -25.509773
+        ]
+      ],
+      "centro": [
+        -54.596047,
+        -25.510022
+      ],
+      "bairro": "PORTES"
+    },
+    {
       "id": "g-pesado-acesso-avenida-paran",
       "rua": "Acesso – Avenida Paraná",
       "nivel": "pesado",
@@ -573,33 +588,6 @@
         -25.533804
       ],
       "bairro": "MONJOLO"
-    },
-    {
-      "id": "g-pesado-avenida-juscelino-kubitschek",
-      "rua": "Avenida Juscelino Kubitschek",
-      "nivel": "pesado",
-      "velocidade_kmh": null,
-      "atraso_s": null,
-      "comprimento_m": 77,
-      "linha": [
-        [
-          -54.585116,
-          -25.512684
-        ],
-        [
-          -54.585161,
-          -25.513272
-        ],
-        [
-          -54.585169,
-          -25.513383
-        ]
-      ],
-      "centro": [
-        -54.585149,
-        -25.513113
-      ],
-      "bairro": "PORTES"
     },
     {
       "id": "g-pesado-acesso-br-277-3",
@@ -637,27 +625,31 @@
       "bairro": "PORTES"
     },
     {
-      "id": "g-medio-avenida-paran",
-      "rua": "Avenida Paraná",
-      "nivel": "medio",
+      "id": "g-pesado-avenida-das-cataratas",
+      "rua": "Avenida das Cataratas",
+      "nivel": "pesado",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 193,
+      "comprimento_m": 68,
       "linha": [
         [
-          -54.574733,
-          -25.488933
+          -54.569091,
+          -25.553349
         ],
         [
-          -54.574685,
-          -25.490677
+          -54.56884,
+          -25.553503
+        ],
+        [
+          -54.568536,
+          -25.553704
         ]
       ],
       "centro": [
-        -54.574709,
-        -25.489805
+        -54.568822,
+        -25.553519
       ],
-      "bairro": "KLP"
+      "bairro": "YOLANDA"
     },
     {
       "id": "g-medio-avenida-costa-e-silva",
@@ -665,7 +657,7 @@
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 152,
+      "comprimento_m": 278,
       "linha": [
         [
           -54.575015,
@@ -689,10 +681,175 @@
         ]
       ],
       "centro": [
-        -54.574332,
-        -25.53314
+        -54.574468,
+        -25.533203
+      ],
+      "partes": [
+        [
+          [
+            -54.575015,
+            -25.533725
+          ],
+          [
+            -54.574614,
+            -25.533405
+          ],
+          [
+            -54.574174,
+            -25.533005
+          ],
+          [
+            -54.573936,
+            -25.532788
+          ],
+          [
+            -54.573923,
+            -25.532777
+          ]
+        ],
+        [
+          [
+            -54.574291,
+            -25.532988
+          ],
+          [
+            -54.574345,
+            -25.533036
+          ],
+          [
+            -54.574693,
+            -25.53335
+          ],
+          [
+            -54.57522,
+            -25.53375
+          ]
+        ]
       ],
       "bairro": "MARACANÃ"
+    },
+    {
+      "id": "g-medio-avenida-m-rio-filho",
+      "rua": "Avenida Mário Filho",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 237,
+      "linha": [
+        [
+          -54.536966,
+          -25.520422
+        ],
+        [
+          -54.535291,
+          -25.521931
+        ]
+      ],
+      "centro": [
+        -54.536129,
+        -25.521176
+      ],
+      "bairro": "MORUMBI"
+    },
+    {
+      "id": "g-medio-br-277",
+      "rua": "BR-277",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 203,
+      "linha": [
+        [
+          -54.56375,
+          -25.510153
+        ],
+        [
+          -54.565507,
+          -25.510073
+        ],
+        [
+          -54.565771,
+          -25.51006
+        ]
+      ],
+      "centro": [
+        -54.565009,
+        -25.510095
+      ],
+      "bairro": "ITAIPU A"
+    },
+    {
+      "id": "g-medio-avenida-jorge-schimmelpfeng",
+      "rua": "Avenida Jorge Schimmelpfeng",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 203,
+      "linha": [
+        [
+          -54.581002,
+          -25.546911
+        ],
+        [
+          -54.581454,
+          -25.546903
+        ],
+        [
+          -54.582274,
+          -25.546898
+        ],
+        [
+          -54.582332,
+          -25.546898
+        ],
+        [
+          -54.582374,
+          -25.546898
+        ]
+      ],
+      "centro": [
+        -54.581658,
+        -25.546943
+      ],
+      "partes": [
+        [
+          [
+            -54.581002,
+            -25.546911
+          ],
+          [
+            -54.581454,
+            -25.546903
+          ],
+          [
+            -54.582274,
+            -25.546898
+          ],
+          [
+            -54.582332,
+            -25.546898
+          ],
+          [
+            -54.582374,
+            -25.546898
+          ]
+        ],
+        [
+          [
+            -54.581687,
+            -25.54701
+          ],
+          [
+            -54.581098,
+            -25.547012
+          ],
+          [
+            -54.581042,
+            -25.547013
+          ]
+        ]
+      ],
+      "bairro": "CENTRO"
     },
     {
       "id": "g-medio-acesso-avenida-tancredo-neves",
@@ -700,7 +857,7 @@
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 150,
+      "comprimento_m": 198,
       "linha": [
         [
           -54.583373,
@@ -724,8 +881,8 @@
         ]
       ],
       "centro": [
-        -54.583327,
-        -25.495384
+        -54.583412,
+        -25.495082
       ],
       "partes": [
         [
@@ -752,6 +909,20 @@
         ],
         [
           [
+            -54.58361,
+            -25.494286
+          ],
+          [
+            -54.583611,
+            -25.494288
+          ],
+          [
+            -54.58367,
+            -25.494679
+          ]
+        ],
+        [
+          [
             -54.583435,
             -25.496076
           ],
@@ -769,78 +940,65 @@
             -54.583317,
             -25.494745
           ]
+        ],
+        [
+          [
+            -54.583443,
+            -25.494722
+          ],
+          [
+            -54.583486,
+            -25.494724
+          ]
         ]
       ],
       "bairro": "KLP"
     },
     {
-      "id": "g-medio-avenida-juscelino-kubitschek",
-      "rua": "Avenida Juscelino Kubitschek",
+      "id": "g-medio-avenida-paran",
+      "rua": "Avenida Paraná",
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 141,
+      "comprimento_m": 193,
       "linha": [
         [
-          -54.587419,
-          -25.542034
+          -54.574733,
+          -25.488933
         ],
         [
-          -54.587409,
-          -25.541875
-        ],
-        [
-          -54.587395,
-          -25.541563
-        ],
-        [
-          -54.587372,
-          -25.541084
-        ],
-        [
-          -54.587356,
-          -25.540834
+          -54.574685,
+          -25.490677
         ]
       ],
       "centro": [
-        -54.587416,
-        -25.541305
+        -54.574709,
+        -25.489805
       ],
-      "partes": [
+      "bairro": "KLP"
+    },
+    {
+      "id": "g-medio-ponte-da-amizade",
+      "rua": "Ponte da Amizade",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 168,
+      "linha": [
         [
-          [
-            -54.587419,
-            -25.542034
-          ],
-          [
-            -54.587409,
-            -25.541875
-          ],
-          [
-            -54.587395,
-            -25.541563
-          ],
-          [
-            -54.587372,
-            -25.541084
-          ],
-          [
-            -54.587356,
-            -25.540834
-          ]
+          -54.598166,
+          -25.509494
         ],
         [
-          [
-            -54.587478,
-            -25.540832
-          ],
-          [
-            -54.587482,
-            -25.54091
-          ]
+          -54.59984,
+          -25.509481
         ]
       ],
-      "bairro": "CENTRO"
+      "centro": [
+        -54.599003,
+        -25.509487
+      ],
+      "bairro": "PORTES"
     },
     {
       "id": "g-medio-avenida-general-meira",
@@ -848,7 +1006,7 @@
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 141,
+      "comprimento_m": 150,
       "linha": [
         [
           -54.582072,
@@ -864,10 +1022,71 @@
         ]
       ],
       "centro": [
-        -54.58206,
-        -25.569739
+        -54.582096,
+        -25.569483
+      ],
+      "partes": [
+        [
+          [
+            -54.582072,
+            -25.570491
+          ],
+          [
+            -54.582057,
+            -25.569513
+          ],
+          [
+            -54.582052,
+            -25.569213
+          ]
+        ],
+        [
+          [
+            -54.58215,
+            -25.569059
+          ],
+          [
+            -54.58215,
+            -25.569137
+          ]
+        ]
       ],
       "bairro": "PORTO MEIRA"
+    },
+    {
+      "id": "g-medio-avenida-m-rio-filho-2",
+      "rua": "Avenida Mário Filho",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 139,
+      "linha": [
+        [
+          -54.534379,
+          -25.523156
+        ],
+        [
+          -54.534254,
+          -25.523453
+        ],
+        [
+          -54.534187,
+          -25.5237
+        ],
+        [
+          -54.534103,
+          -25.523981
+        ],
+        [
+          -54.534078,
+          -25.524371
+        ]
+      ],
+      "centro": [
+        -54.5342,
+        -25.523732
+      ],
+      "bairro": "MORUMBI"
     },
     {
       "id": "g-medio-rua-mato-grosso",
@@ -923,12 +1142,47 @@
       "bairro": "MARACANÃ"
     },
     {
+      "id": "g-medio-avenida-juscelino-kubitschek",
+      "rua": "Avenida Juscelino Kubitschek",
+      "nivel": "medio",
+      "velocidade_kmh": null,
+      "atraso_s": null,
+      "comprimento_m": 129,
+      "linha": [
+        [
+          -54.587419,
+          -25.542034
+        ],
+        [
+          -54.587409,
+          -25.541875
+        ],
+        [
+          -54.587395,
+          -25.541563
+        ],
+        [
+          -54.587372,
+          -25.541084
+        ],
+        [
+          -54.587359,
+          -25.540871
+        ]
+      ],
+      "centro": [
+        -54.587391,
+        -25.541485
+      ],
+      "bairro": "CENTRO"
+    },
+    {
       "id": "g-medio-acesso-avenida-tancredo-neves-2",
       "rua": "Acesso – Avenida Tancredo Neves",
       "nivel": "medio",
       "velocidade_kmh": null,
       "atraso_s": null,
-      "comprimento_m": 130,
+      "comprimento_m": 127,
       "linha": [
         [
           -54.583477,
@@ -971,13 +1225,13 @@
           -25.506333
         ],
         [
-          -54.584409,
-          -25.50623
+          -54.584404,
+          -25.506253
         ]
       ],
       "centro": [
         -54.584065,
-        -25.506602
+        -25.506604
       ],
       "bairro": "ITAIPU A"
     }
